@@ -1,0 +1,17 @@
+name: Robotics Club
+title: Robotics Club
+url: http://localhost:8080
+
+plugins: 
+  - jekyll-paginate
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+
+highlighter: rouge
+
+exclude: ["/docs", vendor]
