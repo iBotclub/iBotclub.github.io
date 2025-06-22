@@ -1,4 +1,4 @@
- /* Highlight the active nav tab in red */
+/* Highlight the active nav tab in red */
 .navigation .nav-alumni {
   border-bottom: 4px solid #ff1717;
 }
@@ -460,18 +460,39 @@ body, .profile {
 @media (max-width: 700px) {
   .achievement-card {
     flex-direction: column;
-    align-items: center;
-    width: 98vw;
-    padding: 16px 4vw;
+    align-items: stretch;
+    width: 96vw;
+    min-width: unset;
+    max-width: 99vw;
+    padding: 12px 2vw;
+    margin: 0 0 18px 0;
+    border-radius: 14px;
   }
   .achievement-details {
     text-align: center;
+    padding: 0 2vw;
   }
   .achievement-details h2 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     text-align: center;
+    word-break: break-word;
+  }
+  .achievement-description,
+  .achievement-year {
+    font-size: 0.98rem;
+    text-align: center;
+    word-break: break-word;
   }
   .glow-text {
-    font-size: 2.2em;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    padding: 0 2vw;
+    margin-bottom: 24px;
+    word-break: break-word;
+  }
+  .achievements-wrapper {
+    gap: 18px;
+    margin-top: 18px;
+    padding: 0 0 10vw 0;
   }
 }
