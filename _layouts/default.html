@@ -5,8 +5,8 @@
   {% include head.html %}
   <!-- Any global stylesheets, fonts, etc. -->
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
-  <link rel="stylesheet" href="{{ site.url }}/css/{{page.style}}.css">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/' | append: page.style | append: '.css' | relative_url }}">
 </head>
 
 <body>

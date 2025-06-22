@@ -1,0 +1,22 @@
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.coming-soon-container h1 {
+  font-size: 3rem;
+  color: #ff1717;
+  margin-bottom: 16px;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.coming-soon-container p {
+  font-size: 1.4rem;
+  color: #444;
+  margin: 0;
+}

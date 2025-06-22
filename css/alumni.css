@@ -1,7 +1,128 @@
+ /* Highlight the active nav tab in red */
 .navigation .nav-alumni {
-  border-bottom: 4px solid #8bc34a;
+  border-bottom: 4px solid #ff1717;
+}
+/*parthiv space*/
+/* Black and Red Theme for Achievements Page */
+body, .profile {
+  background: #18191c !important;
+  color: #fff !important;
 }
 
+/* Achievements Section Styles */
+.achievements-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.achievement-card {
+  width: 90vw;
+  max-width: 900px;
+  min-width: 260px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32px 32px;
+  background: rgba(25, 29, 34, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(255,23,23,0.10), 0 2px 8px rgba(0,0,0,0.18);
+  border-left: 6px solid #ff1717;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,23,23,0.18), 0 10px 10px rgba(0,0,0,0.22);
+  border-left: 8px solid #ff1717;
+}
+
+.achievement-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.achievement-details h2 {
+  font-size: 2.1rem;
+  margin: 0 0 12px 0;
+  color: #ff1717;
+  text-align: left;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.achievement-description {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 8px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.achievement-year {
+  font-size: 1rem;
+  color: #ffb3b3;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.achievement-details a {
+  color: #ff1717;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  border-bottom: 1px dashed #ff1717;
+}
+
+.achievement-details a:hover {
+  color: #fff;
+  border-bottom: 2px solid #ff1717;
+  background: #ff1717;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+/* Glow Text - Red Glow */
+.glow-text {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff1717;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ff1717,
+    0 0 20px #ff1717,
+    0 0 40px #ff1717,
+    0 0 60px #ff1717,
+    0 0 80px #ff1717,
+    0 0 100px #ff1717;
+  animation: red-flicker 2s infinite;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+@keyframes red-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 10px #ff1717,
+      0 0 20px #ff1717,
+      0 0 40px #ff1717,
+      0 0 60px #ff1717,
+      0 0 80px #ff1717,
+      0 0 100px #ff1717;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/*parthiv space*/
 .team-sec {
   position: relative;
   font-family: 'Love Ya Like A Sister', cursive;
@@ -318,32 +439,39 @@
   font-family: 'Poppins', sans-serif;
 }
 
-@media (max-width:768px) {
-  .card-wrapper {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card {
-    margin: 20px 40px;
-  }
-
-  .section-title-01 {
-    font-size: 3.0em;
-  }
-
-  .section-title-02 {
-    font-size: 2.2em;
-  }
+.glow-text {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #ff1717;
+  letter-spacing: 10px;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ff1717,
+    0 0 20px #ff1717,
+    0 0 40px #ff1717,
+    0 0 60px #ff1717,
+    0 0 80px #ff1717,
+    0 0 100px #ff1717;
+  animation: red-flicker 2s infinite;
 }
 
-@media (max-width:1025px) {
-  .card {
-    width: 230px;
-    height: 310px;
-    margin: 20px 10px;
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .achievement-card {
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    padding: 16px 4vw;
+  }
+  .achievement-details {
+    text-align: center;
+  }
+  .achievement-details h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .glow-text {
+    font-size: 2.2em;
   }
 }
