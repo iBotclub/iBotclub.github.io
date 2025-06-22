@@ -113,51 +113,6 @@ body {
 	background: url('/assets/images/your-background.jpg') center/cover no-repeat, #191d22;
 	/* Replace with any color you like */ }
 
-.footer {
-	background: #181818;
-	color: #eaeaea;
-	padding: 40px 0 20px;
-	text-align: center;
-	font-family: 'Roboto', Arial, sans-serif;
-	border-top: 3px solid #ff1717;
-	width: 100%;
-	margin-top: 40px;
-}
-
-.footer-social {
-	margin-bottom: 20px;
-}
-
-.footer-social a {
-	display: inline-block;
-	margin: 0 12px;
-	transition: transform 0.2s;
-}
-
-.footer-social a:hover {
-	transform: scale(1.15);
-}
-
-.footer-social img,
-.footer-social svg {
-	width: 32px;
-	height: 32px;
-	border-radius: 6px;
-	background: #fff;
-	padding: 4px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-.footer-credits {
-	color: #eaeaea;
-	font-size: 0.95em;
-	line-height: 1.6;
-}
-
-.footer-credits p {
-	margin: 8px 0;
-}
-		
 html, body {
   height: 100%;
   margin: 0;
@@ -235,3 +190,136 @@ footer {
     height: 36px;
   }
 }
+
+/* Remove duplicated footer and navigation styles that are already in styles.css */
+
+/* Remove this block (already in styles.css):
+.footer {
+    background: #181818;
+    color: #eaeaea;
+    padding: 40px 0 20px;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    border-top: 3px solid #ff1717;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 12px;
+    transition: transform 0.2s;
+}
+
+.footer-social a:hover {
+    transform: scale(1.15);
+}
+
+.footer-social img,
+.footer-social svg {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.footer-credits {
+    color: #eaeaea;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.footer-credits p {
+    margin: 8px 0;
+}
+*/
+
+/* Remove this block (already in styles.css):
+.header {
+  width: 100%;
+  background: #191d22;
+  color: #fff;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  min-height: 68px;
+}
+
+.logo-image {
+  height: 48px;
+  vertical-align: middle;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin: 0 18px;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+  color: #ff1717;
+  border-bottom: 2px solid #ff1717;
+}
+*/
+
+/* Remove duplicated responsive nav/footer styles (already in styles.css):
+@media (max-width: 800px) {
+  .layout-header {
+    flex-direction: column;
+    padding: 0 12px;
+    min-height: 56px;
+  }
+  .navigation a {
+    margin: 0 8px;
+    font-size: 1em;
+  }
+  .logo-image {
+    height: 36px;
+  }
+}
+*/
+
+/* Remove duplicated mobile nav/footer styles (already in styles.css):
+@media (max-width: 900px) {
+  .footer {
+    padding: 24px 4vw 12px;
+    font-size: 1em;
+    text-align: center;
+  }
+  .footer-social img,
+  .footer-social svg {
+    width: 28px;
+    height: 28px;
+  }
+  .footer-credits {
+    font-size: 0.95em;
+  }
+}
+*/
+
+/* Keep only unique home/about/banner styles here */
