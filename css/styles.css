@@ -595,3 +595,21 @@ a img{
     height: 36px;
   }
 }
+
+/* Hide hamburger and checkbox by default (desktop) */
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+/* Show hamburger on mobile only */
+@media (max-width: 900px) {
+  .nav-toggle-label {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: -9999px; /* Hide the checkbox itself off-screen */
+  }
+}
