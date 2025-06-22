@@ -1,6 +1,6 @@
-# Robotics Club, IIT Kanpur
+# iBot Robotics Club, IIT Madras
 
-This is the repository for Robotics Club, Indian Institute Of Technology, Kanpur.
+This is the repository for iBot Club, Indian Institute Of Technology, Madras.
 
 Hosted at: [Robotics Club, Student's Gymkhana](http://students.iitk.ac.in/roboclub/)
 
