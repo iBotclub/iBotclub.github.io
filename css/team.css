@@ -1,7 +1,232 @@
+<<<<<<< HEAD
 body {
   background: #f6f8fa;
   margin: 0;
   padding: 0;
+=======
+/* Black and Red Theme for Team Page (matching alumni.css) */
+:root {
+  --ibot-red: #ff1717;
+  --ibot-bg: #18191c;
+  --ibot-white: #fff;
+  --bg_shadow: #b43030;
+}
+
+body, .profile {
+  background: var(--ibot-bg) !important;
+  color: var(--ibot-white) !important;
+}
+
+/* Section Titles */
+
+
+.team-sec {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  margin: 32px 0 24px 0;
+  color: transparent;
+  letter-spacing: 10px;
+  text-align: center;
+  -webkit-text-stroke: 2px #ff1717;
+  text-stroke: 2px #ff1717;
+  text-shadow:
+    0 0 10px #ff1717,
+    0 0 20px #ff1717,
+    0 0 40px #ff1717,
+    0 0 60px #ff1717,
+    0 0 80px #ff1717,
+    0 0 100px #ff1717;
+  animation: red-flicker 2s infinite;
+  background: none;
+  display: inline-block;
+}
+
+@keyframes red-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow:
+      0 0 10px #ff1717,
+      0 0 20px #ff1717,
+      0 0 40px #ff1717,
+      0 0 60px #ff1717,
+      0 0 80px #ff1717,
+      0 0 100px #ff1717;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.section-title-01 {
+  font-size: 2.5em;
+  font-weight: 800;
+  opacity: 0.13;
+  background: linear-gradient(to top, transparent 0%, var(--ibot-red) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title-02 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 16px 0px;
+  position: relative;
+  color: var(--ibot-white);
+  text-shadow: 1px 2px 8px #000, 0 1px 0 var(--ibot-red);
+}
+.section-title-02::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  background: var(--ibot-red);
+  border-radius: 3px;
+}
+
+/* Team Card Styles */
+.cordi-card.mdl-card,
+.seci-card.mdl-card,
+.card {
+  width: 100%;
+  max-width: 320px;
+  margin: 24px auto;
+  border-radius: 20px;
+  background: rgba(25, 29, 34, 0.95);
+  box-shadow: 0 6px 24px rgba(255,23,23,0.10), 0 2px 8px rgba(0,0,0,0.18);
+  border-left: 6px solid var(--ibot-red);
+  transition: transform 0.15s, box-shadow 0.15s;
+  overflow: hidden;
+  position: relative;
+}
+
+.cordi-card:hover,
+.seci-card:hover,
+.card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(255,23,23,0.18), 0 10px 10px rgba(0,0,0,0.22);
+  border-left: 8px solid var(--ibot-red);
+}
+
+.cordi-card>.mdl-card__title,
+.seci-card>.mdl-card__title {
+  color: var(--ibot-white);
+  background-color: var(--ibot-red);
+  font-weight: bold;
+  border-radius: 14px 14px 0 0;
+  padding: 18px 24px;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.cordi-details,
+.seci-details,
+.details {
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  color: var(--ibot-white);
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.cordi-name,
+.seci-name {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2;
+  color: var(--ibot-red);
+  padding: 15px 0 5px 0;
+  background: none;
+}
+
+.details h2 {
+  font-family: 'Archivo Black', Arial, sans-serif;
+  margin: 0 0 8px 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.3em;
+  color: var(--ibot-red);
+}
+
+.details .job-title {
+  font-size: 1.1rem;
+  color: #ffb3b3;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Social Icons */
+.social-icons li a {
+  background-color: var(--ibot-white);
+  color: var(--ibot-red);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.social-icons li a:hover {
+  background: var(--ibot-red);
+  color: var(--ibot-white);
+}
+
+/* Card Wrapper Grid */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .team-sec {
+    font-size: 2em;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .cordi-card.mdl-card,
+  .seci-card.mdl-card,
+  .card {
+    max-width: 98vw;
+    min-width: unset;
+    border-radius: 14px;
+    margin: 18px auto;
+    padding: 0 2vw;
+  }
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 2vw;
+  }
+  .cordi-details,
+  .seci-details,
+  .details {
+    padding: 12px 8px;
+    font-size: 1em;
+    text-align: center;
+  }
+  .details h2 {
+    font-size: 1.1em;
+  }
+}
+
+/* Remove old background colors and borders from previous theme */
+.cordi-section,
+.seci-section,
+.profile {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navigation .nav-team {
+  border-bottom: 4px solid #8bc34a;
+>>>>>>> 665376c4c2bcbd0e5954a1e3e4bfaf406fa5f8e6
 }
 
 .section-title-01 {
