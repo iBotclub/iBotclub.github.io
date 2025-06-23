@@ -2,7 +2,6 @@ body {
   background: #f6f8fa;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', Arial, sans-serif;
 }
 
 .section-title-01 {
@@ -13,13 +12,189 @@ body {
   letter-spacing: 2px;
   margin: 40px 0 30px 30px;
   position: relative;
-  z-index: 2;
+  z-index: 2;body {
+      background: #f6f8fa;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lato', Arial, sans-serif;
+    }
+  
+    .section-title-01 {
+      font-family: 'Montserrat', 'Arial Black', sans-serif;
+      font-size: 3.2em;
+      font-weight: 900;
+      color: #222;
+      letter-spacing: 2px;
+      margin: 40px 0 30px 30px;
+      position: relative;
+      z-index: 2;
+    }
+  
+    .card-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 30px 40px 30px;
+    }
+  
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0, 174, 255, 0.11), 0 1.5px 6px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1), transform 0.3s cubic-bezier(.25, .8, .25, 1);
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  
+    .card:hover {
+      box-shadow: 0 8px 32px rgba(0, 174, 255, 0.18), 0 0 0 2px #00aeff33;
+      transform: translateY(-7px) scale(1.025);
+    }
+  
+    .card-image {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      background: #e3e3e3;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.42s cubic-bezier(.25, .8, .25, 1), transform 0.42s cubic-bezier(.25, .8, .25, 1);
+      will-change: filter, transform;
+    }
+  
+    .card:hover .card-image img {
+      filter: brightness(0.78) grayscale(10%);
+      transform: scale(1.045);
+    }
+  
+    /* Social Icons Centered Overlay */
+    .social-icons {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 16px;
+      opacity: 0;
+      transition: opacity 0.32s cubic-bezier(.25, .8, .25, 1);
+      z-index: 3;
+      pointer-events: none;
+    }
+  
+    .card:hover .social-icons {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .social-icons li {
+      list-style: none;
+    }
+  
+    .social-icons li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border-radius: 50%;
+      font-size: 1.3em;
+      color: #0077b5;
+      box-shadow: 0 2px 8px rgba(0, 174, 255, 0.08);
+      transition: background 0.22s, color 0.22s, transform 0.22s;
+      pointer-events: auto;
+    }
+  
+    .social-icons li a:hover {
+      background: #0077b5;
+      color: #fff;
+      transform: scale(1.13);
+    }
+  
+    /* Details Overlay (Name & Phone Popup) */
+    .card-image .details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(246, 248, 250, 0.97);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.32s cubic-bezier(.25, .8, .25, 1);
+      z-index: 2;
+    }
+  
+    .card:hover .card-image .details {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    .details h2 {
+      font-family: 'Montserrat', 'Arial Black', sans-serif;
+      font-size: 1.3em;
+      font-weight: 900;
+      color: #222;
+      margin: 0 0 8px 0;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  
+    .details .job-contact {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1.05em;
+      color: #444;
+      margin: 0;
+      letter-spacing: 0.1px;
+      text-align: center;
+    }
+  
+    @media (max-width: 900px) {
+      .card-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 10px;
+        padding: 0 10px 30px 10px;
+      }
+  
+      .card-image {
+        height: 200px;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      .section-title-01 {
+        font-size: 2.1em;
+        margin: 30px 0 18px 15px;
+      }
+  
+      .card-image {
+        height: 170px;
+      }
+    }
 }
 
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
   gap: 14px;
+  /* Reduced gap for compact look */
   justify-content: center;
   align-items: flex-start;
   padding: 0 30px 40px 30px;
@@ -69,20 +244,18 @@ body {
 /* Social Icons Centered Overlay */
 .social-icons {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 16px;
   opacity: 0;
   transition: opacity 0.32s cubic-bezier(.25, .8, .25, 1);
-  z-index: 3;
-  pointer-events: none;
+  z-index: 2;
 }
 
 .card:hover .social-icons {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .social-icons li {
@@ -101,7 +274,6 @@ body {
   color: #0077b5;
   box-shadow: 0 2px 8px rgba(0, 174, 255, 0.08);
   transition: background 0.22s, color 0.22s, transform 0.22s;
-  pointer-events: auto;
 }
 
 .social-icons li a:hover {
@@ -110,7 +282,61 @@ body {
   transform: scale(1.13);
 }
 
-/* Details Overlay (Name & Phone Popup) */
+.details {
+  padding: 18px 0 10px 0;
+  background: #f6f8fa;
+  text-align: center;
+}
+
+.details h2 {
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+  font-size: 1.18em;
+  font-weight: 900;
+  color: #222;
+  margin: 0 0 7px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.22;
+}
+
+.details .job-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.04em;
+  font-weight: 700;
+  color: #0077b6;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.2px;
+}
+
+.details .job-contact {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.98em;
+  color: #444;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 900px) {
+  .card-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+    padding: 0 10px 30px 10px;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title-01 {
+    font-size: 2.1em;
+    margin: 30px 0 18px 15px;
+  }
+
+  .card-image {
+    height: 170px;
+  }
+}
 .card-image .details {
   position: absolute;
   top: 0;
@@ -125,50 +351,10 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.32s cubic-bezier(.25, .8, .25, 1);
-  z-index: 2;
+  z-index: 3;
 }
 
 .card:hover .card-image .details {
   opacity: 1;
   pointer-events: auto;
-}
-
-.details h2 {
-  font-family: 'Montserrat', 'Arial Black', sans-serif;
-  font-size: 1.3em;
-  font-weight: 900;
-  color: #222;
-  margin: 0 0 8px 0;
-  letter-spacing: 0.5px;
-  text-align: center;
-}
-
-.details .job-contact {
-  font-family: 'Lato', Arial, sans-serif;
-  font-size: 1.05em;
-  color: #444;
-  margin: 0;
-  letter-spacing: 0.1px;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  .card-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 10px;
-    padding: 0 10px 30px 10px;
-  }
-  .card-image {
-    height: 200px;
-  }
-}
-
-@media (max-width: 600px) {
-  .section-title-01 {
-    font-size: 2.1em;
-    margin: 30px 0 18px 15px;
-  }
-  .card-image {
-    height: 170px;
-  }
 }
