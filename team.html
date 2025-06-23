@@ -36,12 +36,8 @@ permalink: /team/
 
 <a name="top"></a>
 <div class="profile">
-<<<<<<< HEAD
 	<h1 class="section-title-01">Coordinators</h1>
 	<!-- <h2 class="section-title-02">Coordinators</h2> -->
-=======
-	<h1 class="team-sec">Coordinators</h1>
->>>>>>> 665376c4c2bcbd0e5954a1e3e4bfaf406fa5f8e6
 	<div class="card-wrapper">
 		{% for cordi in site.data.cordis_25_26 %}
 		<div class="card">
@@ -70,34 +66,3 @@ permalink: /team/
 </div>
 
 
-<<<<<<< HEAD
-=======
-<div class="profile">
-	<h1 class="team-sec">Core Team</h1>
-	<div class="card-wrapper">
-		{% for seci in site.data.seci_25_26 %}
-		<div class="card">
-		  <div class="card-image">
-			<img src="../assets/images/seci_25_26/{{ seci.image }}" alt="profile-card">
-		  </div> 
-		  <ul class="social-icons">
-			{% if seci.instagram %}
-			<li><a target="_blank" href="{{ seci.instagram }}"><i class="fab fa-instagram"></i></a></li>
-			{% endif %}
-			{% if seci.linkedin %}
-			<li><a target="_blank" href="{{seci.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
-			{% endif %}
-			{% if seci.github %}
-			<li><a target="_blank" href="{{ seci.github }}"><i class="fab fa-github"></i></a></li>
-			{% endif %}
-		  </ul>
-		  <div class="details">
-			<h2> {{ seci.name }}</h2>
-			<p class="job-title">{{ seci.mob }}</p>
-			<p class="job-title">{{ seci.email }}</p>
-		  </div>
-		</div>
-		{% endfor %}
-	</div>
-</div> -->
->>>>>>> 665376c4c2bcbd0e5954a1e3e4bfaf406fa5f8e6
