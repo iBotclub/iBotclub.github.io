@@ -86,23 +86,32 @@ body, .profile {
   border-radius: 6px;
   transition: 0.2s;
 }
+:root {
+  --ibot-red: #ff1717;
+  --ibot-bg: #18191c;
+  --ibot-white: #fff;
+  --bg_shadow: #b43030;
+}
 
 /* Glow Text - Red Glow */
 .glow-text {
   font-family: 'Arial Black', sans-serif;
-  font-size: 48px;
+  font-size: 100px;
   font-weight: bold;
-  color: #ff1717;
+  color: #ff0000;
   letter-spacing: 10px;
   text-align: center;
+  -webkit-text-stroke: 1px #ff0000; /* Red outline */
+  text-stroke: 2px #ff1717;         /* For Firefox (optional) */
   text-shadow:
-    0 0 10px #ff1717,
-    0 0 20px #ff1717,
-    0 0 40px #ff1717,
-    0 0 60px #ff1717,
-    0 0 80px #ff1717,
-    0 0 100px #ff1717;
+    0 0 10px var(--bg_shadow),
+    0 0 20px var(--bg_shadow),
+    0 0 40px var(--bg_shadow),
+    0 0 60px var(--bg_shadow),
+    0 0 80px var(--bg_shadow),
+    0 0 100px var(--bg_shadow);
   animation: red-flicker 2s infinite;
+  background: none;
   margin-bottom: 40px;
   display: inline-block;
 }
@@ -110,13 +119,13 @@ body, .profile {
 @keyframes red-flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow:
-      0 0 10px #ff1717,
-      0 0 20px #ff1717,
-      0 0 40px #ff1717,
-      0 0 60px #ff1717,
-      0 0 80px #ff1717,
-      0 0 100px #ff1717;
-  }
+      0 0 10px var(--bg_shadow),
+      0 0 20px var(--bg_shadow),
+      0 0 40px var(--bg_shadow),
+      0 0 60px var(--bg_shadow),
+      0 0 80px var(--bg_shadow),
+      0 0 100px var(--bg_shadow);
+  }      
   20%, 24%, 55% {
     text-shadow: none;
   }
@@ -437,23 +446,6 @@ body, .profile {
   font-weight: 500;
   margin: 0px 0px;
   font-family: 'Poppins', sans-serif;
-}
-
-.glow-text {
-  font-family: 'Arial Black', sans-serif;
-  font-size: 100px;
-  font-weight: bold;
-  color: #ff1717;
-  letter-spacing: 10px;
-  text-align: center;
-  text-shadow:
-    0 0 10px #ff1717,
-    0 0 20px #ff1717,
-    0 0 40px #ff1717,
-    0 0 60px #ff1717,
-    0 0 80px #ff1717,
-    0 0 100px #ff1717;
-  animation: red-flicker 2s infinite;
 }
 
 /* Responsive for mobile */
