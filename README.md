@@ -2,7 +2,7 @@
 
 This is the repository for iBot Club, Indian Institute Of Technology, Madras.
 
-Hosted at: [Robotics Club, Student's Gymkhana](http://students.iitk.ac.in/roboclub/)
+Hosted at: [iBot Official Site](https://a-jacked-nerd.github.io/ibot_iitm_website/)
 
 ### Development
 
