@@ -1,113 +1,25 @@
-<link
-  href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet"
-/>
-<div
-  class="header mdl-layout__header mdl-layout__header--waterfall mdl-layout--no-desktop-drawer-button"
->
-  <div class="mdl-layout__header-row layout-header">
-    <span class="title mdl-layout-title">
-      <a href="{{ site.url }}"
-        ><img class="logo-image" src={{ "/assets/images/logo.png" | absolute_url
-        }}></a
-      >
-    </span>
-    <span class="mobile-title mdl-layout-title">
-      <center>
-        <img class="logo-image" src={{ "/assets/images/mobile-logo.png" |
-        absolute_url }}>
-      </center>
-    </span>
-    <!-- Add spacer, to align navigation to the right in desktop -->
-    <div class="mdl-layout-spacer"></div>
-    <!-- Navigation -->
-    <div class="navigation-container">
-      <nav class="navigation mdl-navigation">
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-proj"
-          href="{{ site.url }}/projects/"
-          >Projects</a
-        >
-
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-team"
-          href="{{ site.url }}/team/"
-          >Team</a
-        >
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-alumni"
-          href="{{ site.url }}/alumni/"
-          >Alumni</a
-        >
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-blog"
-          href="{{ site.url }}/blog/"
-          >Blogs</a
-        >
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-advisors"
-          href="{{ site.url }}/faculty/"
-          >Faculty</a
-        >
-        <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-team"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSenf6sITJDo3P35w1xNncTSotWzky1q8GSFf7qwremIvWV0AA/viewform"
-          target="_blank"
-          >Components</a
-        >
-        <!-- <a
-          class="mdl-navigation__link mdl-typography--text-uppercase nav-advisors"
-          href="{{ site.url }}/tutorials/"
-          >Tutorials</a
-        > -->
-        <!-- Archive Dropdown -->
-
-        <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase nav-article" href="{{ site.url }}/articles/">Articles</a> -->
+<div class="header">
+  <div class="layout-header">
+    <a href="{{ site.url }}">
+      <div class="logo-bg">
+        <img class="logo-image" src="{{ '/assets/images/logo.png' | relative_url }}" alt="iBot Club IIT Madras Logo">
+      </div>
+    </a>
+    <!-- Hamburger for mobile -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="navigation-container">
+      <nav class="navigation">
+        <a href="{{ site.url }}/projects/">PROJECTS</a>
+        <a href="{{ site.url }}/team/">TEAM</a>
+        <a href="{{ site.url }}/alumni/">ACHIEVEMENTS</a>
+        <a href="{{ site.url }}/blog/">BLOGS</a>
+        <a href="{{ site.url }}/events/">EVENTS</a>
       </nav>
-    </div>
+    </nav>
   </div>
-</div>
-<!-- ####################### drawer for mobile view ########################################### -->
-<div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">
-    <a href="{{ site.url }}"
-      ><img class="logo-image" src={{ "/assets/images/drawer-logo.png" |
-      absolute_url }}></a
-    >
-  </span>
-  <nav class="drawer mdl-navigation">
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-proj"
-      href="{{ site.url }}/projects/"
-      >Projects</a
-    >
-
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-team"
-      href="{{ site.url }}/team/"
-      >Team</a
-    >
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-alumni"
-      href="{{ site.url }}/alumni/"
-      >Alumni</a
-    >
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-blog"
-      href="{{ site.url }}/blog/"
-      >Blogs</a
-    >
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-advisors"
-      href="{{ site.url }}/faculty/"
-      >Faculty</a
-    >
-    <a
-      class="mdl-navigation__link mdl-typography--text-uppercase nav-team"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSenf6sITJDo3P35w1xNncTSotWzky1q8GSFf7qwremIvWV0AA/viewform"
-      target="_blank"
-      >Components</a
-    >
-    <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase nav-article" href="{{ site.url }}/articles/">Articles</a> -->
-  </nav>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Alumni
+title: Achievements
 layout: default
 style: alumni
 permalink: /alumni/
@@ -7,58 +7,21 @@ permalink: /alumni/
 <a name="top"></a>
 
 <div class="profile">
-	{% assign count = 0 %}
-	{% assign counter = 0 %}
-	{% for alumni in site.data.alumni %}
-	{% if count==0 %}
-	<h1 class="section-title-01">20{{ 24 | minus:counter }}-20{{ 25 | minus:counter }}</h1>
-	<h2 class="section-title-02">20{{ 24 | minus:counter }}-20{{ 25 | minus:counter }}</h2>
-	<div class="card-wrapper">
-	{% endif %}
-		{% assign count = count | plus:1 %}
-		<div class="card">
-			<div class="card-image">
-				<img src="../assets/images/alumni/{{ alumni.image }}" alt="profile-card">
-			</div>
-			<ul class="social-icons">
-				{% if alumni.facebook %}
-				<li><a target="_blank" href="{{ alumni.facebook }}"><i
-							class="fab fa-facebook-f"></i></a></li>
-				{% endif %}
-				{% if alumni.linkedin %}
-				<li><a target="_blank" href="{{ alumni.linkedin }}"><i
-							class="fab fa-linkedin-in"></i></a></li>
-				{% endif %}
-				{% if alumni.github %}
-				<li><a target="_blank" href="{{ alumni.github }}"><i class="fab fa-github"></i></a></li>
-				{% endif %}
-			</ul>
-			<div class="details">
-				<h2>{{ alumni.name }}</h2>
-				<!-- <p class="job-title">{{ cordi.mob }}</p> -->
-				<!-- <p class="job-title">{{ cordi.email }}</p> -->
-			</div>
-		</div>
-		{% if count == 3 and counter == 4 %}
-		{% assign count = 0 %}
-		{% assign counter = counter | plus:1 %}
-	
-	</div>
-		{% endif %}
-		{% if count == 3 and counter == 5 %}
-		{% assign count = 0 %}
-		{% assign counter = counter | plus:1 %}
-	</div>
-		{% endif %}
-		{% if count == 4 %}
-		{% assign count = 0 %}
-		{% assign counter = counter | plus:1 %}
-	</div>
-		{% endif %}
-		{% if count == 3 and counter == 0 %}
-		{% assign count = 0 %}
-		{% assign counter = counter | plus:1 %}
-	</div>
-	{% endif %}
-	{% endfor %}
+    <h1 class="glow-text">Our Achievements</h1>
+    <div class="achievements-wrapper">
+        {% for achievement in site.data.achievements %}
+        <div class="achievement-card">
+            <div class="achievement-details">
+                <h2>{{ achievement.title }}</h2>
+                <p class="achievement-description">{{ achievement.description }}</p>
+                {% if achievement.year %}
+                <p class="achievement-year"><b>Year:</b> {{ achievement.year }}</p>
+                {% endif %}
+                {% if achievement.link %}
+                <p><a href="{{ achievement.link }}" target="_blank">Read more</a></p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>

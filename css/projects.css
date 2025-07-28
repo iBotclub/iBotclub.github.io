@@ -1,201 +1,212 @@
-#proj-auv {
-  display: none;
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-}
-
-#auv-exp {
-  height: 50px;
-  padding-left: 15px;
-}
-
-#huro-exp {
-  height: 50px;
-  padding-left: 15px;
-}
-
-#auv-tit {
-  -webkit-transition: height 1s;
-  -moz-transition: height 1s;
-  -o-transition: height 1s;
-  transition: height 1s;
-}
-
-#proj-huro {
-  display: none;
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-}
-
-#huro-tit {
-  -webkit-transition: height 1s;
-  -moz-transition: height 1s;
-  -o-transition: height 1s;
-  transition: height 1s;
-}
-
-.navigation .nav-proj {
-  border-bottom: 4px solid #8bc34a;
-}
-
-.hero-section {
-  position: relative;
-  height: auto;
-  background: url('../assets/images/projects/hero.png') center 50% no-repeat;
-  background-color: #031111;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.even-project-section {
-  position: relative;
-  background-color: #37474F;
-}
-
-.odd-project-section {
-  position: relative;
-  background-color: #37474F;
-}
-
-.team-sec {
-  position: relative;
-  font-family: 'Love Ya Like A Sister', cursive;
-  line-height: 1;
-  font-weight: 500;
-  font-size: 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.team-section > .team-sec {
-  color: #f5f5f5;
-}
-
-.team-section {
-  position: relative;
-  /* background-color: #263238; */
-  padding-bottom: 50px;
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 40px;
 }
 
 .project-grid {
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px auto 80px;
+  max-width: 1200px;
+  background: radial-gradient(ellipse at top left, #7e2323 0%, #0a0000 100%);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.prj-quote{
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-weight: 300;
-  line-height: 1;
-  font-size: 35px;
-  color: #f3f3f3;
-  padding-top: 50px;
-}
-
-.prj-tit{
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-weight: 300;
-  font-size: 45px;
-  color: #f3f3f3;
-}
-
-.project-card.mdl-card {
-  width: 100%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  -webkit-border-radius: 3;
-  -moz-border-radius: 3;
-  border-radius: 3px;
-}
-.project-card > .mdl-card__title {
-  color: #fff;
-  background-color: #25b099;
+.project-card {
+  background: #182c2c;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  width: 270px;
+  overflow: hidden;
+  transition: all 0.2s;
 }
 
 .project-card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
 }
 
-.project-card > .mdl-card__actions {
-  display: flex;
-  align-items: center;
-}
-
-.m-prj-card.mdl-card {
+.project-img {
   width: 100%;
-  margin: auto;
-  height: 350px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  height: 180px;
+  object-fit: cover;
+  background: #fff;
 }
 
-.m-prj-tit{
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-}
-
-.m-prj-card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.m-prj-details{
-  display: none;
-  height: 0;
-  font-family: 'Saira Condensed', sans-serif;
-  background-color: #fff;
-  color: #616161;
-  padding: 15px;
-  font-size: 18px;
-  -webkit-transition: all 2s ease-out;
-  -moz-transition: all 2s ease-out;
-  -o-transition: all 2s ease-out;
-  transition: all 2s ease-out;
-  text-overflow: hidden;
-}
-
-.m-prj-card:hover .m-prj-details{
-  display: block;
-  height: auto;
-}
-
-.m-prj-name{
+.project-title {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #f3f3f3;
-  padding: 15px;
-  background-color: #25b099;
-}
-
-.m-prj-card > .mdl-card__title {
+  font-size: 1.3em;
   color: #fff;
+  background: #25b099;
+  padding: 16px 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-@media (max-width: 900px) {
-  .hero-section {
-      background-attachment: scroll;
-      width: 100%;
-  }
-
-  .m-prj-details{
-    display: block;
-  }
-
-  .prj-quote {
-    font-size: 20px;
-  }
-
-  #auv-tit {
-    max-height: 230px;
-  }
-
-  #huro-tit {
-    max-height: 230px;
-  }
+.project-title:hover {
+  background: #1a7e6f;
 }
+
+.panel {
+  background: #223e3e;
+  color: #f3f3f3;
+  font-family: 'DM Sans', sans-serif;
+  padding: 16px;
+  display: none;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.project-card {
+  background: #2c1818;
+  /* deep red tone */
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-card .project-title {
+  font-family: 'Archivo Black', 'Arial Black', sans-serif;
+  font-size: 1.35em;
+  color: #fff;
+  background: #ff1717;
+  padding: 18px 0 12px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.21);
+  border-radius: 0 0 8px 8px;
+  margin: 0;
+  transition: background 0.3s;
+}
+
+.project-card .project-title:hover {
+  background: #c40707;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #fff;
+}
+
+.accordion {
+  background-color: #ff1717;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Archivo Black', sans-serif;
+  transition: background 0.3s;
+}
+
+.accordion.active,
+.accordion:hover {
+  background-color: #c40707;
+}
+
+.panel {
+  background: #3d2323;
+  /* slightly lighter red */
+  color: #fff0f0;
+  padding: 16px;
+  border-radius: 0 0 10px 10px;
+  display: none;
+}
+
+.current-projects-heading {
+  font-family: 'Archivo Black', 'Arial Black', sans-serif;
+  font-size: 3.2rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 36px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.30),
+    /* deep shadow */
+    0 1px 0 #222,
+    /* hard shadow for pop */
+    0 8px 40px rgba(0, 0, 0, 0.18);
+  /* soft glow */
+  /* Optional: glossy/gradient overlay effect */
+  position: relative;
+}
+
+.current-projects-heading::after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 8px;
+  margin: 18px auto 0 auto;
+  background: linear-gradient(90deg, #ff1717 0%, #c40707 100%);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+
+.previous-projects-heading {
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.18),
+    0 1px 0 #b1b1b1,
+    0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+.previous-projects-underline {
+  width: 90%;
+  max-width: 1100px;
+  height: 8px;
+  margin: 0 auto 32px auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ffb3b3 0%, #ff1717 100%);
+}
+
+.previous-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 20px auto 80px;
+  max-width: 1200px;
+  background: radial-gradient(ellipse at top left, #7e2323 0%, #0a0000 100%);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background: url('/assets/images/animation-thhe-stark-contrast-between-the-vibrant-blue-lines.jpeg') center/cover no-repeat, #191d22;
+}
+

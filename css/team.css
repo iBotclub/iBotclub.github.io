@@ -1,189 +1,102 @@
-.navigation .nav-team {
-  border-bottom: 4px solid #8bc34a;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+:root {
+  --ibot-red: #ff1717;
+  --ibot-bg: #18191c;
+  --ibot-white: #fff;
+  --bg_shadow: #b43030;
 }
 
-.team-sec {
-  position: relative;
-  font-family: 'Love Ya Like A Sister', cursive;
-  line-height: 1;
-  font-weight: 500;
-  font-size: 60px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+body, .profile {
+  background: var(--ibot-bg) !important;
+  color: var(--ibot-white) !important;
 }
 
-.cordi-section>.team-sec {
-  color: #f5f5f5;
+:root {
+  --ibot-red: #ff1717;
+  --ibot-bg: #18191c;
+  --ibot-white: #fff;
+  --bg_shadow: #4b1111;
 }
-
-.cordi-section {
-  position: relative;
-  background-color: #263238;
-  padding-bottom: 50px;
-}
-
-.cordi-card.mdl-card {
-  width: 100%;
-  margin: auto;
-  height: 23vw;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-
-}
-
-.cordi-card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.cordi-details {
-  font-family: 'Saira Condensed', sans-serif;
-  background-color: #fff;
-  color: #616161;
-  padding: 15px;
-  font-size: 18px;
-}
-
-.cordi-name {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 18px;
-  line-height: 1.2;
-  color: #f3f3f3;
-  padding: 15px;
-  background-color: #EF5350;
-}
-
-.cordi-card>.mdl-card__title {
-  color: #fff;
-}
-
-.seci-section>.team-sec {
-  color: #414141;
-}
-
-.seci-section {
-  position: relative;
-  background-color: #EEEEEE;
-  padding-bottom: 50px;
-}
-
-.seci-card.mdl-card {
-  width: 100%;
-  margin: auto;
-  height: 21vw;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
-
-.seci-card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-}
-
-.seci-details {
-  font-family: 'Saira Condensed', sans-serif;
-  background-color: #fff;
-  color: #616161;
-  padding: 15px;
-  font-size: 18px;
-}
-
-.seci-name {
-  font-family: 'Archivo Black', sans-serif;
-
-  font-size: 18px;
-  line-height: 1.2;
-  color: #f3f3f3;
-  padding: 15px;
-  background-color: #EF5350;
-}
-
-.seci-card>.mdl-card__title {
-  color: #fff;
-}
-
-/*##### For Mobile #####*/
-@media (max-width: 900px) {
-
-  .seci-card.mdl-card {
-    height: 350px;
-  }
-
-  .cordi-card.mdl-card {
-    height: 350px;
-  }
-
-
-  .team-sec {
-    font-size: 40px;
-    margin: 0;
-    padding-top: 20px;
-  }
-}
-
-
-.profile {
-  font-family: 'Poppins', sans-serif;
-  color: #0e2431;
-  background: #f3f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.section-title-01{
-  font-family: 'Poppins', sans-serif;
-  font-size: 4.5em;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  background: linear-gradient(to top, transparent 0%, #0e2431 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0.1;
-}
-
-.section-title-02{
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.8em;
+/* Section Titles */
+.section-title-01, .team-sec {
+  font-family: 'Orbitron', 'Archivo Black', 'Arial Black', Arial, sans-serif;
+  font-size: 2em;
   font-weight: 700;
-  transform: translateY(-80px);
-  margin: 16px 0px;
+  margin: 40px 0 30px 0;
+  color: var(--ibot-red);
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: none;
+  -webkit-text-stroke: 1.5px var(--ibot-red);
+  text-stroke: 1.5px var(--ibot-red);
+  text-shadow:
+    0 0 5px var(--bg_shadow),
+    0 0 10px var(--bg_shadow),
+    0 0 20px var(--bg_shadow),
+    0 0 40px var(--bg_shadow),
+    0 0 60px var(--bg_shadow);
+  background: none;
+  display: block;
+  padding: 20px 0 10px 0;
+  animation: tubelight-blink 2.2s infinite;
+  will-change: opacity, filter;
 }
 
-.section-title-02::before{
-  content: '';
-  position: absolute;
-  width: 70px;
-  height: 5px;
-  right: 0;
-  bottom: 0;
-  background: #004d69;
+/* Tubelight blink animation for heads and coordinators */
+@keyframes tubelight-blink {
+  0%, 100% { opacity: 1; filter: brightness(1.3) drop-shadow(0 0 8px #fff7); }
+  2% { opacity: 0.5; filter: brightness(1.1) drop-shadow(0 0 2px #fff3); }
+  4% { opacity: 0.2; filter: brightness(0.8) drop-shadow(0 0 1px #fff1); }
+  6% { opacity: 0.7; filter: brightness(1.2) drop-shadow(0 0 6px #fff5); }
+  8% { opacity: 0.3; filter: brightness(0.7) drop-shadow(0 0 1px #fff1); }
+  10%, 20% { opacity: 1; filter: brightness(1.4) drop-shadow(0 0 10px #fff9); }
+  22% { opacity: 0.6; filter: brightness(1.1) drop-shadow(0 0 2px #fff3); }
+  24% { opacity: 0.4; filter: brightness(0.9) drop-shadow(0 0 1px #fff1); }
+  26% { opacity: 0.9; filter: brightness(1.3) drop-shadow(0 0 8px #fff7); }
+  28% { opacity: 0.2; filter: brightness(0.7) drop-shadow(0 0 1px #fff1); }
+  30%, 100% { opacity: 1; filter: brightness(1.3) drop-shadow(0 0 8px #fff7); }
 }
 
+/* Example selectors, adjust as needed */
 
+/* If you use a different class for heads/coordinators, change .team-head/.team-coord accordingly. */
+
+/* Card Grid */
 .card-wrapper {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  top: -50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* Center the cards horizontally */
+  align-items: flex-start;   /* Align cards to the top */
+  gap: 28px;
+  margin: 0 auto;
+  padding: 0 2vw;
 }
 
+/* Team Card */
 .card {
-  /* top:50%;
-  left:50%;
-  transform: translate(-50%,-50%); */
   position: relative;
   width: 255px;
   height: 320px;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 5px 18px rgb(0 0 0 / 60%);
+  background: rgba(25, 29, 34, 0.98);
+  box-shadow: 0 5px 18px rgb(255 23 23 / 30%);
   cursor: pointer;
-  transition: 0.5s;
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s cubic-bezier(.25,.8,.25,1);
   margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 14px 36px rgba(255,23,23,0.18), 0 10px 18px rgba(0,0,0,0.22);
+}
+
+/* Full Image Cover */
 .card .card-image {
   position: absolute;
   top: 0px;
@@ -193,31 +106,39 @@
   z-index: 2;
   background: #000;
   transition: 0.5s;
+  overflow: hidden;
 }
 
 .card .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.5s, filter 0.5s;
 }
 
-.card:hover img {
-  opacity: 0.3;
-  transition: 0.5s;
+.card:hover .card-image img {
+  opacity: 0.22;
+  filter: blur(1.5px) grayscale(30%);
 }
 
-.card:hover .card-image {
-  /* transform:translateY(-100px); */
-  transition: all 0.9s;
-}
-
+/* Social Icons - animated in center on hover */
 .social-icons {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-58%, -50%);
+  bottom: 85px;
+  transform: translateX(-60%) translateY(-10%);
   z-index: 3;
   display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 102px; /* 3 icons * 34px + 2*gap */
+  pointer-events: none;
+}
+
+.card:hover .social-icons {
+  pointer-events: auto; /* Enable pointer events on hover */
 }
 
 .social-icons li {
@@ -225,34 +146,34 @@
 }
 
 .social-icons li a {
-  position: relative;
-  display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  background-color: #fff;
-  font-size: 21px;
-  color: #333;
-  font-weight: bold;
-  margin: 0 6px;
-  transition: 0.4s;
-  transform: translateY(200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+  color: var(--ibot-red);
+  background: linear-gradient(135deg, #fff 60%, #ffeaea 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(255,23,23,0.12);
+  border: 2px solid #ffebee;
+  margin: 0 4px;
+  transition: transform 0.22s cubic-bezier(.25,.8,.25,1), box-shadow 0.22s, background 0.22s, color 0.22s;
   opacity: 0;
+  transform: translateY(70px);
 }
 
 .card:hover .social-icons li a {
-  transform: translateY(0px);
   opacity: 1;
+  transform: translateY(0px);
 }
 
 .social-icons li a:hover {
-  background: #000;
-  transition: 0.2s;
-}
-
-.social-icons li a:hover .fab {
+  background: linear-gradient(135deg, #ff1717 60%, #ff6262 100%);
   color: #fff;
+  box-shadow: 0 4px 18px 0 #ff1717a0, 0 1.5px 8px 0 #00000025;
+  transform: scale(1.13);
+  border-color: #ff1717;
 }
 
 .social-icons li a .fab {
@@ -264,84 +185,84 @@
   color: #fff;
 }
 
-.card:hover li:nth-child(1) a {
-  transition-delay: 0.1s;
-}
+.card:hover li:nth-child(1) a { transition-delay: 0.1s; }
+.card:hover li:nth-child(2) a { transition-delay: 0.2s; }
+.card:hover li:nth-child(3) a { transition-delay: 0.3s; }
+.card:hover li:nth-child(4) a { transition-delay: 0.4s; }
 
-.card:hover li:nth-child(2) a {
-  transition-delay: 0.2s;
-}
-
-.card:hover li:nth-child(3) a {
-  transition-delay: 0.3s;
-}
-
-.card:hover li:nth-child(4) a {
-  transition-delay: 0.4s;
-}
-
+/* Details Overlay - slides up on hover */
 .details {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #fff;
+  background: rgba(24,25,28,0.98);
   width: 100%;
-  height: 85px;
+  height: 80px; /* Lower height */
   z-index: 1;
-  padding: 10px 0px;
+  padding: 8px 0px 6px 0px;
   transform: translateY(100px);
+  transition: transform 0.5s cubic-bezier(.25,.8,.25,1), background 0.4s, height 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:hover .details {
   z-index: 2;
-  transition: all 0.9s ease;
   transform: translateY(0px);
+  background: linear-gradient(0deg, rgba(24,25,28,0.98) 90%, rgba(24,25,28,0.7) 100%, rgba(24,25,28,0.0) 100%);
+  height: 80px;
 }
 
 .details h2 {
-  font-family: 'Poppins', sans-serif;
-  margin: 0px 0px;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  margin: 0px 0px 2px 0px;
   padding: 0;
   text-align: center;
-  font-size: 25px;
+  font-size: 1.15em;
+  color: var(--ibot-red);
+  letter-spacing: 1px;
+  text-shadow: none;
+  background: none;
 }
 
 .details .job-title {
-  font-size: 1.1rem;
-  /* line-height: 2.5rem; */
-  color: #333;
+  font-size: 1em;
+  color: #ffb3b3;
   text-align: center;
   font-weight: 500;
   margin: 0px 0px;
   font-family: 'Poppins', sans-serif;
+  text-shadow: none;
+  background: none;
 }
 
-@media (max-width:768px) {
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .team-sec {
+    font-size: 1.3em;
+    margin: 18px auto 18px auto;
+  }
   .card-wrapper {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 2vw;
   }
-
-  .card{
-    margin: 20px 40px;
+  .card {
+    max-width: 98vw;
+    min-width: unset;
+    border-radius: 14px;
+    margin: 14px auto;
+    height: 280px;
   }
-
-  .section-title-01{
-    font-size: 3.0em;
+  .details {
+    padding: 0 8px 10px 8px;
+    min-height: 60px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
   }
-
-  .section-title-02{
-    font-size: 2.2em;
-  }
-}
-
-@media (max-width:1025px){
-  .card{
-    width: 230px;
-    height: 310px;
-    margin: 20px 10px;
+  .social-icons {
+    bottom: 70px;
   }
 }

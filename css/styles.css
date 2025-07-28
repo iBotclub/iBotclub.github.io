@@ -9,6 +9,116 @@
 a {
   text-decoration: none;
 }
+/*parthiv*/
+/*footer*/
+.footer {
+	background: #181818;
+	color: #eaeaea;
+	padding: 40px 0 20px;
+	text-align: center;
+	font-family: 'Roboto', Arial, sans-serif;
+	border-top: 3px solid #ff1717;
+	width: 100%;
+	margin-top: 40px;
+}
+
+.footer-social {
+	margin-bottom: 20px;
+}
+
+.footer-social a {
+	display: inline-block;
+	margin: 0 12px;
+	transition: transform 0.2s;
+}
+
+.footer-social a:hover {
+	transform: scale(1.15);
+}
+
+.footer-social img,
+.footer-social svg {
+	width: 32px;
+	height: 32px;
+	border-radius: 6px;
+	background: #fff;
+	padding: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.footer-credits {
+	color: #eaeaea;
+	font-size: 0.95em;
+	line-height: 1.6;
+}
+
+.footer-credits p {
+	margin: 8px 0;
+}
+/*header*/
+.header {
+  width: 100%;
+  background: #191d22; /* or your chosen dark background */
+  color: #fff;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* subtle shadow, optional */
+  overflow: visible;
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  min-height: 68px;
+}
+.navigation-container {
+  display: flex;
+  align-items: center;
+  direction: ltr;    /* changed from rtl */
+  order: 1;
+  width: auto;       /* let it size to content */
+}
+
+.navigation {
+  display: flex;     /* ensure horizontal layout */
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;       /* let it size to content */
+  direction: ltr;
+}
+
+.navigation a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin: 0 10px;
+  font-family: 'Archivo Black', Arial, sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap; /* prevent wrapping */
+}
+
+.navigation a:hover {
+  color: #ff1717;
+  border-bottom: 2px solid #ff1717;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.logo-bg {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2px 2px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+/*parthiv*/
+
+
 
 .rsrc{
   color: #757575;
@@ -98,10 +208,7 @@ a img{
   width: auto;
 }
 
-.header {
-  overflow: visible;
-  background-color: white;
-}
+
 
 .header .material-icons {
   color: #767777 !important;
@@ -122,7 +229,7 @@ a img{
   /* Simple hack to make the overflow happen to the left instead... */
   direction: rtl;
   order: 1;
-  width: 500px;
+  width: 420px;      /* reduced from 500px */
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
       width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -131,7 +238,7 @@ a img{
   /* ... and now make sure the content is actually LTR */
   direction: ltr;
   justify-content: flex-end;
-  width: 800px;
+  width: 670px;      /* reduced from 800px */
 }
 
 .search-box.is-focused + .navigation-container {
@@ -148,7 +255,7 @@ a img{
 }
 
 .navigation .mdl-navigation__link:hover {
-  border-bottom: 4px solid #8bc34a;
+  border-bottom: 4px solid #ff1717;
 }
 
 .search-box {
@@ -228,7 +335,7 @@ a img{
 }
 
 .main-footer a:hover {
-  color: #8bc34a;
+  color: #ff1717;
 }
 
 .main-footer .mdl-mega-footer--top-section::after {
@@ -272,7 +379,34 @@ a img{
 	margin: 0;
 }
 
-/*##### For Mobile #####*/
+/* Hamburger styles */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  height: 32px;
+  width: 36px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #ff1717;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
 @media (max-width: 900px) {
   #feed-bar{
     display: none;
@@ -358,5 +492,124 @@ a img{
 
   .main-footer .mdl-mega-footer--bottom-section {
     display: none;
+  }
+
+  .navigation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    background: #191d22;
+    padding: 12px 0;
+  }
+  .navigation {
+    flex-direction: column;
+    width: 100vw;
+    align-items: flex-start;
+  }
+  .navigation a {
+    margin: 8px 16px;
+    font-size: 1.1em;
+    border-bottom: none;
+    color: #fff;
+    width: 100vw;
+    display: block;
+  }
+
+  .footer {
+    padding: 24px 4vw 12px;
+    font-size: 1em;
+    text-align: center;
+  }
+  .footer-social img,
+  .footer-social svg {
+    width: 28px;
+    height: 28px;
+  }
+  .footer-credits {
+    font-size: 0.95em;
+  }
+
+  .nav-toggle-label {
+    display: flex;
+  }
+  .navigation-container {
+    display: none !important;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100vw;
+    background: #191d22;
+    padding: 12px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 150;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .nav-toggle:checked + .nav-toggle-label + .navigation-container {
+    display: flex !important;
+  }
+  .navigation {
+    flex-direction: column;
+    width: 100vw;
+    align-items: flex-start;
+  }
+  .navigation a {
+    margin: 8px 16px;
+    font-size: 1.1em;
+    border-bottom: none;
+    color: #fff;
+    width: 100vw;
+    display: block;
+  }
+}
+
+/* Responsive Navbar for Mobile (like home.css) */
+@media (max-width: 800px) {
+  .layout-header {
+    flex-direction: column;
+    padding: 0 12px;
+    min-height: 56px;
+  }
+  .navigation-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .navigation a {
+    margin: 0 8px;
+    font-size: 1em;
+    padding: 6px 0;
+    display: inline-block;
+  }
+  .logo-image {
+    height: 36px;
+  }
+}
+
+/* Hide hamburger and checkbox by default (desktop) */
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+/* Show hamburger on mobile only */
+@media (max-width: 900px) {
+  .nav-toggle-label {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    left: -9999px; /* Hide the checkbox itself off-screen */
   }
 }

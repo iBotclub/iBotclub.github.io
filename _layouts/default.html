@@ -1,32 +1,22 @@
 <!doctype html>
-
 <html lang="en">
-  <head>
-    {% include head.html %}
-  </head>
 
-  <body>
+<head>
+  {% include head.html %}
+  <!-- Any global stylesheets, fonts, etc. -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/' | append: page.style | append: '.css' | relative_url }}">
+</head>
 
-  <!-- ############## script for facebook page plugin ################################ -->
-    {% include fb-script.html %}
-    <!-- ############## material layout starts here #################################### -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+<body>
+  <div class="page-wrapper">
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+</body>
 
-      <!-- ################ header ############################################################### -->
-      {% include header.html %}
-
-      <!-- ########################## websites contents ################################################ -->
-      <div class="mdl-layout__content">
-
-        {{ content }}
-        
-        <!-- ################ footer ####################################################################### -->
-        {% include footer.html %}
-      </div>
-    </div>
-
-    <!--########### Newsfeeds ########################################################################## -->
-    {% include newsfeed.html %}
-    
-  </body>
 </html>
