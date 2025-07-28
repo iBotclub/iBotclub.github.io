@@ -1,20 +1,25 @@
 - name: Aryan Jain
-  # github: https://github.com/a-jacked-nerd
-  add:
   email: ch24b040@smail.iitm.ac.in
   image: aryan.jpg
-  linkedin: https://www.linkedin.com/in/jacked-nerd/
 
 - name: Chikoti Shiva Parthiv
-  add:
   email: ae24b032@smail.iitm.ac.in
   image: parthiv.jpg
-  instagram: https://www.instagram.com/chikoti_parthiv_0410/
 
-- name: Prakash Raj Janakiraman
+- name: Vivek
+  image: Vivek.jpg
+  email: CS24B060@smail.iitm.ac.in
+
+- name: Krish Yadav
+  image: Krish_Yadav.jpg
+  email: DA24043@smail.iitm.ac.in
+
+- name: Sriram Venkata Krishna
   image: Prakash.jpeg
-  email: CH23B100@smail.iitm.ac.in
-  mob: +91 99400 00000
-  instagram: https://www.linkedin.com/in/prakash-raj-janakiraman-4680162a8/
-  linkedin: https://www.linkedin.com/in/prakash-raj-janakiraman-4680162a8/
-  github: https://www.linkedin.com/in/prakash-raj-janakiraman-4680162a8/
+  email: EE24B067@smail.iitm.ac.in
+
+- name: Kodithyala Rishik
+  image: Prakash.jpeg
+  email: ED24B014@smail.iitm.ac.in
+
+
