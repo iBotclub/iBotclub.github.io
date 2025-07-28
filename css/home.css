@@ -110,7 +110,7 @@
 }
 
 body {
-	background: url('/assets/images/yourBackground.jpg') center/cover no-repeat, #191d22;
+	background: url('../assets/images/yourBackground.jpg') center/cover no-repeat, #191d22;
 	/* Replace with any color you like */ }
 
 html, body {
