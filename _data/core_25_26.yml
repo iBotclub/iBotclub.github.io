@@ -1,12 +1,12 @@
-- name: Prakash Raj Janakiraman
-  image: Prakash.jpeg
-  email: CH23B100@smail.iitm.ac.in
-  linkedin: https://www.linkedin.com/in/prakash-raj-janakiraman-4680162a8/
-
 - name: Arnav Sarda
   image: Arnav.jpg
   email: ME23B019@smail.iitm.ac.in
   linkedin: https://www.linkedin.com/in/arnav-sarda?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+- name: Prakash Raj Janakiraman
+  image: Prashu.jpg
+  email: CH23B100@smail.iitm.ac.in
+  linkedin: https://www.linkedin.com/in/prakash-raj-janakiraman-4680162a8/
 
 - name: Aadarsh Ramachandran
   image: Aadarsh.jpg

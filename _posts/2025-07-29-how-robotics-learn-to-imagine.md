@@ -5,8 +5,8 @@ comments: true
 author: Aadarsh Ram + Krish Yadav
 excerpt_separator: <!--more-->
 ---
-It’s a rainy evening. You’re cycling home when a ball rolls across the road. Instinctively, you slow down. You haven’t seen the child yet, but you already know one is coming.  
-Congratulations — you’ve just simulated the future in your head. Now imagine a robot in your place. Would it have stopped in time?
+t’s late at night, and you’re walking through a quiet street. Suddenly, you hear the distant bark of a dog and spot a shadow darting behind a parked car. Instinctively, you pause, your mind racing through possibilities — is it a stray, a person, or just the wind?
+In that split second, your brain has imagined several futures, helping you decide your next move. But what if you were a robot? Would you have stopped, or walked straight ahead?
 <!--more-->
 
 # How Robotics Learn to Imagine  
@@ -50,6 +50,7 @@ Unlike traditional AI systems that operate on symbolic rules or massive internet
 If disembodied AI is a chess engine, Embodied AI is a self-learning robot arm trying to actually move a knight.
 Embodied AI is like teaching a toddler to walk by letting them walk. Disembodied AI is like
 sending them 10 PDFs about Newtonian mechanics
+
 ---
 
 ## 3. Embodied AI in the Real World
@@ -68,6 +69,8 @@ demonstrate remarkable low-level control and physical agility. Atlas performs co
 - [Spot](https://bostondynamics.com/spot/): Autonomous navigation, door opening, inspection tasks
 
 However, embodied AI goes beyond locomotion. For instance, robots like **Mobile Manipulators in warehouse settings** combine visual perception, object recognition, and task-level planning to grasp, sort, and relocate items in changing conditions.
+
+---
 
 ## 4. From Doing to Dreaming: Why Robots Need a Mind’s Eye
 
@@ -119,7 +122,7 @@ World Models let robots:
 - Generalize to unfamiliar scenarios  
 - Make informed, grounded decisions
 
->*It’s like a robot building a mini Bollywood studio in its head and filming futures before acting.*
+>*It’s like a robot building a mini Bollywood studio in its head and filming futures before acting.”*
 Systems like **DreamerV2** showcase how robots can learn motor skills entirely in imagination.
 
 A trained world model lets an agent “look before it leaps.” Instead of blindly trying every possible move, the robot simulates the consequences of actions inside its internal model — choosing only the best ones to execute in reality.
@@ -147,7 +150,7 @@ Models often train in simulated environments like MuJoCo or Isaac Gym, which are
 Most current world models compress reality into a compact latent space, but this comes at a cost. Fine-grained interactions (like finger-object manipulation), 3D geometry, or visual occlusions can be difficult to represent accurately. This bottleneck limits the imagination's precision.
 
 
----
+
 
 ### Where We're Headed
 Despite these challenges, the field is rapidly evolving. Researchers are pushing the boundaries to make robot imagination more accurate, grounded, and useful. Here’s how:
@@ -164,7 +167,6 @@ To imagine in 3D, robots need to go beyond flat latent codes. By integrating too
 ##### 5. Hierarchical Planning with World Models :
  Instead of imagining every tiny joint movement, future systems will reason across **multiple levels of abstraction**. High-level plans like “make coffee” break down into mid-level goals (“grasp mug”, “press button”), and those break down into low-level actions. This mirrors how humans plan, and it makes imagination scalable.
 
----
 
 ### From Dreams to Decisions
 

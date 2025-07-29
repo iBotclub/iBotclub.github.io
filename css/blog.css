@@ -8,6 +8,10 @@ table {
   background-color: #232323;
   color: #eee;
 }
+strong, b {
+  color: #ff6666;
+  font-weight: bold;
+}
 thead { padding-bottom: 3px }
 tr { position: relative; height: 48px; transition: background-color 0.28s cubic-bezier(.4,0,.2,1);}
 tr:hover { background-color: #2d2d2d }
@@ -74,7 +78,7 @@ th, td {
 .post-section h1 {
   font-size: 2.8rem;
   font-weight: 900;
-  color: #ff1717;
+  color: #fff !important; /* Fix for heading color not changing */
   margin-top: 2.2em;
   margin-bottom: 0.7em;
   letter-spacing: 1px;
@@ -116,10 +120,7 @@ a {
 }
 
 /* Make **text** light red and bold */
-strong, b {
-  color: #ff6666;
-  font-weight: bold;
-}
+
 
 .post-card.mdl-card {
   width: 100%;
@@ -136,15 +137,18 @@ strong, b {
 }
 .post-card > .mdl-card__title {
   transition: max-height 0.35s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1);
-  color: #fff;
   background-color: #ff1717;
   font-weight: bold;
   border-radius: 14px 14px 0 0;
   padding: 0px 20px;
   font-size: 0.95rem;
-  max-height: 100px;
   font-family: 'Archivo Black', Arial, sans-serif;
   letter-spacing: 1px;
+}
+
+.post-card .mdl-card__title-text,
+.post-card h1.mdl-card__title-text {
+  color: #fff !important;
 }
 .post-card.expanded > .mdl-card__title {
   max-height: 0 !important;
@@ -352,7 +356,7 @@ pre, code {
   }
 
 
-  .hero-section {
+  /* .hero-section {
     height: 350px;
   }
   .post-card.mdl-card {
@@ -365,5 +369,5 @@ pre, code {
   .post-card > .mdl-card__actions {
     padding-left: 10px;
     padding-right: 10px;
-  }
+  } */
 }
