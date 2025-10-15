@@ -1,0 +1,508 @@
+---
+title: DC Recruitment 2025-26
+layout: default
+style: dc-recruitment
+permalink: /event/dc_recruitment/
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBot Club: Deputy Coordinator Tenure Plan</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* near-black */
+            color: #e5e5e5; /* white/light gray */
+        }
+        .nav-link {
+            transition: color 0.2s, border-bottom-color 0.2s;
+        }
+        .nav-link.active {
+            color: #ef4444; /* red-500 */
+            border-bottom-color: #ef4444;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .bar-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+        }
+        /* Chart tooltip styling for dark mode */
+        .chartjs-tooltip {
+            background: rgba(255, 255, 255, 0.9);
+            color: #0a0a0a;
+            border-radius: 4px;
+            padding: 8px;
+            pointer-events: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <header class="bg-gray-900 shadow-xl sticky top-0 z-50 border-b border-red-900">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-white">iBot Club Tenure Plan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Overview</a>
+                        <a href="#curriculum" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Curriculum</a>
+                        <a href="#schedule" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Schedule</a>
+                        <a href="#timeline" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Timeline</a>
+                        <a href="#evaluation" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Evaluation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        
+    <main>
+        <section id="overview" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-base font-semibold text-red-500 tracking-wide uppercase">iBot Club</h2>
+                <p class="mt-2 text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Deputy Coordinator Tenure Plan (2025-26)</p>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-400">
+                    This intensive program is designed to transform 36 selected individuals into versatile technical leaders across Electronics, Software, and Mechanical design. The plan integrates essential programming fundamentals with advanced robotics concepts, culminating in a final project phase.
+                </p>
+                <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                                        <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">36</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Deputy Coordinators</p>
+                    </div>
+                                        <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">6</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Groups of 6 DCs</p>
+                    </div>
+                                        <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">60</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Training Days</p>
+                    </div>
+                                        <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">1</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Workshop</p>
+                    </div>
+                                        <div class="lg:col-span-4 flex flex-col justify-center rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900 h-36">
+                        <p class="text-5xl font-extrabold text-red-500">3</p>
+                        <p class="mt-2 text-xl font-medium text-gray-200">Major Mini-Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section id="curriculum" class="py-16 sm:py-24 bg-gray-900 border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">The Three Core Verticals of Training</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                        The curriculum is rigorous, balancing foundational components with advanced tools like Google Media Pipe and Coppelia Sim for deep, real-world application.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-10 lg:grid-cols-3">
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="electronics-details">
+                        <div class="flex items-center space-x-4">
+                             <div class="text-3xl">⚡️</div>
+                            <h3 class="text-2xl font-bold text-white">Electronics</h3>
+                        </div>
+                        <p class="mt-4 text-gray-400 flex-grow">Focuses on control systems, hardware interfacing (Arduino/ESP32), and PID logic for precise robot movement.</p>
+                        <ul id="electronics-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Hardware:</strong> Arduino Uno & ESP32 Integration</li>
+                            <li><strong>Control:</strong> PID, Motor Control, Bluetooth Systems</li>
+                            <li><strong>Interfacing:</strong> Sensor Workshops (e.g., Ultrasonic) & Comm. Protocols</li>
+                            <li><strong>Simulation:</strong> Wokwi & Tinkercad Circuit Prototyping</li>
+                        </ul>
+                        <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+                    
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="software-details">
+                         <div class="flex items-center space-x-4">
+                             <div class="text-3xl">💻</div>
+                            <h3 class="text-2xl font-bold text-white">Software</h3>
+                        </div>
+                        <p class="mt-4 text-gray-400 flex-grow">A deep dive into Python (Pandas/NumPy/OpenCV), C++ algorithms (A*/Dijkstra), and AI models (Media Pipe).</p>
+                         <ul id="software-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Basic Python:</strong> Fundamentals, NumPy, Pandas, OpenCV, Media Pipe</li>
+                            <li><strong>Basic C++:</strong> Fundamentals</li>
+                            <li><strong>Advanced Python:</strong> Implementation of Tracking Modules using OpenCV and Media Pipe</li>
+                            <li><strong>Advanced C++:</strong> Basic Graph Theory, Maze Solving Algorithms</li>
+                            <li><strong>Linux Commands:</strong> Essential Linux Commands & OverTheWire Bandit Lvl 1-20</li>
+                        </ul>
+                         <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="mechanical-details">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl">⚙️</div>
+                            <h3 class="text-2xl font-bold text-white">Mechanical</h3>
+                        </div>
+                        <p class="mt-4 text-gray-400 flex-grow">Covers 3D design in Fusion 360, system integration using URDF, and model verification via advanced simulation.</p>
+                        <ul id="mechanical-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Fusion 360:</strong> Comprehensive Fusion 360 Training</li>
+                            <li><strong>URDF:</strong> Joint Configuration & URDF File Creation</li>
+                            <li><strong>Coppelia Sim:</strong> Coppelia Sim Environment Setup (Mini Conda)</li>
+                        </ul>
+                         <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="py-16 sm:py-24">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">15-Session Training Schedule (Dec 2025 - Jan 2026)</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                       This section details the 15 training sessions over the 62-day Training Phase (Phase I). Sessions occur every 4 days, followed by a mandatory 1-week assignment. Coordinators lead 2-3 sessions each.
+                    </p>
+                </div>
+
+                <div id="schedule-container" class="mt-12 space-y-4 max-w-4xl mx-auto">
+                                    </div>
+            </div>
+        </section>
+        
+        <section id="timeline" class="py-16 sm:py-24 bg-gray-900 border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Full Program Timeline (Nov 2025 - Mar 2026)</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                       The program is structured into four sequential phases, from mandatory setup to final project execution.
+                    </p>
+                </div>
+                <div class="mt-12 bg-gray-900 p-6 rounded-xl shadow-2xl border border-red-900/50">
+                    <div class="chart-container">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evaluation" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Evaluation & Accountability</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                        Performance is measured across four criteria, culminating in a critical restructuring checkpoint at the end of the Training Phase.
+                    </p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-2xl border border-red-900/50">
+                        <h3 class="text-2xl font-bold text-white text-center">Leaderboard Weighting</h3>
+                        <p class="text-center mt-2 text-gray-400">The final ranking is determined by a four-part score, emphasizing both commitment and technical proficiency.</p>
+                         <div class="bar-chart-container mt-8">
+                            <canvas id="leaderboardChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Team Restructuring Policy</h4>
+                            <p class="mt-2 text-gray-400">Following the Training Phase (Jan 31, 2026), a team restructuring will occur. Individuals who persistently miss tasks and assignments may be let go, affecting up to <strong class="text-red-500">33% of the team</strong>.</p>
+                        </div>
+                         <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Project Role Determination</h4>
+                            <p class="mt-2 text-gray-400">The Leaderboard ranking as of February 28, 2026 (end of Workshop Phase), will determine the weightage, roles, and responsibilities DCs receive during the subsequent Mini-Project Phase (March 2026).</p>
+                        </div>
+                         <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Session Structure</h4>
+                            <p class="mt-2 text-gray-400">Live sessions are conducted every 4 days. Each session is immediately followed by a mandatory task and assignment with a strict 1-week deadline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500">&copy; 2025 iBot Club. All rights reserved.</p>
+            <p class="text-gray-500 text-xs">Developed with Tailwind, Chart.js, and Jekyll.</p>
+        </div>
+    </footer>
+
+    <script>
+        const SCHEDULE_DATA = [
+            { cycle: 0, topic: "Phase 0: Software Setup", vertical: "Initialization", assigned: "Coord A" },
+            { cycle: 1, topic: "Software: Basic Python: Introduction to Python", vertical: "Software", assigned: "Coord A" },
+            { cycle: 2, topic: "Software: Basic Python: Pandas & NumPy Intro", vertical: "Software", assigned: "Coord A" },
+            { cycle: 3, topic: "Electronics: Tinkercad & Arduino Uno", vertical: "Electronics", assigned: "Coord B" },
+            { cycle: 4, topic: "Electronics: Wokwi & ESP32", vertical: "Electronics", assigned: "Coord B" },
+            { cycle: 5, topic: "Software: Basic Python: OpenCV Fundamentals", vertical: "Software", assigned: "Coord C" },
+            { cycle: 6, topic: "Mechanical: Fusion 360 Sketching", vertical: "Mechanical", assigned: "Coord D" },
+            { cycle: 7, topic: "Mechanical: URDF Files & System Assembly", vertical: "Mechanical", assigned: "Coord D" },
+            { cycle: 8, topic: "Software: Basic Python - Google Media Pipe Models", vertical: "Software", assigned: "Coord C" },
+            { cycle: 9, topic: "Software: Intermediate Python - Tracking Modules", vertical: "Software", assigned: "Coord C" },
+            { cycle: 10, topic: "Mechanical: Coppelia Sim Intro & Mini Conda Setup", vertical: "Mechanical", assigned: "Coord A" },
+            { cycle: 11, topic: "Software: Basic C++: Introduction", vertical: "Software", assigned: "Coord E" },
+            { cycle: 12, topic: "Software: Basic Graph Theory: Graph Traversal Algorithms", vertical: "Software", assigned: "Coord E" },
+            { cycle: 13, topic: "Software: Linux Commands & OverTheWire Bandit Lvl 1-10", vertical: "Software", assigned: "Coord D" },
+            { cycle: 14, topic: "Software: Intermediate C++: Dijkstra's Algorithm", vertical: "Software", assigned: "Coord D" },
+            { cycle: 15, topic: "Software: Intermediate C++: A* Pathfinding", vertical: "Software", assigned: "Coord D" },
+        ];
+
+        function populateSchedule() {
+            const container = document.getElementById('schedule-container');
+            let sessionDay = 0;
+            const dayIncrement = 4;
+            
+            SCHEDULE_DATA.forEach((item, index) => {
+                const sessionNumber = index + 1;
+                
+                // Calculate day: Phase 0 is 5 days, then sessions start every 4 days
+                if (item.vertical === 'Initialization') {
+                    sessionDay = 0; // Start on Day 1 (Nov 26) of the 5-day window
+                } else if (sessionNumber === 1) {
+                    sessionDay = 1; // Start of Phase I (Dec 1)
+                } else {
+                    sessionDay += dayIncrement;
+                }
+                
+                const sessionBlock = document.createElement('div');
+                sessionBlock.classList.add('bg-gray-800', 'rounded-xl', 'shadow-xl', 'border', 'border-red-900/50', 'overflow-hidden');
+                
+                const header = document.createElement('div');
+                header.classList.add('flex', 'justify-between', 'items-center', 'p-4', 'cursor-pointer', 'hover:bg-gray-700', 'transition', 'duration-200');
+                header.innerHTML = `
+                    <div class="flex items-center space-x-4">
+                        <span class="text-red-500 font-bold text-lg w-10 text-center">S${sessionNumber}</span>
+                        <div>
+                            <p class="text-sm text-gray-400 font-medium">${item.vertical === 'Initialization' ? 'Nov 26 - 30' : `Approx. Day ${sessionDay-3}`}</p>
+                            <h4 class="text-white font-semibold">${item.topic}</h4>
+                        </div>
+                    </div>
+                    <span class="text-red-500 text-lg transform transition duration-300">+</span>
+                `;
+                header.setAttribute('data-target', `details-${sessionNumber}`);
+
+                const details = document.createElement('div');
+                details.id = `details-${sessionNumber}`;
+                details.classList.add('p-4', 'bg-gray-700', 'hidden', 'border-t', 'border-red-900');
+                details.innerHTML = `
+                    <p class="text-sm"><strong class="text-red-400">Vertical:</strong> ${item.vertical}</p>
+                    <p class="text-sm"><strong class="text-red-400">Coordinator:</strong> ${item.assigned}</p>
+                    <p class="text-sm mt-2"><strong class="text-red-400">Assignment:</strong> Mandatory task due 7 days after the session.</p>
+                `;
+
+                sessionBlock.appendChild(header);
+                sessionBlock.appendChild(details);
+                container.appendChild(sessionBlock);
+
+                header.addEventListener('click', () => {
+                    details.classList.toggle('hidden');
+                    const arrow = header.querySelector('span:last-child');
+                    arrow.textContent = details.classList.contains('hidden') ? '+' : '−';
+                });
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            populateSchedule();
+            
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            const curriculumCards = document.querySelectorAll('.curriculum-card');
+            curriculumCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-target');
+                    const details = document.getElementById(targetId);
+                    const arrowText = card.querySelector('.font-semibold');
+                    details.classList.toggle('hidden');
+                    if (details.classList.contains('hidden')) {
+                         arrowText.textContent = 'Show Details →';
+                    } else {
+                         arrowText.textContent = 'Hide Details ↑';
+                    }
+                });
+            });
+
+            // Timeline Chart (Gantt Style)
+            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+            new Chart(timelineCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['0. Initialisation', 'I. Training Phase', 'II. Workshop Phase', 'III. Mini-Project Phase'],
+                    datasets: [{
+                        label: 'Tenure Phases',
+                        data: [
+                            {x: ['2025-11-26', '2025-11-30'], y: '0. Initialisation'},
+                            {x: ['2025-12-01', '2026-01-31'], y: 'I. Training Phase'},
+                            {x: ['2026-02-01', '2026-02-28'], y: 'II. Workshop Phase'},
+                            {x: ['2026-03-01', '2026-03-31'], y: 'III. Mini-Project Phase'},
+                        ],
+                        backgroundColor: ['#fecaca', '#dc2626', '#b91c1c', '#7f1d1d'], 
+                        borderColor: ['#f87171', '#ef4444', '#991b1b', '#450a0a'],
+                        borderWidth: 1,
+                        borderSkipped: false,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'month'
+                            },
+                            min: '2025-11-15',
+                            max: '2026-04-15',
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#e5e5e5'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#e5e5e5'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#0a0a0a',
+                            bodyColor: '#0a0a0a',
+                            callbacks: {
+                                title: function(context) {
+                                    const point = context[0].raw.y;
+                                    let objective = '';
+                                    if(point === '0. Initialisation') objective = 'Objective: Essential software installation and account setup. MANDATORY.';
+                                    if(point === 'I. Training Phase') objective = 'Objective: Complete 15 rigorous live sessions and assignments. ENDPOINT for Team Restructuring.';
+                                    if(point === 'II. Workshop Phase') objective = 'Objective: Hands-on implementation of a complete robotic platform (Robotic Kits). ENDPOINT for Leaderboard Score.';
+                                    if(point === 'III. Mini-Project Phase') objective = 'Objective: Execute 3 Major Mini-Projects with roles determined by Leaderboard ranking.';
+                                    return objective;
+                                },
+                                label: function() {
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Leaderboard Weighting Chart (Bar Chart)
+            const leaderboardCtx = document.getElementById('leaderboardChart').getContext('2d');
+            new Chart(leaderboardCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        ['Live Session', 'Attendance (20%)'],
+                        ['Training Phase', 'Assignments (30%)'],
+                        ['Workshop Phase', 'Participation (30%)'],
+                        ['Workshop Phase', 'Proficiency (20%)']
+                    ],
+                    datasets: [{
+                        label: 'Weightage (%)',
+                        data: [20, 30, 30, 20],
+                        backgroundColor: ['#f87171', '#ef4444', '#dc2626', '#b91c1c'],
+                        borderColor: '#e5e5e5',
+                        borderWidth: 0,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 40,
+                            ticks: {
+                                color: '#e5e5e5',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#e5e5e5'
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#0a0a0a',
+                            bodyColor: '#0a0a0a',
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.raw}% of Final Score`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
