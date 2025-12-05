@@ -1,40 +1,376 @@
 ---
 title: Events
 layout: default
-style: events
 permalink: /events/
 ---
 
-<link rel="stylesheet" href="{{ '/css/' | append: page.style | append: '.css' | relative_url }}">
-
 <div id="events" class="event-section mdl-typography--text-center">
-  <div class="event-grid mdl-grid">
+  <div class="page-header">
+    <h1 class="page-title">Events</h1>
+    <p class="page-subtitle">MARK YOUR CALENDAR</p>
+  </div>
 
-    <div class="event-title mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
-      <br>EVENTS
-      <p style="font-size: 35%; color: #EEEEEE; margin: 0;">MARK YOUR CALENDAR</p>
-      <i class="material-icons">date_range</i>
-    </div>
-
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
-      <div class="event-cards mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand" style="background-color: #ef4444; color: white; display: flex; align-items: center; justify-content: center; height: 180px;">
-          <h1 class="mdl-card__title-text" style="color: #f3f3f3; text-align: center; padding: 10px;">DC RECRUITMENT 2025-26</h1>
+  <div class="timeline-container">
+    {% for event in site.data.events %}
+    <div class="timeline-item {% cycle 'left', 'right' %}">
+      <div class="timeline-content">
+                {% if event.image %}
+                <div class="timeline-image">
+                    <img src="{{ event.image | relative_url }}" alt="{{ event.title }}" class="timeline-image-img">
+                </div>
+                {% endif %}
+        <span class="timeline-date">{{ event.date }}</span>
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.description }}</p>
+          {% if event.show_button != false %}
+        <div class="card-action">
+            <a href="{{ event.link | relative_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" {% if event.disabled %}disabled{% endif %}>
+              {{ event.button_text }}
+            </a>
         </div>
-        <div class="mdl-card__supporting-text">
-          Deputy Coordinator Selection & Training Tenure Plan.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a href="{{ '/event/dc_recruitment/' | relative_url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            View Full Plan
-          </a>
-        </div>
+          {% endif %}
       </div>
     </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
-        </div>
-    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
-        </div>
+    {% endfor %}
+  </div>
 
+  <div class="coming-soon-container">
+    <h1>More Events Coming Soon!</h1>
+    <p>Stay tuned for exciting workshops, competitions, and tech talks.</p>
   </div>
 </div>
+
+<style>
+    :root {
+        --ibot-red: #ff1717;
+        --ibot-bg: #18191c;
+        --ibot-white: #fff;
+    }
+
+    .profile {
+        background: var(--ibot-bg) !important;
+        color: var(--ibot-white) !important;
+    }
+
+    #events {
+        background: var(--ibot-bg);
+        padding: 40px 20px;
+        min-height: 70vh;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .page-title {
+        font-family: 'Archivo Black', 'Orbitron', Arial, sans-serif;
+        font-size: 3.5rem;
+        color: var(--ibot-white);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 0;
+        text-shadow: 0 0 15px rgba(255, 23, 23, 0.5);
+    }
+
+    .page-subtitle {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.1rem;
+        color: #ccc;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+
+    /* Timeline Container */
+    .timeline-container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .timeline-item {
+        /* Removed padding here, will be handled by image/content margin */
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        display: flex; /* Make timeline-item a flex container */
+        align-items: center; /* Vertically align image and content */
+        min-height: 120px; /* Ensure enough space for the dot/line */
+    }
+
+    .timeline-item:nth-child(odd) {
+        /* These nth-child rules are now overridden by .timeline-item.left/.right */
+        /* left: 0; */
+        /* padding-right: 70px; */
+    }
+
+    .timeline-item:nth-child(even) {
+        /* These nth-child rules are now overridden by .timeline-item.left/.right */
+        /* left: 50%; */
+        /* padding-left: 70px; */
+    }
+
+    /* Explicit positioning for timeline items */
+    .timeline-item.left {
+        left: 0;
+        padding-right: 70px; /* Space for dot and arrow */
+    }
+
+    .timeline-item.right {
+        left: 50%;
+        padding-left: 70px; /* Space for dot and arrow */
+    }
+
+    .timeline-content {
+        background: rgba(37, 37, 37, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px; /* This radius is matched by the image */
+        padding: 20px; /* Slightly reduced padding to make space for image */
+        position: relative;
+        flex-grow: 1; /* Allow content to take remaining space */
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .timeline-content:hover {
+        transform: translateY(-5px);
+        border-color: var(--ibot-red);
+        box-shadow: 0 0 25px rgba(255, 23, 23, 0.2);
+    }
+
+    /* Image container: holds a responsive <img> so the entire image can be visible */
+    .timeline-image {
+        margin: -20px -20px 20px -20px; /* break out to full-width look */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
+        background-color: #111; /* fallback */
+        display: block;
+    }
+
+    .timeline-image-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* show the whole image without cropping */
+    }
+    
+    /* Timeline dot */
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--ibot-bg);
+        border: 4px solid var(--ibot-red);
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for its own height */
+        z-index: 1;
+    }
+
+    /* Position dot based on .left/.right classes */
+    .timeline-item.left::after {
+        right: -10px;
+    }
+
+    .timeline-item.right::after {
+        left: -10px;
+    }
+
+    /* Arrow */
+    .timeline-content::before {
+        content: '';
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: solid transparent;
+        border-width: 12px; /* Slightly smaller arrow */
+    }
+
+    /* Position arrow based on .left/.right classes */
+    .timeline-item.left .timeline-content::before {
+        right: -30px;
+        border-left-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .timeline-item.right .timeline-content::before {
+        left: -30px;
+        border-right-color: rgba(255, 255, 255, 0.1);
+    }
+    .timeline-date {
+        display: inline-block;
+        padding: 4px 12px;
+        background-color: var(--ibot-red);
+        color: var(--ibot-white);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    .timeline-content h3 {
+        font-family: 'Archivo Black', Arial, sans-serif;
+        font-size: 1.5rem;
+        color: var(--ibot-white);
+        margin: 0 0 12px 0;
+        letter-spacing: 1px;
+    }
+
+    .timeline-content p {
+        font-family: 'DM Sans', sans-serif;
+        color: #ccc;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .timeline-content p a {
+        color: var(--ibot-red);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .timeline-content p a:hover {
+        text-decoration: underline;
+    }
+
+    .timeline-content .card-action {
+        text-align: center;
+    }
+
+    .timeline-content .mdl-button {
+        background: var(--ibot-red);
+        color: white;
+        font-family: 'Archivo Black', Arial, sans-serif;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+    }
+
+    .timeline-content .mdl-button:hover {
+        background: #cc0f0f;
+        transform: scale(1.02);
+    }
+
+    .timeline-content .mdl-button[disabled] {
+        background-color: #555 !important;
+        color: #999 !important;
+        cursor: not-allowed;
+    }
+
+    .coming-soon-container {
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .coming-soon-container h1 {
+        font-family: 'Archivo Black', 'Orbitron', Arial, sans-serif;
+        font-size: 2.5rem;
+        color: var(--ibot-white);
+        text-shadow: 0 0 15px rgba(255, 23, 23, 0.4);
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .coming-soon-container p {
+        color: #ccc;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    /* Responsive Timeline */
+    @media screen and (max-width: 900px) {
+        .timeline-container::before {
+            left: 20px; /* Keep central line on left for mobile */
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding: 10px 15px 10px 60px; /* Adjust padding for mobile */
+            justify-content: flex-start;
+        }
+
+        /* Force all items to left on mobile */
+        .timeline-item.left,
+        .timeline-item.right {
+            left: 0; /* All items start from left */
+            padding-right: 15px; /* Reset right padding */
+            padding-left: 60px; /* Consistent left padding */
+        }
+
+        /* Position dot on left for all items on mobile */
+        .timeline-item::after,
+        .timeline-item.left::after,
+        .timeline-item.right::after {
+            left: 10px; /* Dot always on the left */
+            right: auto; /* Remove right positioning */
+        }
+
+        /* Position arrow on left for all items on mobile */
+        .timeline-content::before,
+        .timeline-item.left .timeline-content::before,
+        .timeline-item.right .timeline-content::before {
+            left: -30px; /* Arrow always points from left */
+            right: auto; /* Remove right positioning */
+            border-right-color: rgba(255, 255, 255, 0.1); /* Ensure correct arrow direction */
+            border-left-color: transparent; /* Ensure correct arrow direction */
+        }
+
+        .timeline-image { }
+
+        .page-title {
+            font-size: 2.5rem;
+        }
+
+        .coming-soon-container h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .page-title {
+            font-size: 2rem;
+        }
+        .page-subtitle {
+            font-size: 0.9rem;
+        }
+        .timeline-item,
+        .timeline-item.left,
+        .timeline-item.right {
+            padding-left: 50px; /* Reduce side padding */
+        }
+        .timeline-container::before {
+            left: 15px; /* Move line closer to edge */
+        }
+        .timeline-item::after,
+        .timeline-item.left::after,
+        .timeline-item.right::after {
+            left: 5px; /* Move dot to align with new line */
+        }
+        .timeline-image { }
+
+        .coming-soon-container h1 {
+            font-size: 1.6rem;
+        }
+    }
+</style>

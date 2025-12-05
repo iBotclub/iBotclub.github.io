@@ -1,0 +1,29 @@
+{
+  "participants": [
+    {
+      "teamName": "test",
+      "teamId": "001",
+      "score": 10000,
+      "hfRepo": "https://huggingface.co/"
+    },
+    {
+      "teamName": "test2",
+      "teamId": "002",
+      "score": 5000,
+      "hfRepo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_6e6DeMwpB_MHX_Ok8j5ONxAExdO91dHow&s"
+    },
+    {
+      "teamName": "test3",
+      "teamId": "003",
+      "score": 8008,
+      "hfRepo": "https://scoreleader.com/leaderboard-maker/"
+    },
+    {
+      "teamName": "test4",
+      "teamId": "004",
+      "score": 800,
+      "hfRepo": "https://leaderboarded.com/"
+    }
+  ],
+  "lastUpdated": "2025-11-27T08:16:24.392Z"
+}
