@@ -5,7 +5,6 @@
   show_button: false
   image: "/assets/images/event/photo.jpg" 
   
-
 - title: "Robo Race"
   date: "SEPT 10, 2025"
   description: "Robo Race – TechSoc challenged freshers to build their own line-follower robots from scratch. Teams engineered sensors and logic to track and follow the course accurately. The race tested speed, stability, and real-time control. The fastest robot to complete the track took the win. A thrilling competition showcasing creativity and engineering skills."
@@ -18,7 +17,6 @@
   link: "/event/dc_recruitment/"
   button_text: "View Full Plan"
   image: null # No image for this one
-
 
 - title: "Reward Rush: RL Challenge"
   date: "DEC 01, 2025"
