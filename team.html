@@ -1,211 +1,111 @@
-------
-
-title: Teamtitle: Team
-
-layout: defaultlayout: default
-
-style: teamstyle: team
-
-permalink: /team/permalink: /team/
-
-------
+---
+title: Team
+layout: default
+style: team
+permalink: /team/
+---
 
 <div class="profile">
-
-<div class="team-container">	<h1 class="section-title-01">Core Team</h1>
-
-  <!-- Core Team Section -->	<!-- <h2 class="section-title-02">Heads</h2> -->
-
-  <div class="profile">	<div class="card-wrapper">
-
-    <h1 class="section-title-01">Core Team</h1>		{% for seci in site.data.core_25_26 %}
-
-    <div class="card-wrapper">		<div class="card">
-
-      {% for seci in site.data.core_25_26 %}		  <div class="card-image">
-
-      <div class="card">			<img src="{{ site.baseurl }}/assets/images/core_25_26/{{ seci.image }}" alt="profile-card">
-
-        <div class="card-image">			<div class="details">
-
-          <img src="{{ site.baseurl }}/assets/images/core_25_26/{{ seci.image }}" alt="profile-card">			  <h2> {{ seci.name }}</h2>
-
-          <div class="details">			  <div class="job-title">{{ seci.mob }}</div>
-
-            <h2>{{ seci.name }}</h2>			  <div class="job-contact">{{ seci.email }}</div>
-
-            <div class="job-title">Core Team Lead</div>			  <ul class="social-icons">
-
-            <div class="job-contact">{{ seci.email }}</div>				{% if seci.instagram %}
-
-            <ul class="social-icons">				<li><a target="_blank" href="{{ seci.instagram }}"><i class="fab fa-instagram"></i></a></li>
-
-              {% if seci.linkedin %}				{% endif %}
-
-              <li><a target="_blank" href="{{ seci.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>				{% if seci.linkedin %}
-
-              {% endif %}				<li><a target="_blank" href="{{seci.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
-
-              {% if seci.instagram %}				{% endif %}
-
-              <li><a target="_blank" href="{{ seci.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>				{% if seci.github %}
-
-              {% endif %}				<li><a target="_blank" href="{{ seci.github }}"><i class="fab fa-github"></i></a></li>
-
-              {% if seci.github %}				{% endif %}
-
-              <li><a target="_blank" href="{{ seci.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>			  </ul>
-
-              {% endif %}			</div>
-
-            </ul>		  </div>
-
-          </div>		</div>
-
-        </div>		{% endfor %}
-
-      </div>	</div>
-
-      {% endfor %}</div>
-
+  <h1 class="section-title-01">Core Team</h1>
+  <div class="card-wrapper">
+    {% for seci in site.data.core_25_26 %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ site.baseurl }}/assets/images/core_25_26/{{ seci.image }}" alt="profile-card">
+        <div class="details">
+          <h2>{{ seci.name }}</h2>
+          <div class="job-title">Core Team Lead</div>
+          <div class="job-contact">{{ seci.email }}</div>
+          <ul class="social-icons">
+            {% if seci.linkedin %}
+            <li><a target="_blank" href="{{ seci.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            {% endif %}
+            {% if seci.instagram %}
+            <li><a target="_blank" href="{{ seci.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            {% endif %}
+            {% if seci.github %}
+            <li><a target="_blank" href="{{ seci.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
     </div>
-
-  </div><a name="top"></a>
+    {% endfor %}
+  </div>
+</div>
 
 <div class="profile">
+  <h1 class="section-title-01">Coordinators</h1>
+  <div class="card-wrapper">
+    {% for cordi in site.data.cordis_25_26 %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ site.baseurl }}/assets/images/cordi_25_26/{{ cordi.image }}" alt="profile-card">
+        <div class="details">
+          <h2>{{ cordi.name }}</h2>
+          <div class="job-title">Coordinator</div>
+          <div class="job-contact">{{ cordi.email }}</div>
+          <ul class="social-icons">
+            {% if cordi.linkedin %}
+            <li><a target="_blank" href="{{ cordi.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            {% endif %}
+            {% if cordi.instagram %}
+            <li><a target="_blank" href="{{ cordi.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+            {% endif %}
+            {% if cordi.github %}
+            <li><a target="_blank" href="{{ cordi.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
-  <!-- Coordinators Section -->	<h1 class="section-title-01">Coordinators</h1>
-
-  <div class="profile">	<!-- <h2 class="section-title-02">Coordinators</h2> -->
-
-    <h1 class="section-title-01">Coordinators</h1>	<div class="card-wrapper">
-
-    <div class="card-wrapper">		{% for cordi in site.data.cordis_25_26 %}
-
-      {% for cordi in site.data.cordis_25_26 %}		<div class="card">
-
-      <div class="card">		  <div class="card-image">
-
-        <div class="card-image">			<img src="{{ site.baseurl }}/assets/images/cordi_25_26/{{ cordi.image }}" alt="profile-card">
-
-          <img src="{{ site.baseurl }}/assets/images/cordi_25_26/{{ cordi.image }}" alt="profile-card">			<div class="details">
-
-          <div class="details">			  <h2>{{ cordi.name }}</h2>
-
-            <h2>{{ cordi.name }}</h2>			  <div class="job-title">{{ cordi.mob }}</div>
-
-            <div class="job-title">Coordinator</div>			  <div class="job-contact">{{ cordi.email }}</div>
-
-            <div class="job-contact">{{ cordi.email }}</div>			  <ul class="social-icons">
-
-            <ul class="social-icons">				{% if cordi.instagram %}
-
-              {% if cordi.linkedin %}				<li><a target="_blank" href="{{ cordi.instagram }}"><i class="fab fa-instagram"></i></a></li>
-
-              <li><a target="_blank" href="{{ cordi.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>				{% endif %}
-
-              {% endif %}				{% if cordi.linkedin %}
-
-              {% if cordi.instagram %}				<li><a target="_blank" href="{{cordi.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
-
-              <li><a target="_blank" href="{{ cordi.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>				{% endif %}
-
-              {% endif %}				{% if cordi.github %}
-
-              {% if cordi.github %}				<li><a target="_blank" href="{{ cordi.github }}"><i class="fab fa-github"></i></a></li>
-
-              <li><a target="_blank" href="{{ cordi.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>				{% endif %}
-
-              {% endif %}			  </ul>
-
-            </ul>			</div>
-
-          </div>		  </div>
-
-        </div>		</div>
-
-      </div>		{% endfor %}
-
-      {% endfor %}	</div>
-
-    </div></div>
-
-  </div><div class="profile">
-
-	<h1 class="section-title-01">Previous Heads</h1>
-
-  <!-- Deputy Coordinators Section with Carousel -->	<div class="card-wrapper">
-
-  <div class="profile">	  {% for prev in site.data.prev_cores %}
-
-    <h1 class="section-title-01">Deputy Coordinators</h1>	  <div class="card">
-
-    <div class="deputy-coords-container">		<div class="card-image">
-
-      <div class="deputy-coords-info">		  <img src="{{ site.baseurl }}/assets/images/prev_cores/{{ prev.image }}" alt="profile-card">
-
-        <p>Meet our 45 dedicated Deputy Coordinators who help drive our initiatives forward!</p>		  <div class="details">
-
-        <div class="carousel-controls">			<h2>{{ prev.name }}</h2>
-
-          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">			<div class="job-title">{{ prev.mob }}</div>
-
-            <i class="fas fa-chevron-left"></i>			<div class="job-contact">{{ prev.email }}</div>
-
-          </button>			<ul class="social-icons">
-
-          <div class="carousel-indicator">			  {% if prev.instagram %}
-
-            <span id="currentPage">1</span> / <span id="totalPages">9</span>			  <li><a target="_blank" href="{{ prev.instagram }}"><i class="fab fa-instagram"></i></a></li>
-
-          </div>			  {% endif %}
-
-          <button class="carousel-btn next" id="nextBtn" aria-label="Next">			  {% if prev.linkedin %}
-
-            <i class="fas fa-chevron-right"></i>			  <li><a target="_blank" href="{{ prev.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
-
-          </button>			  {% endif %}
-
-        </div>			  {% if prev.github %}
-
-      </div>			  <li><a target="_blank" href="{{ prev.github }}"><i class="fab fa-github"></i></a></li>
-
-      <div class="carousel-wrapper">			  {% endif %}
-
-        <div class="card-carousel" id="carouselContainer">			</ul>
-
-          {% for deputy in site.data.deputy_coords_25_26 %}		  </div>
-
-          <div class="card">		</div>
-
-            <div class="card-image">	  </div>
-
-              <img src="{{ site.baseurl }}/assets/images/deputy_coords_25_26/{{ deputy.image }}" alt="profile-card" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">	  {% endfor %}
-
-              <div class="details">	</div>
-
-                <h2>{{ deputy.name }}</h2>  </div>
-
-                <div class="job-title">Deputy Coordinator</div>
-
-                <div class="job-contact">{{ deputy.email }}</div>
-
-                <ul class="social-icons">
-                  {% if deputy.linkedin %}
-                  <li><a target="_blank" href="{{ deputy.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                  {% endif %}
-                  {% if deputy.instagram %}
-                  <li><a target="_blank" href="{{ deputy.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                  {% endif %}
-                  {% if deputy.github %}
-                  <li><a target="_blank" href="{{ deputy.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>
-                  {% endif %}
-                </ul>
-              </div>
+<!-- Deputy Coordinators Section with Carousel -->
+<div class="profile">
+  <h1 class="section-title-01">Deputy Coordinators</h1>
+  <div class="deputy-coords-container">
+    <div class="deputy-coords-info">
+      <p>Meet our 45 dedicated Deputy Coordinators who help drive our initiatives forward!</p>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="carousel-indicator">
+          <span id="currentPage">1</span> / <span id="totalPages">9</span>
+        </div>
+        <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="carousel-wrapper">
+      <div class="card-carousel" id="carouselContainer">
+        {% for deputy in site.data.deputy_coords_25_26 %}
+        <div class="card">
+          <div class="card-image">
+            <img src="{{ site.baseurl }}/assets/images/deputy_coords_25_26/{{ deputy.image }}" alt="profile-card" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+            <div class="details">
+              <h2>{{ deputy.name }}</h2>
+              <div class="job-title">Deputy Coordinator</div>
+              <div class="job-contact">{{ deputy.email }}</div>
+              <ul class="social-icons">
+                {% if deputy.linkedin %}
+                <li><a target="_blank" href="{{ deputy.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                {% endif %}
+                {% if deputy.instagram %}
+                <li><a target="_blank" href="{{ deputy.instagram }}" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                {% endif %}
+                {% if deputy.github %}
+                <li><a target="_blank" href="{{ deputy.github }}" title="GitHub"><i class="fab fa-github"></i></a></li>
+                {% endif %}
+              </ul>
             </div>
           </div>
-          {% endfor %}
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>

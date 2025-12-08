@@ -147,11 +147,36 @@
 }
 
 .panel p {
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1rem;
   margin: 0;
   font-size: 1.0625rem;
   line-height: 1.8;
   color: var(--text-secondary);
+}
+
+/* View Team Button */
+.view-team-btn {
+  display: block;
+  margin: 0 1.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 8, 68, 0.1);
+  border: 1px solid rgba(255, 8, 68, 0.3);
+  color: var(--primary-red);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-base);
+  width: calc(100% - 3rem);
+  text-align: center;
+}
+
+.view-team-btn:hover {
+  background: var(--primary-red);
+  color: white;
+  border-color: var(--primary-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 8, 68, 0.3);
 }
 
 /* Responsive Design */
@@ -188,7 +213,7 @@
   }
 
   .panel p {
-    padding: 1.5rem 1.25rem;
+    padding: 1.5rem 1.25rem 1rem;
     font-size: 1rem;
   }
 
@@ -267,6 +292,7 @@
   max-height: 90vh;
   overflow-y: auto;
   animation: slideUp 0.4s ease-out;
+  position: relative;
 }
 
 @keyframes slideUp {
@@ -282,8 +308,8 @@
 
 .project-team-modal .modal-close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
   width: 40px;
   height: 40px;
   border: none;
@@ -296,6 +322,8 @@
   align-items: center;
   justify-content: center;
   transition: all var(--transition-base);
+  line-height: 1;
+  padding: 0;
 }
 
 .project-team-modal .modal-close:hover {
@@ -308,10 +336,15 @@
   margin-bottom: 2rem;
   text-align: center;
   color: var(--text-primary);
+  padding-right: 40px; /* Space for close button */
 }
 
 .team-section {
   margin-bottom: 3rem;
+}
+
+.team-section:last-child {
+  margin-bottom: 0;
 }
 
 .team-section h3 {
@@ -348,9 +381,10 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   border: 2px solid rgba(255, 8, 68, 0.3);
   transition: all var(--transition-base);
+  display: block;
 }
 
 .team-card:hover img {
@@ -390,28 +424,6 @@
   transform: translateY(-2px);
 }
 
-/* View Team Button in Project Card */
-.view-team-btn {
-  display: block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: rgba(255, 8, 68, 0.1);
-  border: 1px solid rgba(255, 8, 68, 0.3);
-  color: var(--primary-red);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  font-weight: 600;
-  transition: all var(--transition-base);
-  width: 100%;
-}
-
-.view-team-btn:hover {
-  background: var(--primary-red);
-  color: white;
-  border-color: var(--primary-red);
-  transform: translateY(-2px);
-}
-
 /* Responsive Modal */
 @media (max-width: 768px) {
   .project-team-modal .modal-content {
@@ -447,6 +459,10 @@
 }
 
 @media (max-width: 480px) {
+  .project-team-modal {
+    padding: 1rem;
+  }
+
   .project-team-modal .modal-content {
     padding: 1.5rem;
     border-radius: var(--radius-md);
@@ -455,15 +471,20 @@
   .project-team-modal .modal-close {
     top: 1rem;
     right: 1rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
   }
 
   .project-team-modal h2 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
+    padding-right: 36px;
   }
 
   .team-section h3 {
     font-size: 1.125rem;
+    margin-bottom: 1rem;
   }
 
   .team-grid {
@@ -473,4 +494,23 @@
   .team-card {
     padding: 1rem;
   }
+}
+
+/* Scrollbar styling for modal */
+.project-team-modal .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-team-modal .modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.project-team-modal .modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 8, 68, 0.5);
+  border-radius: 4px;
+}
+
+.project-team-modal .modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-red);
 }

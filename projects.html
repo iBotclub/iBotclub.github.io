@@ -1,449 +1,181 @@
-------
+---
+title: Projects
+layout: default
+style: projects
+permalink: /projects/
+---
 
-title: Projectstitle: Projects
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">
+</head>
 
-layout: defaultlayout: default
-
-style: projectsstyle: projects
-
-permalink: /projects/permalink: /projects/
-
-------
-
-
-
-<head><head>
-
-  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">
-
-</head></head>
-
-
-
-<h1 class="current-projects-heading">Current Projects</h1><h1 class="current-projects-heading">Current Projects</h1>
-
-
+<h1 class="current-projects-heading">Current Projects</h1>
 
 <div class="project-grid">
-
-  <div class="project-card" data-project="grasp"><div class="project-grid">
-
-    <img src="{{ "/assets/images/grasp.jpg" | relative_url }}" alt="GRASP" class="project-img">  <div class="project-card">
-
-    <button class="project-title">GRASP</button>    <img src="{{ "/assets/images/grasp.jpg" | relative_url }}" alt="GRASP" class="project-img">
-
-    <div class="panel">    <button class="project-title">GRASP</button>
-
-      <p>In an age where intelligent robots are becoming increasingly relevant, Project GRASP aims to explore and    <div class="panel">
-
-        experiment with robotic foundation models for visuomotor policies in general-purpose robotic manipulation. The      <p>In an age where intelligent robots are becoming increasingly relevant, Project GRASP aims to explore and
-
-        team is building simulated and real-world setups for single-arm pick-and-place tasks, using cutting-edge AI to        experiment with robotic foundation models for visuomotor policies in general-purpose robotic manipulation. The
-
-        develop end-to-end learning workflows. This not only allows for scalable, adaptable robotic control but also        team is building simulated and real-world setups for single-arm pick-and-place tasks, using cutting-edge AI to
-
-        offers hands-on exposure to frontier tech, making it a career-boosting learning ground in AI-driven robotics.        develop end-to-end learning workflows. This not only allows for scalable, adaptable robotic control but also
-
-      </p>        offers hands-on exposure to frontier tech, making it a career-boosting learning ground in AI-driven robotics.
-
-      <button class="view-team-btn" onclick="toggleProjectTeam('grasp')">View Team Members ▼</button>      </p>
-
-    </div>    </div>
-
-  </div>  </div>
-
-
-
-  <div class="project-card" data-project="pathblazer">  <div class="project-card">
-
-    <img src="{{ "/assets/images/pathblazer.jpg" | relative_url }}" alt="PathBlazer" class="project-img">    <img src="{{ "/assets/images/pathblazer.jpg" | relative_url }}" alt="PathBlazer" class="project-img">
-
-    <button class="project-title">PathBlazer</button>    <button class="project-title">PathBlazer</button>
-
-    <div class="panel">    <div class="panel">
-
-      <p>Indoor navigation without relying on maps is a core challenge in autonomous robotics, and Project PathBlazer      <p>Indoor navigation without relying on maps is a core challenge in autonomous robotics, and Project PathBlazer
-
-        directly addresses this. The team is developing a robust robotic navigation system that uses reinforcement        directly addresses this. The team is developing a robust robotic navigation system that uses reinforcement
-
-        learning and sensor fusion to adapt in real time to dynamic environments. The ultimate goal is to enable fast,        learning and sensor fusion to adapt in real time to dynamic environments. The ultimate goal is to enable fast,
-
-        human-aware, and safe movement in unknown spaces — pushing the limits of mapless navigation while sharpening        human-aware, and safe movement in unknown spaces — pushing the limits of mapless navigation while sharpening
-
-        members' skills in ROS2, CV, and system debugging.</p>        members' skills in ROS2, CV, and system debugging.</p>
-
-      <button class="view-team-btn" onclick="toggleProjectTeam('pathblazer')">View Team Members ▼</button>    </div>
-
-    </div>  </div>
-
+  <div class="project-card" data-project="grasp">
+    <img src="{{ "/assets/images/grasp.jpg" | relative_url }}" alt="GRASP" class="project-img">
+    <button class="project-title">GRASP</button>
+    <div class="panel">
+      <p>In an age where intelligent robots are becoming increasingly relevant, Project GRASP aims to explore and
+        experiment with robotic foundation models for visuomotor policies in general-purpose robotic manipulation. The
+        team is building simulated and real-world setups for single-arm pick-and-place tasks, using cutting-edge AI to
+        develop end-to-end learning workflows. This not only allows for scalable, adaptable robotic control but also
+        offers hands-on exposure to frontier tech, making it a career-boosting learning ground in AI-driven robotics.
+      </p>
+      <button class="view-team-btn" onclick="openTeamModal('grasp')">View Team</button>
+    </div>
   </div>
 
-  <div class="project-card">
-
-  <div class="project-card" data-project="handy">    <img src="{{ "/assets/images/handy.jpg" | relative_url }}" alt="HANDy" class="project-img">
-
-    <img src="{{ "/assets/images/handy.jpg" | relative_url }}" alt="HANDy" class="project-img">    <button class="project-title">HANDy</button>
-
-    <button class="project-title">HANDy</button>    <div class="panel">
-
-    <div class="panel">      <p>With a growing need for dexterous and adaptive robotic manipulators, Project HANDy is developing a
-
-      <p>With a growing need for dexterous and adaptive robotic manipulators, Project HANDy is developing a        precision-controlled robotic arm capable of performing complex tasks using advanced kinematics and automation.
-
-        precision-controlled robotic arm capable of performing complex tasks using advanced kinematics and automation.        The team is engineering an articulated system that integrates real-world flexibility and control, making it
-
-        The team is engineering an articulated system that integrates real-world flexibility and control, making it        suitable for a wide range of industrial and assistive tasks. Through this, members gain deep insights into core
-
-        suitable for a wide range of industrial and assistive tasks. Through this, members gain deep insights into core        robotics concepts, collaborative systems design, and real-time motion control.</p>
-
-        robotics concepts, collaborative systems design, and real-time motion control.</p>    </div>
-
-      <button class="view-team-btn" onclick="toggleProjectTeam('handy')">View Team Members ▼</button>  </div>
-
+  <div class="project-card" data-project="pathblazer">
+    <img src="{{ "/assets/images/pathblazer.jpg" | relative_url }}" alt="PathBlazer" class="project-img">
+    <button class="project-title">PathBlazer</button>
+    <div class="panel">
+      <p>Indoor navigation without relying on maps is a core challenge in autonomous robotics, and Project PathBlazer
+        directly addresses this. The team is developing a robust robotic navigation system that uses reinforcement
+        learning and sensor fusion to adapt in real time to dynamic environments. The ultimate goal is to enable fast,
+        human-aware, and safe movement in unknown spaces – pushing the limits of mapless navigation while sharpening
+        members' skills in ROS2, CV, and system debugging.</p>
+      <button class="view-team-btn" onclick="openTeamModal('pathblazer')">View Team</button>
     </div>
+  </div>
 
-  </div>  <div class="project-card">
+  <div class="project-card" data-project="handy">
+    <img src="{{ "/assets/images/handy.jpg" | relative_url }}" alt="HANDy" class="project-img">
+    <button class="project-title">HANDy</button>
+    <div class="panel">
+      <p>With a growing need for dexterous and adaptive robotic manipulators, Project HANDy is developing a
+        precision-controlled robotic arm capable of performing complex tasks using advanced kinematics and automation.
+        The team is engineering an articulated system that integrates real-world flexibility and control, making it
+        suitable for a wide range of industrial and assistive tasks. Through this, members gain deep insights into core
+        robotics concepts, collaborative systems design, and real-time motion control.</p>
+      <button class="view-team-btn" onclick="openTeamModal('handy')">View Team</button>
+    </div>
+  </div>
 
+  <div class="project-card" data-project="morph">
     <img src="{{ "/assets/images/morph.jpg" | relative_url }}" alt="MORPH" class="project-img">
+    <button class="project-title">MORPH</button>
+    <div class="panel">
+      <p>To tackle the challenges of adaptive grasping in unstructured environments, Project MORPH is working on a
+        gripper that utilizes both shape and force control. The team is engineering mechanical and software systems that
+        allow the gripper to modify its form dynamically, thereby improving grip reliability across diverse object
+        types. The project blends robotics hardware with smart sensing and control, giving team members comprehensive
+        exposure to robotics integration and real-world application.</p>
+      <button class="view-team-btn" onclick="openTeamModal('morph')">View Team</button>
+    </div>
+  </div>
 
-  <div class="project-card" data-project="morph">    <button class="project-title">MORPH</button>
-
-    <img src="{{ "/assets/images/morph.jpg" | relative_url }}" alt="MORPH" class="project-img">    <div class="panel">
-
-    <button class="project-title">MORPH</button>      <p>To tackle the challenges of adaptive grasping in unstructured environments, Project MORPH is working on a
-
-    <div class="panel">        gripper that utilizes both shape and force control. The team is engineering mechanical and software systems that
-
-      <p>To tackle the challenges of adaptive grasping in unstructured environments, Project MORPH is working on a        allow the gripper to modify its form dynamically, thereby improving grip reliability across diverse object
-
-        gripper that utilizes both shape and force control. The team is engineering mechanical and software systems that        types. The project blends robotics hardware with smart sensing and control, giving team members comprehensive
-
-        allow the gripper to modify its form dynamically, thereby improving grip reliability across diverse object        exposure to robotics integration and real-world application.</p>
-
-        types. The project blends robotics hardware with smart sensing and control, giving team members comprehensive    </div>
-
-        exposure to robotics integration and real-world application.</p>  </div>
-
-      <button class="view-team-btn" onclick="toggleProjectTeam('morph')">View Team Members ▼</button>
-
-    </div>  <div class="project-card">
-
-  </div>    <img src="{{ "/assets/images/biogrip.jpg" | relative_url }}" alt="BioGrip" class="project-img">
-
+  <div class="project-card" data-project="biogrip">
+    <img src="{{ "/assets/images/biogrip.jpg" | relative_url }}" alt="BioGrip" class="project-img">
     <button class="project-title">BioGrip</button>
-
-  <div class="project-card" data-project="biogrip">    <div class="panel">
-
-    <img src="{{ "/assets/images/biogrip.jpg" | relative_url }}" alt="BioGrip" class="project-img">      <p>Project BioGrip merges biotechnology and robotics in a powerful collaboration aimed at improving lives. The
-
-    <button class="project-title">BioGrip</button>        team is designing an EMG/EEG-controlled robotic arm that interprets brain and muscle signals to perform
-
-    <div class="panel">        real-time robotic arm control. This initiative empowers individuals with disabilities to interact with the
-
-      <p>Project BioGrip merges biotechnology and robotics in a powerful collaboration aimed at improving lives. The        physical world more intuitively, while giving the team hands-on experience with biosignal processing, machine
-
-        team is designing an EMG/EEG-controlled robotic arm that interprets brain and muscle signals to perform        learning for HMI, and advanced kinematic modeling.</p>
-
-        real-time robotic arm control. This initiative empowers individuals with disabilities to interact with the    </div>
-
-        physical world more intuitively, while giving the team hands-on experience with biosignal processing, machine  </div>
-
-        learning for HMI, and advanced kinematic modeling.</p></div>
-
-      <button class="view-team-btn" onclick="toggleProjectTeam('biogrip')">View Team Members ▼</button>
-
-    </div><h1 class="previous-projects-heading">Previous Projects</h1>
-
-  </div><div class="previous-projects-underline"></div>
-
+    <div class="panel">
+      <p>Project BioGrip merges biotechnology and robotics in a powerful collaboration aimed at improving lives. The
+        team is designing an EMG/EEG-controlled robotic arm that interprets brain and muscle signals to perform
+        real-time robotic arm control. This initiative empowers individuals with disabilities to interact with the
+        physical world more intuitively, while giving the team hands-on experience with biosignal processing, machine
+        learning for HMI, and advanced kinematic modeling.</p>
+      <button class="view-team-btn" onclick="openTeamModal('biogrip')">View Team</button>
+    </div>
+  </div>
 </div>
 
+<h1 class="previous-projects-heading">Previous Projects</h1>
+<div class="previous-projects-underline"></div>
+
 <div class="previous-projects-grid">
-
-<!-- Project Team Members Modal -->  <div class="project-card">
-
-<div class="project-team-modal" id="projectTeamModal">    <img src="{{ "/assets/images/samvid.jpg" | relative_url }}" alt="Samvid" class="project-img">
-
-  <div class="modal-content">    <button class="project-title">Samvid</button>
-
-    <button class="modal-close" onclick="closeProjectTeam()">×</button>    <div class="panel">
-
-    <h2 id="projectTeamTitle">Project Team Members</h2>      <p>In dynamic spaces like museums and malls, Samvid is envisioned as an autonomous humanoid robot designed to enhance user
-
-          navigation and engagement. Leveraging cutting-edge speech synthesis via innoguideGPT, seamless path planning, and
-
-    <div class="team-section">      intuitive interfaces, it acts as a real-time guide and assistant. The project evaluates Samvid’s efficiency in improving
-
-      <h3>Project Leads</h3>      user experience and accessibility in crowded indoor environments—positioning it as a future-ready service robot.</p>
-
-      <div class="team-grid" id="leadsGrid"></div>    </div>
-
-    </div>  </div>
-
-      <div class="project-card">
-
-    <div class="team-section">    <img src="{{ "/assets/images/chetak.jpg" | relative_url }}" alt="Chetak" class="project-img">
-
-      <h3>Team Members</h3>    <button class="project-title">Chetak</button>
-
-      <div class="team-grid" id="membersGrid"></div>    <div class="panel">
-
-    </div>      <p>Competing in the international Robocon 2025, Team Chetak focuses on building a technically advanced robot that can
-
-  </div>      autonomously navigate, execute precise mechanical tasks, and adapt strategy in real-time—all while adhering to strict
-
-</div>      competition constraints. The project demands a high level of collaboration and engineering skill, and through this
-
-      challenge, the team hones its capabilities in systems design, optimization, and compliance under pressure.
-
-<h1 class="previous-projects-heading">Previous Projects</h1>      </p>
-
-<div class="previous-projects-underline"></div>    </div>
-
+  <div class="project-card" data-project="samvid">
+    <img src="{{ "/assets/images/samvid.jpg" | relative_url }}" alt="Samvid" class="project-img">
+    <button class="project-title">Samvid</button>
+    <div class="panel">
+      <p>In dynamic spaces like museums and malls, Samvid is envisioned as an autonomous humanoid robot designed to enhance user
+      navigation and engagement. Leveraging cutting-edge speech synthesis via innoguideGPT, seamless path planning, and
+      intuitive interfaces, it acts as a real-time guide and assistant. The project evaluates Samvid's efficiency in improving
+      user experience and accessibility in crowded indoor environments—positioning it as a future-ready service robot.</p>
+      <button class="view-team-btn" onclick="openTeamModal('samvid')">View Team</button>
+    </div>
   </div>
-
-<div class="previous-projects-grid">  <div class="project-card">
-
-  <div class="project-card">    <img src="{{ "/assets/images/cobalt.jpg" | relative_url }}" alt="Cobalt" class="project-img">
-
-    <img src="{{ "/assets/images/samvid.jpg" | relative_url }}" alt="Samvid" class="project-img">    <button class="project-title">Cobalt</button>
-
-    <button class="project-title">Samvid</button>    <div class="panel">
-
-    <div class="panel">      <p>Project CoBALT sets out to redefine warehouse automation through modular, scalable robots that navigate autonomously and
-
-      <p>In dynamic spaces like museums and malls, Samvid is envisioned as an autonomous humanoid robot designed to enhance user      collaborate in swarm-like behavior. The team has completed simulations involving three bots and successfully built one
-
-      navigation and engagement. Leveraging cutting-edge speech synthesis via innoguideGPT, seamless path planning, and      working prototype, all engineered for efficient order handling and dynamic path planning. With a focus on swarm
-
-      intuitive interfaces, it acts as a real-time guide and assistant. The project evaluates Samvid's efficiency in improving      intelligence and CV integration, CoBALT tackles real-world logistics by building bots that are responsive, adaptable,
-
-      user experience and accessibility in crowded indoor environments—positioning it as a future-ready service robot.</p>      and scalable.
-
-    </div>      </p>
-
-  </div>    </div>
-
-  <div class="project-card">  </div>
-
-    <img src="{{ "/assets/images/chetak.jpg" | relative_url }}" alt="Chetak" class="project-img">  <div class="project-card">
-
-    <button class="project-title">Chetak</button>    <img src="{{ "/assets/images/praskash.png" | relative_url }}" alt="Mine" class="project-img">
-
-    <div class="panel">    <button class="project-title">Mine</button>
-
-      <p>Competing in the international Robocon 2025, Team Chetak focuses on building a technically advanced robot that can    <div class="panel">
-
-      autonomously navigate, execute precise mechanical tasks, and adapt strategy in real-time—all while adhering to strict      <p>In response to the risks faced during landmine disposal, Project M.I.N.E. proposes an intelligent robot designed to
-
-      competition constraints. The project demands a high level of collaboration and engineering skill, and through this      autonomously detect and neutralize explosive threats. Unlike traditional manual methods, this system aims to drastically
-
-      challenge, the team hones its capabilities in systems design, optimization, and compliance under pressure.      reduce human involvement, ensuring safety through precise detection and timely neutralization. It’s a high-impact,
-
-      </p>      research-driven initiative focused on saving lives and transforming security practices.</p>
-
-    </div>    </div>
-
-  </div>  </div>
-
-  <div class="project-card">  <div class="project-card">
-
-    <img src="{{ "/assets/images/cobalt.jpg" | relative_url }}" alt="Cobalt" class="project-img">    <img src="{{ "/assets/images/krishika.jpg" | relative_url }}" alt="Krishika" class="project-img">
-
-    <button class="project-title">Cobalt</button>    <button class="project-title">Krishika</button>
-
-    <div class="panel">    <div class="panel">
-
-      <p>Project CoBALT sets out to redefine warehouse automation through modular, scalable robots that navigate autonomously and      <p>Krishika project description here.Born from a challenge at the Inter-IIT Tech Meet, Krishaka evolved into a fully autonomous agricultural robot capable of
-
-      collaborate in swarm-like behavior. The team has completed simulations involving three bots and successfully built one      executing key tasks like weeding, ploughing, sowing, and fertilizing. Designed for marginal farmers, it combines
-
-      working prototype, all engineered for efficient order handling and dynamic path planning. With a focus on swarm      affordability with utility and has now progressed to a startup incubated under Nirmaan. The project aims to bring
-
-      intelligence and CV integration, CoBALT tackles real-world logistics by building bots that are responsive, adaptable,      robotic precision to traditional farming, improving yield, reducing labor, and empowering rural India</p>
-
-      and scalable.    </div>
-
-      </p>  </div>
-
-    </div>  <div class="project-card">
-
-  </div>    <img src="{{ "/assets/images/amogh.jpg" | relative_url }}" alt="Amogh" class="project-img">
-
-  <div class="project-card">    <button class="project-title">Amogh</button>
-
-    <img src="{{ "/assets/images/praskash.png" | relative_url }}" alt="Mine" class="project-img">    <div class="panel">
-
-    <button class="project-title">Mine</button>      <p>Amogh is an autonomous underwater vehicle developed to push the boundaries of marine robotics. Created in under a year,
-
-    <div class="panel">      it competed at the Singapore Autonomous Underwater Vehicle Challenge, where it earned a remarkable 9th place among 30+
-
-      <p>In response to the risks faced during landmine disposal, Project M.I.N.E. proposes an intelligent robot designed to      global teams. Through Amogh, the team mastered underwater navigation, sensor integration, and robustness—showcasing the
-
-      autonomously detect and neutralize explosive threats. Unlike traditional manual methods, this system aims to drastically      iBot Club’s proficiency in real-world autonomous systems.</p>
-
-      reduce human involvement, ensuring safety through precise detection and timely neutralization. It's a high-impact,    </div>
-
-      research-driven initiative focused on saving lives and transforming security practices.</p>  </div>
-
-    </div>  <div class="project-card">
-
-  </div>    <img src="{{ "/assets/images/beach-cleaning.jpg" | relative_url }}" alt="Beach Cleaning" class="project-img">
-
-  <div class="project-card">    <button class="project-title">Beach Cleaning</button>
-
-    <img src="{{ "/assets/images/krishika.jpg" | relative_url }}" alt="Krishika" class="project-img">    <div class="panel">
-
-    <button class="project-title">Krishika</button>      <p>The Beach Cleaning Bot addresses environmental waste on Chennai’s coastlines with an autonomous robot designed to sieve
-
-    <div class="panel">      sand and collect trash while navigating independently. Developed through modular efforts in mechanics, navigation, and
-
-      <p>Krishika project description here.Born from a challenge at the Inter-IIT Tech Meet, Krishaka evolved into a fully autonomous agricultural robot capable of      electrical design, BCB integrates sonar sensors, GPS-based geo-fencing, and a Raspberry Pi brain to operate within
-
-      executing key tasks like weeding, ploughing, sowing, and fertilizing. Designed for marginal farmers, it combines      defined beach zones. Its mission: to preserve natural beauty through automation while minimizing environmental
-
-      affordability with utility and has now progressed to a startup incubated under Nirmaan. The project aims to bring      disruption.
-
-      robotic precision to traditional farming, improving yield, reducing labor, and empowering rural India</p>      </p>
-
-    </div>    </div>
-
-  </div>  </div>
-
-  <div class="project-card"></div>
-
+  
+  <div class="project-card" data-project="chetak">
+    <img src="{{ "/assets/images/chetak.jpg" | relative_url }}" alt="Chetak" class="project-img">
+    <button class="project-title">Chetak</button>
+    <div class="panel">
+      <p>Competing in the international Robocon 2025, Team Chetak focuses on building a technically advanced robot that can
+      autonomously navigate, execute precise mechanical tasks, and adapt strategy in real-time—all while adhering to strict
+      competition constraints. The project demands a high level of collaboration and engineering skill, and through this
+      challenge, the team hones its capabilities in systems design, optimization, and compliance under pressure.
+      </p>
+      <button class="view-team-btn" onclick="openTeamModal('chetak')">View Team</button>
+    </div>
+  </div>
+  
+  <div class="project-card">
+    <img src="{{ "/assets/images/cobalt.jpg" | relative_url }}" alt="Cobalt" class="project-img">
+    <button class="project-title">Cobalt</button>
+    <div class="panel">
+      <p>Project CoBALT sets out to redefine warehouse automation through modular, scalable robots that navigate autonomously and
+      collaborate in swarm-like behavior. The team has completed simulations involving three bots and successfully built one
+      working prototype, all engineered for efficient order handling and dynamic path planning. With a focus on swarm
+      intelligence and CV integration, CoBALT tackles real-world logistics by building bots that are responsive, adaptable,
+      and scalable.
+      </p>
+    </div>
+  </div>
+  
+  <div class="project-card">
+    <img src="{{ "/assets/images/praskash.png" | relative_url }}" alt="Mine" class="project-img">
+    <button class="project-title">Mine</button>
+    <div class="panel">
+      <p>In response to the risks faced during landmine disposal, Project M.I.N.E. proposes an intelligent robot designed to
+      autonomously detect and neutralize explosive threats. Unlike traditional manual methods, this system aims to drastically
+      reduce human involvement, ensuring safety through precise detection and timely neutralization. It's a high-impact,
+      research-driven initiative focused on saving lives and transforming security practices.</p>
+    </div>
+  </div>
+  
+  <div class="project-card">
+    <img src="{{ "/assets/images/krishika.jpg" | relative_url }}" alt="Krishika" class="project-img">
+    <button class="project-title">Krishika</button>
+    <div class="panel">
+      <p>Born from a challenge at the Inter-IIT Tech Meet, Krishaka evolved into a fully autonomous agricultural robot capable of
+      executing key tasks like weeding, ploughing, sowing, and fertilizing. Designed for marginal farmers, it combines
+      affordability with utility and has now progressed to a startup incubated under Nirmaan. The project aims to bring
+      robotic precision to traditional farming, improving yield, reducing labor, and empowering rural India</p>
+    </div>
+  </div>
+  
+  <div class="project-card">
     <img src="{{ "/assets/images/amogh.jpg" | relative_url }}" alt="Amogh" class="project-img">
+    <button class="project-title">Amogh</button>
+    <div class="panel">
+      <p>Amogh is an autonomous underwater vehicle developed to push the boundaries of marine robotics. Created in under a year,
+      it competed at the Singapore Autonomous Underwater Vehicle Challenge, where it earned a remarkable 9th place among 30+
+      global teams. Through Amogh, the team mastered underwater navigation, sensor integration, and robustness—showcasing the
+      iBot Club's proficiency in real-world autonomous systems.</p>
+    </div>
+  </div>
+  
+  <div class="project-card">
+    <img src="{{ "/assets/images/beach-cleaning.jpg" | relative_url }}" alt="Beach Cleaning" class="project-img">
+    <button class="project-title">Beach Cleaning</button>
+    <div class="panel">
+      <p>The Beach Cleaning Bot addresses environmental waste on Chennai's coastlines with an autonomous robot designed to sieve
+      sand and collect trash while navigating independently. Developed through modular efforts in mechanics, navigation, and
+      electrical design, BCB integrates sonar sensors, GPS-based geo-fencing, and a Raspberry Pi brain to operate within
+      defined beach zones. Its mission: to preserve natural beauty through automation while minimizing environmental
+      disruption.
+      </p>
+    </div>
+  </div>
+</div>
 
-    <button class="project-title">Amogh</button><script>
-
-    <div class="panel">  // Modern accordion functionality for project cards
-
-      <p>Amogh is an autonomous underwater vehicle developed to push the boundaries of marine robotics. Created in under a year,  document.addEventListener('DOMContentLoaded', () => {
-
-      it competed at the Singapore Autonomous Underwater Vehicle Challenge, where it earned a remarkable 9th place among 30+    const projectCards = document.querySelectorAll('.project-card');
-
-      global teams. Through Amogh, the team mastered underwater navigation, sensor integration, and robustness—showcasing the    
-
-      iBot Club's proficiency in real-world autonomous systems.</p>    projectCards.forEach(card => {
-
-    </div>      const button = card.querySelector('.project-title');
-
-  </div>      const panel = card.querySelector('.panel');
-
-  <div class="project-card">      
-
-    <img src="{{ "/assets/images/beach-cleaning.jpg" | relative_url }}" alt="Beach Cleaning" class="project-img">      if (button && panel) {
-
-    <button class="project-title">Beach Cleaning</button>        button.addEventListener('click', () => {
-
-    <div class="panel">          // Toggle expanded state
-
-      <p>The Beach Cleaning Bot addresses environmental waste on Chennai's coastlines with an autonomous robot designed to sieve          const isExpanded = card.classList.contains('expanded');
-
-      sand and collect trash while navigating independently. Developed through modular efforts in mechanics, navigation, and          
-
-      electrical design, BCB integrates sonar sensors, GPS-based geo-fencing, and a Raspberry Pi brain to operate within          // Close all other cards
-
-      defined beach zones. Its mission: to preserve natural beauty through automation while minimizing environmental          projectCards.forEach(otherCard => {
-
-      disruption.            if (otherCard !== card) {
-
-      </p>              otherCard.classList.remove('expanded');
-
-    </div>            }
-
-  </div>          });
-
-</div>          
-
-          // Toggle current card
-
-<!-- Project Data in JSON format for JavaScript access -->          if (!isExpanded) {
-
-<script type="application/json" id="projectData">            card.classList.add('expanded');
-
-{            button.setAttribute('aria-expanded', 'true');
-
-  "grasp": {          } else {
-
-    "name": "GRASP",            card.classList.remove('expanded');
-
-    "leads": [            button.setAttribute('aria-expanded', 'false');
-
-      {"name": "Project Lead 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},          }
-
-      {"name": "Project Lead 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}        });
-
-    ],        
-
-    "members": [        // Set initial aria attributes
-
-      {"name": "Member 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},        button.setAttribute('aria-expanded', 'false');
-
-      {"name": "Member 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},        button.setAttribute('role', 'button');
-
-      {"name": "Member 3", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},      }
-
-      {"name": "Member 4", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}    });
-
-    ]  });
-
-  },</script>
-
-  "pathblazer": {
-    "name": "PathBlazer",
-    "leads": [
-      {"name": "Project Lead 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Project Lead 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ],
-    "members": [
-      {"name": "Member 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 3", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 4", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ]
-  },
-  "handy": {
-    "name": "HANDy",
-    "leads": [
-      {"name": "Project Lead 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Project Lead 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ],
-    "members": [
-      {"name": "Member 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 3", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 4", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ]
-  },
-  "morph": {
-    "name": "MORPH",
-    "leads": [
-      {"name": "Project Lead 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Project Lead 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ],
-    "members": [
-      {"name": "Member 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 3", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 4", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ]
-  },
-  "biogrip": {
-    "name": "BioGrip",
-    "leads": [
-      {"name": "Project Lead 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Project Lead 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ],
-    "members": [
-      {"name": "Member 1", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 2", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 3", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"},
-      {"name": "Member 4", "email": "placeholder@smail.iitm.ac.in", "linkedin": "", "image": "placeholder.jpg"}
-    ]
-  }
-}
-</script>
+<!-- Project Team Modal -->
+<div class="project-team-modal" id="teamModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeTeamModal()">&times;</button>
+    <h2 id="modalProjectName">Project Team</h2>
+    <div id="modalTeamContent"></div>
+  </div>
+</div>
 
 <script>
   // Modern accordion functionality for project cards
@@ -483,61 +215,161 @@ permalink: /projects/permalink: /projects/
     });
   });
 
-  // Project team modal functionality
-  function toggleProjectTeam(projectId) {
-    const modal = document.getElementById('projectTeamModal');
-    const projectData = JSON.parse(document.getElementById('projectData').textContent);
-    const project = projectData[projectId];
+  // Project team data structure (this would come from your YAML in production)
+  const projectTeams = {
+    grasp: {
+      name: "GRASP",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    pathblazer: {
+      name: "PathBlazer",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    handy: {
+      name: "HANDy",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    morph: {
+      name: "MORPH",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    biogrip: {
+      name: "BioGrip",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    samvid: {
+      name: "Samvid",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    },
+    chetak: {
+      name: "Chetak",
+      leads: [
+        { name: "Project Lead 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Project Lead 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ],
+      members: [
+        { name: "Member 1", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 2", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 3", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" },
+        { name: "Member 4", email: "placeholder@smail.iitm.ac.in", image: "placeholder.jpg", linkedin: "" }
+      ]
+    }
+  };
 
-    if (!project) return;
-
-    // Update modal title
-    document.getElementById('projectTeamTitle').textContent = project.name + ' - Team Members';
-
-    // Populate leads
-    const leadsGrid = document.getElementById('leadsGrid');
-    leadsGrid.innerHTML = project.leads.map(lead => `
-      <div class="team-card">
-        <img src="{{ site.baseurl }}/assets/images/project_members_25_26/${lead.image}" alt="${lead.name}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-        <h4>${lead.name}</h4>
-        <p>${lead.email}</p>
-        ${lead.linkedin ? `<a href="${lead.linkedin}" target="_blank" class="linkedin-link">LinkedIn</a>` : ''}
-      </div>
-    `).join('');
-
-    // Populate members
-    const membersGrid = document.getElementById('membersGrid');
-    membersGrid.innerHTML = project.members.map(member => `
-      <div class="team-card">
-        <img src="{{ site.baseurl }}/assets/images/project_members_25_26/${member.image}" alt="${member.name}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-        <h4>${member.name}</h4>
-        <p>${member.email}</p>
-        ${member.linkedin ? `<a href="${member.linkedin}" target="_blank" class="linkedin-link">LinkedIn</a>` : ''}
-      </div>
-    `).join('');
-
-    // Show modal
+  function openTeamModal(projectId) {
+    const modal = document.getElementById('teamModal');
+    const projectData = projectTeams[projectId];
+    
+    if (!projectData) return;
+    
+    document.getElementById('modalProjectName').textContent = `${projectData.name} Team`;
+    
+    let content = '';
+    
+    // Add Leads Section
+    if (projectData.leads && projectData.leads.length > 0) {
+      content += '<div class="team-section"><h3>Project Leads</h3><div class="team-grid">';
+      projectData.leads.forEach(member => {
+        content += createMemberCard(member);
+      });
+      content += '</div></div>';
+    }
+    
+    // Add Members Section
+    if (projectData.members && projectData.members.length > 0) {
+      content += '<div class="team-section"><h3>Team Members</h3><div class="team-grid">';
+      projectData.members.forEach(member => {
+        content += createMemberCard(member);
+      });
+      content += '</div></div>';
+    }
+    
+    document.getElementById('modalTeamContent').innerHTML = content;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeProjectTeam() {
-    const modal = document.getElementById('projectTeamModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+  function createMemberCard(member) {
+    const linkedinLink = member.linkedin ? 
+      `<a href="${member.linkedin}" target="_blank" class="linkedin-link">LinkedIn</a>` : '';
+    
+    return `
+      <div class="team-card">
+        <img src="{{ site.baseurl }}/assets/images/project_members/${member.image}" alt="${member.name}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+        <h4>${member.name}</h4>
+        <p>${member.email}</p>
+        ${linkedinLink}
+      </div>
+    `;
   }
 
-  // Close modal on outside click
-  document.getElementById('projectTeamModal').addEventListener('click', (e) => {
-    if (e.target.id === 'projectTeamModal') {
-      closeProjectTeam();
-    }
+  function closeTeamModal() {
+    const modal = document.getElementById('teamModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Close modal on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeTeamModal();
   });
 
-  // Close modal on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeProjectTeam();
-    }
+  // Close modal on background click
+  document.getElementById('teamModal').addEventListener('click', (e) => {
+    if (e.target.id === 'teamModal') closeTeamModal();
   });
 </script>

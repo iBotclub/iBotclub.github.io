@@ -93,7 +93,7 @@
   transform: scale(1.1);
 }
 
-/* Details Overlay */
+/* Details Overlay - FIXED: Now fully hidden by default */
 .details {
   position: absolute;
   bottom: 0;
@@ -101,10 +101,12 @@
   right: 0;
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 30%);
   padding: 4rem 1.5rem 1.5rem;
-  transform: translateY(calc(100% - 80px));
+  transform: translateY(100%); /* Completely hidden */
   transition: transform var(--transition-base);
+  z-index: 5;
 }
 
+/* Show details on hover */
 .card:hover .details {
   transform: translateY(0);
 }
@@ -130,7 +132,7 @@
   word-break: break-word;
 }
 
-/* Social Icons */
+/* Social Icons - FIXED: Proper clickable area */
 .social-icons {
   list-style: none;
   padding: 0;
@@ -156,6 +158,8 @@
   color: var(--text-secondary);
   transition: all var(--transition-fast);
   font-size: 1.125rem;
+  position: relative;
+  z-index: 10; /* Ensure links are clickable */
 }
 
 .social-icons a:hover {
@@ -223,10 +227,6 @@
 
   .section-title-01 {
     font-size: 2rem;
-  }
-
-  .details {
-    transform: translateY(calc(100% - 50px));
   }
 
   .details h2 {
@@ -387,40 +387,30 @@
 }
 
 .card-carousel {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
   gap: 2rem;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  width: max-content;
 }
 
 .card-carousel .card {
-  width: 280px;
+  min-width: 280px;
   flex-shrink: 0;
 }
 
 /* Responsive Carousel */
 @media (max-width: 1600px) {
-  .card-carousel {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .carousel-wrapper {
-    overflow-x: auto;
+  .card-carousel .card {
+    min-width: 260px;
   }
 }
 
 @media (max-width: 1200px) {
-  .card-carousel {
-    grid-template-columns: repeat(3, 1fr);
+  .card-carousel .card {
+    min-width: 240px;
   }
 }
 
 @media (max-width: 968px) {
-  .card-carousel {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .carousel-controls {
     gap: 1.5rem;
   }
@@ -435,22 +425,13 @@
     min-width: 70px;
     font-size: 0.875rem;
   }
+
+  .card-carousel .card {
+    min-width: 220px;
+  }
 }
 
 @media (max-width: 640px) {
-  .card-carousel {
-    grid-template-columns: 1fr;
-  }
-
-  .carousel-wrapper {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-  }
-
-  .card-carousel .card {
-    width: 100%;
-  }
-
   .carousel-controls {
     gap: 1rem;
   }
@@ -468,6 +449,10 @@
   .deputy-coords-info p {
     font-size: 1rem;
   }
+
+  .card-carousel .card {
+    min-width: 200px;
+  }
 }
 
 /*=========================================
@@ -481,16 +466,3 @@
 .profile {
   scroll-margin-top: 100px;
 }
-
-/* Additional fix for mobile details visibility */
-@media (max-width: 640px) {
-  .details {
-    padding: 3rem 1rem 1rem;
-    transform: translateY(calc(100% - 70px));
-  }
-
-  .card:hover .details {
-    transform: translateY(0);
-  }
-}
-
