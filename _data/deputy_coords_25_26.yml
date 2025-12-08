@@ -55,7 +55,7 @@
   image: Vydeesh.jpg
   linkedin: 
 
-#Position 10
+# Position 10
 - name: Kritisha Babu
   email: babu.kriti@gmail.com
   image: Kritisha.jpg
@@ -67,108 +67,116 @@
   image: Divyanshu.jpg
   linkedin: https://www.linkedin.com/in/divyanshu-gedam-143068390
 
-# Position 12 
+# Position 12
 - name: Shreyasi
   email: shreyasip.123@gmail.com
   image: Shreyasi.jpg
   linkedin: 
 
-# Position 13 
+# Position 13
 - name: Abhirath Narla
   email: ed25b002@smail.iitm.ac.in
   image: Abhirath.jpg
   linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
 
 
-# Position 12
+# Position 14
 - name: Riyansh Trivedi
   email: me25b105@smail.iitm.ac.in
   image: Riyansh.jpg
   linkedin: 
 
-# Position 13
+# Position 15
+- name: Neelkanth Trivikram Sikder
+  email: am25b125@smail.iitm.ac.in
+  image: Neelkanth.jpg
+  linkedin:
+
+# Position 16
 - name: Sarrveshwar T
   email: me25b115@smail.iitm.ac.in
   image: Sarrveshwar.jpg
   linkedin: https://www.linkedin.com/in/sarrveshwar-t-96a1a9277
 
-# Position 14
+# Position 17
 - name: Anubhav Shyjesh
   email: ee25b013@smail.iitm.ac.in
   image: Anubhav.jpg
   linkedin: https://in.linkedin.com/in/anubhav-shyjesh-084936368
 
-# Position 15
+# Position 18
 - name: Vishvaa I
   email: vishvaaisskr@gmail.com
   image: Vishvaa.jpg
   linkedin: https://www.linkedin.com/in/vishvaa-i-11590a275
 
-# Position 16
+# Position 19
 - name: Bhavishya Jain
   email: ed25b014@smail.iitm.ac.in
   image: Bhavishya.jpg
   linkedin: https://www.linkedin.com/in/bhavishya-jain-46652a369
 
-# Position 17
+# Position 20
 - name: Pragadish Arjun V
   email: pragadisharjun275@gmail.com
   image: Pragadish.jpg
   linkedin: https://drive.google.com/open?id=115ymrBplxjG8Dnuq3tGErCCv-UrToBCN
 
-# Position 18
+# Position 21
 - name: Vakhin S
   email: ed25b060@smail.iitm.ac.in
   image: Vakhin.jpg
   linkedin: https://www.linkedin.com/in/vakhin-sundarapandian-020523366
 
-# Position 19
+# Position 22
 - name: Vigneshwar S K
   email: ep25b041@smail.iitm.ac.in
   image: Vigneshwar.jpg
   linkedin: https://www.linkedin.com/in/vigneshwar-s-k-3877b3393
 
-# Position 20
+# Position 23
 - name: Nisha Paulraj Mahendran
   email: ep25b022@smail.iitm.ac.in
   image: Nisha.jpg
   linkedin: https://www.linkedin.com/in/nisha-mahendran
 
-# Position 21
+# Position 24
 - name: Ashwin K
   email: ee25b018@smail.iitm.ac.in
   image: Ashwin.jpg
   linkedin: https://in.linkedin.com/in/ashwin-k-39826539a
 
-# Position 22
-- name: Sarveshwar SD
-  email: ee25b119@smail.iitm.ac.in
-  image: Sarveshwar.jpg
-  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
-
-# Position 23
-- name: Nikhil Guha
-  email: ee25b092@smail.iitm.ac.in
-  image: Nikhil.jpg
-  linkedin: 
-
-- name: Pranav Ravisankar
-  email: ee25b100@smail.iitm.ac.in
-  image: Pranav.jpg
-  linkedin: https://drive.google.com/open?id=1bhjCRtJl2Baq1g5MYNIwsJFbrrOWz5OO
-
+# Position 25
 - name: Pratham D
   email: ae25b042@smail.iitm.ac.in
   image: Pratham.jpg
   linkedin: https://www.linkedin.com/in/pratham-d-a43331375?utm_source=share_via&utm_content=profile&utm_medium=member_android
 
-# Placeholder entries for remaining positions (2845)
-- name: Deputy Coordinator 28
+# Position 26
+- name: Pranav Ravisankar
+  email: ee25b100@smail.iitm.ac.in
+  image: Pranav.jpg
+  linkedin: https://drive.google.com/open?id=1bhjCRtJl2Baq1g5MYNIwsJFbrrOWz5OO
+
+# Position 27
+- name: Nikhil Guha
+  email: ee25b092@smail.iitm.ac.in
+  image: Nikhil.jpg
+  linkedin: 
+
+# Position 28
+- name: Sarveshwar SD
+  email: ee25b119@smail.iitm.ac.in
+  image: Sarveshwar.jpg
+  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
+
+# Placeholder entries for remaining positions (29-45)
+- name: Deputy Coordinator 29
   email: placeholder@smail.iitm.ac.in
   image: placeholder.jpg
   linkedin: 
 
-- name: Deputy Coordinator 29
+- name: Deputy Coordinator 30
   email: placeholder@smail.iitm.ac.in
   image: placeholder.jpg
   linkedin: 
