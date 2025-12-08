@@ -1,25 +1,333 @@
-<div class="header">
-  <div class="layout-header">
-    <a href="{{ site.url }}">
-      <div class="logo-bg">
-        <img class="logo-image" src="{{ '/assets/images/logo.png' | relative_url }}" alt="iBot Club IIT Madras Logo">
+<header class="main-header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="{{ '/' | relative_url }}" class="nav-logo">
+        <div class="logo-wrapper">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="iBot Club IIT Madras" class="logo-img">
+        </div>
+        <span class="logo-text">iBot IITM</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-menu" id="navMenu">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="{{ '/projects/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">🤖</span>
+          <span>Projects</span>
+        </a>
+        <a href="{{ '/team/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">👥</span>
+          <span>Team</span>
+        </a>
+        <a href="{{ '/achievements/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">🏆</span>
+          <span>Achievements</span>
+        </a>
+        <a href="{{ '/blog/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">📝</span>
+          <span>Blog</span>
+        </a>
+        <a href="{{ '/events/' | relative_url }}" class="nav-link">
+          <span class="nav-icon">📅</span>
+          <span>Events</span>
+        </a>
       </div>
-    </a>
-    <!-- Hamburger for mobile -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <nav class="navigation-container">
-      <nav class="navigation">
-        <a href="{{ site.url }}/projects/">PROJECTS</a>
-        <a href="{{ site.url }}/team/">TEAM</a>
-        <a href="{{ site.url }}/alumni/">ACHIEVEMENTS</a>
-        <a href="{{ site.url }}/blog/">BLOGS</a>
-        <a href="{{ site.url }}/events/">EVENTS</a>
-      </nav>
-    </nav>
-  </div>
-</div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // Close menu when clicking a link
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  }
+
+  // Add scroll effect to header
+  let lastScroll = 0;
+  const header = document.querySelector('.main-header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+  });
+</script>
+
+<style>
+  /* Modern Header Styles */
+  .main-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 14, 39, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .main-header.scrolled {
+    background: rgba(7, 11, 31, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  /* Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    z-index: 1001;
+  }
+
+  .logo-wrapper {
+    background: white;
+    padding: 0.375rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-logo:hover .logo-wrapper {
+    transform: scale(1.05);
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  .logo-text {
+    font-family: 'Archivo Black', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #ff1717;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  /* Navigation Menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    color: #b8c5d6;
+    text-decoration: none;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .nav-icon {
+    font-size: 1.125rem;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff1717, #ff6b6b);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #ff1717;
+    background: rgba(255, 23, 23, 0.1);
+  }
+
+  .nav-link:hover::before {
+    width: 80%;
+  }
+
+  .nav-link:hover .nav-icon {
+    transform: scale(1.15);
+  }
+
+  /* Mobile Toggle */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.375rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger {
+    width: 28px;
+    height: 3px;
+    background: #ff1717;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle.active .hamburger:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .nav-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active .hamburger:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .nav-container {
+      padding: 0 1.5rem;
+      height: 70px;
+    }
+
+    .logo-img {
+      height: 36px;
+    }
+
+    .logo-text {
+      font-size: 1.25rem;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 70px;
+      right: -100%;
+      width: 280px;
+      height: calc(100vh - 70px);
+      background: rgba(7, 11, 31, 0.98);
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 2rem 1.5rem;
+      border-left: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-link {
+      padding: 1rem 1.25rem;
+      font-size: 1.05rem;
+      border-radius: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-link::before {
+      display: none;
+    }
+
+    .nav-icon {
+      font-size: 1.375rem;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-container {
+      padding: 0 1rem;
+      height: 65px;
+    }
+
+    .logo-img {
+      height: 32px;
+    }
+
+    .logo-text {
+      font-size: 1.125rem;
+    }
+
+    .nav-menu {
+      top: 65px;
+      height: calc(100vh - 65px);
+      width: 100%;
+      padding: 1.5rem 1rem;
+    }
+  }
+</style>

@@ -3,10 +3,12 @@
 
 <head>
   {% include head.html %}
-  <!-- Any global stylesheets, fonts, etc. -->
-  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|DM+Sans:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <!-- Modern Base Styles -->
+  <link rel="stylesheet" href="{{ '/css/modern-base.css' | relative_url }}">
+  <!-- Page-specific Styles -->
   <link rel="stylesheet" href="{{ '/css/' | append: page.style | append: '.css' | relative_url }}">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,6 +19,9 @@
     </main>
     {% include footer.html %}
   </div>
+  
+  <!-- Main JavaScript -->
+  <script src="{{ '/js/main.js' | relative_url }}"></script>
 </body>
 
 </html>
