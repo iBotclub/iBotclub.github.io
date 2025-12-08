@@ -111,6 +111,254 @@ permalink: /team/
   </div>
 </div>
 
+<!-- Project Members Section -->
+<div class="profile project-members-section">
+  <h1 class="section-title-01">Project Members</h1>
+  <p class="section-subtitle-02">Explore our active projects and the amazing teams behind them</p>
+  
+  <div class="projects-grid">
+    <!-- GRASP Project -->
+    <div class="project-card-team" data-project="grasp">
+      <div class="project-header">
+        <img src="{{ site.baseurl }}/assets/images/grasp.jpg" alt="GRASP" class="project-img-team">
+        <div class="project-overlay">
+          <h3 class="project-name">GRASP</h3>
+          <button class="view-members-btn" onclick="toggleProjectMembers('grasp')">
+            <span>View Team</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-members-panel" id="grasp-panel">
+        <div class="members-section">
+          <h4>Project Leads</h4>
+          <div class="members-grid">
+            {% assign grasp_leads = site.data.project_members_flat_25_26 | where: "project_id", "grasp" | where: "role", "Lead" %}
+            {% for member in grasp_leads %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="members-section">
+          <h4>Team Members</h4>
+          <div class="members-grid">
+            {% assign grasp_members = site.data.project_members_flat_25_26 | where: "project_id", "grasp" | where: "role", "Member" %}
+            {% for member in grasp_members %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PathBlazer Project -->
+    <div class="project-card-team" data-project="pathblazer">
+      <div class="project-header">
+        <img src="{{ site.baseurl }}/assets/images/pathblazer.jpg" alt="PathBlazer" class="project-img-team">
+        <div class="project-overlay">
+          <h3 class="project-name">PathBlazer</h3>
+          <button class="view-members-btn" onclick="toggleProjectMembers('pathblazer')">
+            <span>View Team</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-members-panel" id="pathblazer-panel">
+        <div class="members-section">
+          <h4>Project Leads</h4>
+          <div class="members-grid">
+            {% assign pathblazer_leads = site.data.project_members_flat_25_26 | where: "project_id", "pathblazer" | where: "role", "Lead" %}
+            {% for member in pathblazer_leads %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="members-section">
+          <h4>Team Members</h4>
+          <div class="members-grid">
+            {% assign pathblazer_members = site.data.project_members_flat_25_26 | where: "project_id", "pathblazer" | where: "role", "Member" %}
+            {% for member in pathblazer_members %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HANDy Project -->
+    <div class="project-card-team" data-project="handy">
+      <div class="project-header">
+        <img src="{{ site.baseurl }}/assets/images/handy.jpg" alt="HANDy" class="project-img-team">
+        <div class="project-overlay">
+          <h3 class="project-name">HANDy</h3>
+          <button class="view-members-btn" onclick="toggleProjectMembers('handy')">
+            <span>View Team</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-members-panel" id="handy-panel">
+        <div class="members-section">
+          <h4>Project Leads</h4>
+          <div class="members-grid">
+            {% assign handy_leads = site.data.project_members_flat_25_26 | where: "project_id", "handy" | where: "role", "Lead" %}
+            {% for member in handy_leads %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="members-section">
+          <h4>Team Members</h4>
+          <div class="members-grid">
+            {% assign handy_members = site.data.project_members_flat_25_26 | where: "project_id", "handy" | where: "role", "Member" %}
+            {% for member in handy_members %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MORPH Project -->
+    <div class="project-card-team" data-project="morph">
+      <div class="project-header">
+        <img src="{{ site.baseurl }}/assets/images/morph.jpg" alt="MORPH" class="project-img-team">
+        <div class="project-overlay">
+          <h3 class="project-name">MORPH</h3>
+          <button class="view-members-btn" onclick="toggleProjectMembers('morph')">
+            <span>View Team</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-members-panel" id="morph-panel">
+        <div class="members-section">
+          <h4>Project Leads</h4>
+          <div class="members-grid">
+            {% assign morph_leads = site.data.project_members_flat_25_26 | where: "project_id", "morph" | where: "role", "Lead" %}
+            {% for member in morph_leads %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="members-section">
+          <h4>Team Members</h4>
+          <div class="members-grid">
+            {% assign morph_members = site.data.project_members_flat_25_26 | where: "project_id", "morph" | where: "role", "Member" %}
+            {% for member in morph_members %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BioGrip Project -->
+    <div class="project-card-team" data-project="biogrip">
+      <div class="project-header">
+        <img src="{{ site.baseurl }}/assets/images/biogrip.jpg" alt="BioGrip" class="project-img-team">
+        <div class="project-overlay">
+          <h3 class="project-name">BioGrip</h3>
+          <button class="view-members-btn" onclick="toggleProjectMembers('biogrip')">
+            <span>View Team</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="project-members-panel" id="biogrip-panel">
+        <div class="members-section">
+          <h4>Project Leads</h4>
+          <div class="members-grid">
+            {% assign biogrip_leads = site.data.project_members_flat_25_26 | where: "project_id", "biogrip" | where: "role", "Lead" %}
+            {% for member in biogrip_leads %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="members-section">
+          <h4>Team Members</h4>
+          <div class="members-grid">
+            {% assign biogrip_members = site.data.project_members_flat_25_26 | where: "project_id", "biogrip" | where: "role", "Member" %}
+            {% for member in biogrip_members %}
+            <div class="member-mini-card">
+              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+              <h5>{{ member.name }}</h5>
+              <p class="member-email">{{ member.email }}</p>
+              {% if member.linkedin %}
+              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Hidden section for previous heads (commented out) -->
 <!--
 <div class="profile">
@@ -189,4 +437,42 @@ permalink: /team/
   });
 
   updateCarousel();
+
+  // Project members toggle functionality
+  function toggleProjectMembers(projectId) {
+    const panel = document.getElementById(`${projectId}-panel`);
+    const card = document.querySelector(`[data-project="${projectId}"]`);
+    const button = card.querySelector('.view-members-btn');
+    const icon = button.querySelector('i');
+    
+    // Close all other panels
+    document.querySelectorAll('.project-members-panel').forEach(p => {
+      if (p !== panel) {
+        p.classList.remove('active');
+        const otherCard = p.closest('.project-card-team');
+        const otherButton = otherCard.querySelector('.view-members-btn');
+        const otherIcon = otherButton.querySelector('i');
+        otherCard.classList.remove('expanded');
+        otherIcon.style.transform = 'rotate(0deg)';
+      }
+    });
+    
+    // Toggle current panel
+    const isActive = panel.classList.contains('active');
+    
+    if (isActive) {
+      panel.classList.remove('active');
+      card.classList.remove('expanded');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      panel.classList.add('active');
+      card.classList.add('expanded');
+      icon.style.transform = 'rotate(180deg)';
+      
+      // Smooth scroll to show the expanded content
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 300);
+    }
+  }
 </script>
