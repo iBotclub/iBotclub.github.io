@@ -297,7 +297,69 @@ permalink: /team/
     }, 250);
   });
 
+  // Mobile touch scrolling support
+  const isMobile = window.innerWidth <= 640;
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+  if (isMobile && carouselWrapper) {
+    // Enable native scrolling on mobile
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carouselWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - carouselWrapper.offsetLeft;
+      scrollLeft = carouselWrapper.scrollLeft;
+    });
+
+    carouselWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    carouselWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    carouselWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carouselWrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      carouselWrapper.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch events for mobile
+    carouselWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
+      scrollLeft = carouselWrapper.scrollLeft;
+    }, { passive: true });
+
+    carouselWrapper.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      carouselWrapper.scrollLeft = scrollLeft - walk;
+    }, { passive: true });
+
+    // Update page indicator based on scroll position
+    carouselWrapper.addEventListener('scroll', () => {
+      const card = carousel.querySelector('.card');
+      if (!card) return;
+      
+      const cardWidth = card.offsetWidth + 16; // card width + gap
+      const scrollPos = carouselWrapper.scrollLeft;
+      const newPage = Math.floor(scrollPos / cardWidth) + 1;
+      
+      if (newPage !== currentPage && newPage >= 1 && newPage <= totalPages) {
+        currentPage = newPage;
+        currentPageSpan.textContent = currentPage;
+      }
+    });
+  }
+
   if (carousel) updateCarousel();
+  if (carousel) updateCarousel();
+
 </script>
 
 <script id="projectTeamsData" type="application/json">
@@ -336,9 +398,7 @@ permalink: /team/
   const projectTeamsData = JSON.parse(
     document.getElementById('projectTeamsData').textContent
   );
-</script>
 
-<script>
   // Override with proper names
   if (projectTeamsData.grasp) projectTeamsData.grasp.name = "GRASP";
   if (projectTeamsData.pathblazer) projectTeamsData.pathblazer.name = "PathBlazer";

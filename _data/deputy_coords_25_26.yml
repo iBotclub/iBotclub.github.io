@@ -35,7 +35,7 @@
 - name: Tejas Arjuna
   email: ee25b146@smail.iitm.ac.in
   image: Tejas.jpg
-  linkedin: 
+  linkedin: https://drive.google.com/open?id=1nTU3x7x-UcihHQRFBo1r3o168T6UVeFj
 
 # Position 7
 - name: Kritisha Babu
@@ -66,6 +66,18 @@
   email: ee25b046@smail.iitm.ac.in
   image: Divyanshu.jpg
   linkedin: https://www.linkedin.com/in/divyanshu-gedam-143068390
+
+# Inserted: Position 12 (Aadya Kumar)
+- name: Aadya Kumar
+  email: me25b003@smail.iitm.ac.in
+  image: Aadya.jpg
+  linkedin: 
+
+# Inserted: Position 13 (Judah Bharathan)
+- name: Judah Bharathan
+  email: me25b051@smail.iitm.ac.in
+  image: Judah.jpg
+  linkedin: 
 
 # Position 12
 - name: Riyansh Trivedi
@@ -139,16 +151,17 @@
   image: Nikhil.jpg
   linkedin: 
 
-# Placeholder entries for remaining positions (24-45)
-- name: Deputy Coordinator 24
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
+- name: Pranav Ravisankar
+  email: ee25b100@smail.iitm.ac.in
+  image: Pranav.jpg
+  linkedin: https://drive.google.com/open?id=1bhjCRtJl2Baq1g5MYNIwsJFbrrOWz5OO
 
-- name: Deputy Coordinator 25
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
+- name: Pratham D
+  email: ae25b042@smail.iitm.ac.in
+  image: Pratham.jpg
+  linkedin: https://www.linkedin.com/in/pratham-d-a43331375?utm_source=share_via&utm_content=profile&utm_medium=member_android
+
+# Placeholder entries for remaining positions (26-45)
 
 - name: Deputy Coordinator 26
   email: placeholder@smail.iitm.ac.in
