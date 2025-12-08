@@ -119,243 +119,82 @@ permalink: /team/
   <div class="projects-grid">
     <!-- GRASP Project -->
     <div class="project-card-team" data-project="grasp">
-      <div class="project-header">
+      <div class="project-header" onclick="openProjectModal('grasp')">
         <img src="{{ site.baseurl }}/assets/images/grasp.jpg" alt="GRASP" class="project-img-team">
         <div class="project-overlay">
           <h3 class="project-name">GRASP</h3>
-          <button class="view-members-btn" onclick="toggleProjectMembers('grasp')">
+          <button class="view-members-btn">
             <span>View Team</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-arrow-right"></i>
           </button>
-        </div>
-      </div>
-      <div class="project-members-panel" id="grasp-panel">
-        <div class="members-section">
-          <h4>Project Leads</h4>
-          <div class="members-grid">
-            {% assign grasp_leads = site.data.project_members_flat_25_26 | where: "project_id", "grasp" | where: "role", "Lead" %}
-            {% for member in grasp_leads %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="members-section">
-          <h4>Team Members</h4>
-          <div class="members-grid">
-            {% assign grasp_members = site.data.project_members_flat_25_26 | where: "project_id", "grasp" | where: "role", "Member" %}
-            {% for member in grasp_members %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
     </div>
 
     <!-- PathBlazer Project -->
     <div class="project-card-team" data-project="pathblazer">
-      <div class="project-header">
+      <div class="project-header" onclick="openProjectModal('pathblazer')">
         <img src="{{ site.baseurl }}/assets/images/pathblazer.jpg" alt="PathBlazer" class="project-img-team">
         <div class="project-overlay">
           <h3 class="project-name">PathBlazer</h3>
-          <button class="view-members-btn" onclick="toggleProjectMembers('pathblazer')">
+          <button class="view-members-btn">
             <span>View Team</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-arrow-right"></i>
           </button>
-        </div>
-      </div>
-      <div class="project-members-panel" id="pathblazer-panel">
-        <div class="members-section">
-          <h4>Project Leads</h4>
-          <div class="members-grid">
-            {% assign pathblazer_leads = site.data.project_members_flat_25_26 | where: "project_id", "pathblazer" | where: "role", "Lead" %}
-            {% for member in pathblazer_leads %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="members-section">
-          <h4>Team Members</h4>
-          <div class="members-grid">
-            {% assign pathblazer_members = site.data.project_members_flat_25_26 | where: "project_id", "pathblazer" | where: "role", "Member" %}
-            {% for member in pathblazer_members %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
     </div>
 
     <!-- HANDy Project -->
     <div class="project-card-team" data-project="handy">
-      <div class="project-header">
+      <div class="project-header" onclick="openProjectModal('handy')">
         <img src="{{ site.baseurl }}/assets/images/handy.jpg" alt="HANDy" class="project-img-team">
         <div class="project-overlay">
           <h3 class="project-name">HANDy</h3>
-          <button class="view-members-btn" onclick="toggleProjectMembers('handy')">
+          <button class="view-members-btn">
             <span>View Team</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-arrow-right"></i>
           </button>
-        </div>
-      </div>
-      <div class="project-members-panel" id="handy-panel">
-        <div class="members-section">
-          <h4>Project Leads</h4>
-          <div class="members-grid">
-            {% assign handy_leads = site.data.project_members_flat_25_26 | where: "project_id", "handy" | where: "role", "Lead" %}
-            {% for member in handy_leads %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="members-section">
-          <h4>Team Members</h4>
-          <div class="members-grid">
-            {% assign handy_members = site.data.project_members_flat_25_26 | where: "project_id", "handy" | where: "role", "Member" %}
-            {% for member in handy_members %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
     </div>
 
     <!-- MORPH Project -->
     <div class="project-card-team" data-project="morph">
-      <div class="project-header">
+      <div class="project-header" onclick="openProjectModal('morph')">
         <img src="{{ site.baseurl }}/assets/images/morph.jpg" alt="MORPH" class="project-img-team">
         <div class="project-overlay">
           <h3 class="project-name">MORPH</h3>
-          <button class="view-members-btn" onclick="toggleProjectMembers('morph')">
+          <button class="view-members-btn">
             <span>View Team</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-arrow-right"></i>
           </button>
-        </div>
-      </div>
-      <div class="project-members-panel" id="morph-panel">
-        <div class="members-section">
-          <h4>Project Leads</h4>
-          <div class="members-grid">
-            {% assign morph_leads = site.data.project_members_flat_25_26 | where: "project_id", "morph" | where: "role", "Lead" %}
-            {% for member in morph_leads %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="members-section">
-          <h4>Team Members</h4>
-          <div class="members-grid">
-            {% assign morph_members = site.data.project_members_flat_25_26 | where: "project_id", "morph" | where: "role", "Member" %}
-            {% for member in morph_members %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
     </div>
 
     <!-- BioGrip Project -->
     <div class="project-card-team" data-project="biogrip">
-      <div class="project-header">
+      <div class="project-header" onclick="openProjectModal('biogrip')">
         <img src="{{ site.baseurl }}/assets/images/biogrip.jpg" alt="BioGrip" class="project-img-team">
         <div class="project-overlay">
           <h3 class="project-name">BioGrip</h3>
-          <button class="view-members-btn" onclick="toggleProjectMembers('biogrip')">
+          <button class="view-members-btn">
             <span>View Team</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-arrow-right"></i>
           </button>
         </div>
       </div>
-      <div class="project-members-panel" id="biogrip-panel">
-        <div class="members-section">
-          <h4>Project Leads</h4>
-          <div class="members-grid">
-            {% assign biogrip_leads = site.data.project_members_flat_25_26 | where: "project_id", "biogrip" | where: "role", "Lead" %}
-            {% for member in biogrip_leads %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="members-section">
-          <h4>Team Members</h4>
-          <div class="members-grid">
-            {% assign biogrip_members = site.data.project_members_flat_25_26 | where: "project_id", "biogrip" | where: "role", "Member" %}
-            {% for member in biogrip_members %}
-            <div class="member-mini-card">
-              <img src="{{ site.baseurl }}/assets/images/project_members/{{ member.image }}" alt="{{ member.name }}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
-              <h5>{{ member.name }}</h5>
-              <p class="member-email">{{ member.email }}</p>
-              {% if member.linkedin %}
-              <a href="{{ member.linkedin }}" target="_blank" class="linkedin-mini"><i class="fab fa-linkedin-in"></i></a>
-              {% endif %}
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
     </div>
+  </div>
+</div>
+
+<!-- Project Team Modal -->
+<div class="project-team-modal" id="projectTeamModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+    <h2 id="modalProjectName">Project Team</h2>
+    <div id="modalTeamContent"></div>
   </div>
 </div>
 
@@ -404,75 +243,143 @@ permalink: /team/
   const currentPageSpan = document.getElementById('currentPage');
   const totalPagesSpan = document.getElementById('totalPages');
 
-  totalPagesSpan.textContent = totalPages;
+  if (totalPagesSpan) totalPagesSpan.textContent = totalPages;
 
   function updateCarousel() {
-    const offset = (currentPage - 1) * itemsPerPage * 280; // 280px is card width + gap
+    const offset = (currentPage - 1) * itemsPerPage * 280;
     carousel.style.transform = `translateX(${-offset}px)`;
     currentPageSpan.textContent = currentPage;
     
-    // Update button states
     prevBtn.disabled = currentPage === 1;
     nextBtn.disabled = currentPage === totalPages;
   }
 
-  prevBtn.addEventListener('click', () => {
-    if (currentPage > 1) {
-      currentPage--;
-      updateCarousel();
-    }
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      updateCarousel();
-    }
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') prevBtn.click();
-    if (e.key === 'ArrowRight') nextBtn.click();
-  });
-
-  updateCarousel();
-
-  // Project members toggle functionality
-  function toggleProjectMembers(projectId) {
-    const panel = document.getElementById(`${projectId}-panel`);
-    const card = document.querySelector(`[data-project="${projectId}"]`);
-    const button = card.querySelector('.view-members-btn');
-    const icon = button.querySelector('i');
-    
-    // Close all other panels
-    document.querySelectorAll('.project-members-panel').forEach(p => {
-      if (p !== panel) {
-        p.classList.remove('active');
-        const otherCard = p.closest('.project-card-team');
-        const otherButton = otherCard.querySelector('.view-members-btn');
-        const otherIcon = otherButton.querySelector('i');
-        otherCard.classList.remove('expanded');
-        otherIcon.style.transform = 'rotate(0deg)';
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updateCarousel();
       }
     });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        updateCarousel();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' && prevBtn) prevBtn.click();
+    if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
+  });
+
+  if (carousel) updateCarousel();
+
+  // Project Members Data (from Jekyll data)
+  const projectTeamsData = {
+    {% for project_id in site.data.project_members_flat_25_26 | map: "project_id" | uniq %}
+    "{{ project_id }}": {
+      name: "{{ project_id | capitalize }}",
+      leads: [
+        {% assign leads = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Lead" %}
+        {% for lead in leads %}
+        {
+          name: "{{ lead.name }}",
+          email: "{{ lead.email }}",
+          image: "{{ lead.image }}",
+          linkedin: "{{ lead.linkedin }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      members: [
+        {% assign members = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Member" %}
+        {% for member in members %}
+        {
+          name: "{{ member.name }}",
+          email: "{{ member.email }}",
+          image: "{{ member.image }}",
+          linkedin: "{{ member.linkedin }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+
+  // Override with proper names
+  if (projectTeamsData.grasp) projectTeamsData.grasp.name = "GRASP";
+  if (projectTeamsData.pathblazer) projectTeamsData.pathblazer.name = "PathBlazer";
+  if (projectTeamsData.handy) projectTeamsData.handy.name = "HANDy";
+  if (projectTeamsData.morph) projectTeamsData.morph.name = "MORPH";
+  if (projectTeamsData.biogrip) projectTeamsData.biogrip.name = "BioGrip";
+
+  function openProjectModal(projectId) {
+    const modal = document.getElementById('projectTeamModal');
+    const projectData = projectTeamsData[projectId];
     
-    // Toggle current panel
-    const isActive = panel.classList.contains('active');
+    if (!projectData) return;
     
-    if (isActive) {
-      panel.classList.remove('active');
-      card.classList.remove('expanded');
-      icon.style.transform = 'rotate(0deg)';
-    } else {
-      panel.classList.add('active');
-      card.classList.add('expanded');
-      icon.style.transform = 'rotate(180deg)';
-      
-      // Smooth scroll to show the expanded content
-      setTimeout(() => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 300);
+    document.getElementById('modalProjectName').textContent = `${projectData.name} Team`;
+    
+    let content = '';
+    
+    // Add Leads Section
+    if (projectData.leads && projectData.leads.length > 0) {
+      content += '<div class="team-section"><h3>Project Leads</h3><div class="team-grid">';
+      projectData.leads.forEach(member => {
+        content += createMemberCard(member);
+      });
+      content += '</div></div>';
     }
+    
+    // Add Members Section
+    if (projectData.members && projectData.members.length > 0) {
+      content += '<div class="team-section"><h3>Team Members</h3><div class="team-grid">';
+      projectData.members.forEach(member => {
+        content += createMemberCard(member);
+      });
+      content += '</div></div>';
+    }
+    
+    document.getElementById('modalTeamContent').innerHTML = content;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function createMemberCard(member) {
+    const linkedinLink = member.linkedin ? 
+      `<a href="${member.linkedin}" target="_blank" class="linkedin-link">LinkedIn</a>` : '';
+    
+    return `
+      <div class="team-card">
+        <img src="{{ site.baseurl }}/assets/images/project_members/${member.image}" alt="${member.name}" onerror="this.src='{{ site.baseurl }}/assets/images/placeholder.jpg'">
+        <h4>${member.name}</h4>
+        <p>${member.email}</p>
+        ${linkedinLink}
+      </div>
+    `;
+  }
+
+  function closeProjectModal() {
+    const modal = document.getElementById('projectTeamModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Close modal on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeProjectModal();
+  });
+
+  // Close modal on background click
+  const modal = document.getElementById('projectTeamModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target.id === 'projectTeamModal') closeProjectModal();
+    });
   }
 </script>
