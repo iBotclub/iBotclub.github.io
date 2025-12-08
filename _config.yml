@@ -15,5 +15,13 @@ kramdown:
 
 highlighter: rouge
 
-exclude: ["/docs", vendor]
+exclude: 
+  - "/docs"
+  - vendor
+  - READY.md
+  - TEAM_PROJECTS_VISUAL_GUIDE.md
+  - README.md
+  - VISUAL_SUMMARY.md
+  - "*.zip"
+  
 destination: "docs/"
