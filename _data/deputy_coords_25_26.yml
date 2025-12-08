@@ -1,121 +1,145 @@
 # Deputy Coordinators 2025-26
-# Placeholder data - Replace with actual information when received
+# Updated with real submission data
 
-- name: Deputy Coordinator 1
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 1
+- name: Mohammad Rafee N
+  email: ee25b083@smail.iitm.ac.in
+  image: Mohammad.jpg
+  linkedin: https://www.linkedin.com/in/mohammad-rafee-238a18383
+
+# Position 2
+- name: Sarveshwar SD
+  email: ee25b119@smail.iitm.ac.in
+  image: Sarveshwar.jpg
+  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
+
+# Position 3 - Toshita
+- name: Toshita Vaishnavi Dogra
+  email: ce25b110@smail.iitm.ac.in
+  image: Toshita.jpg
+  linkedin: https://www.linkedin.com/in/toshita-vaishnavi-dogra-9aa90a348
+
+# Position 4
+- name: Abhirath Narla
+  email: ed25b002@smail.iitm.ac.in
+  image: Abhirath.jpg
+  linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
+
+# Position 5
+- name: Kshitij Kulkarni
+  email: kshitij.klabz@gmail.com
+  image: Kshitij.jpg
   linkedin: 
 
-- name: Deputy Coordinator 2
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 6
+- name: Roy Saldanha
+  email: am25b130@smail.iitm.ac.in
+  image: Roy.jpg
+  linkedin: https://www.linkedin.com/in/roy-saldanha-198a09352/
+
+# Position 7
+- name: Kritisha Babu
+  email: babu.kriti@gmail.com
+  image: Kritisha.jpg
+  linkedin: https://www.linkedin.com/in/kritisha-babu-3b035220a
+
+# Position 8
+- name: Nikhil Guha
+  email: ee25b092@smail.iitm.ac.in
+  image: Nikhil.jpg
   linkedin: 
 
-- name: Deputy Coordinator 3
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 9
+- name: Ketan S Hegde
+  email: ee25b066@smail.iitm.ac.in
+  image: Ketan.jpg
   linkedin: 
 
-- name: Deputy Coordinator 4
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+#Position 10
+- name: Shreyasi
+  email: shreyasip.123@gmail.com
+  image: Shreyasi.jpg
   linkedin: 
 
-- name: Deputy Coordinator 5
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 11
+- name: Divyanshu
+  email: ee25b046@smail.iitm.ac.in
+  image: Divyanshu.jpg
+  linkedin: https://www.linkedin.com/in/divyanshu-gedam-143068390
+
+# Position 12
+- name: Riyansh Trivedi
+  email: me25b105@smail.iitm.ac.in
+  image: Riyansh.jpg
   linkedin: 
 
-- name: Deputy Coordinator 6
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 13
+- name: Sarrveshwar T
+  email: me25b115@smail.iitm.ac.in
+  image: Sarrveshwar.jpg
+  linkedin: https://www.linkedin.com/in/sarrveshwar-t-96a1a9277
+
+# Position 14
+- name: Anubhav Shyjesh
+  email: ee25b013@smail.iitm.ac.in
+  image: Anubhav.jpg
+  linkedin: https://in.linkedin.com/in/anubhav-shyjesh-084936368
+
+# Position 15
+- name: Vishvaa I
+  email: vishvaaisskr@gmail.com
+  image: Vishvaa.jpg
+  linkedin: https://www.linkedin.com/in/vishvaa-i-11590a275
+
+# Position 16
+- name: Bhavishya Jain
+  email: ed25b014@smail.iitm.ac.in
+  image: Bhavishya.jpg
+  linkedin: https://www.linkedin.com/in/bhavishya-jain-46652a369
+
+# Position 17
+- name: P Vydeesh
+  email: me25b144@smail.iitm.ac.in
+  image: Vydeesh.jpg
   linkedin: 
 
-- name: Deputy Coordinator 7
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 18
+- name: Vakhin S
+  email: ed25b060@smail.iitm.ac.in
+  image: Vakhin.jpg
+  linkedin: https://www.linkedin.com/in/vakhin-sundarapandian-020523366
+
+# Position 19
+- name: Vigneshwar S K
+  email: ep25b041@smail.iitm.ac.in
+  image: Vigneshwar.jpg
+  linkedin: https://www.linkedin.com/in/vigneshwar-s-k-3877b3393
+
+# Position 20
+- name: Nisha Paulraj Mahendran
+  email: ep25b022@smail.iitm.ac.in
+  image: Nisha.jpg
+  linkedin: https://www.linkedin.com/in/nisha-mahendran
+
+# Position 21
+- name: Ashwin K
+  email: ee25b018@smail.iitm.ac.in
+  image: Ashwin.jpg
+  linkedin: https://in.linkedin.com/in/ashwin-k-39826539a
+
+# Position 22
+- name: Tejas Arjuna
+  email: ee25b146@smail.iitm.ac.in
+  image: Tejas.jpg
   linkedin: 
 
-- name: Deputy Coordinator 8
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
+# Position 23
+- name: Pragadish Arjun V
+  email: pragadisharjun275@gmail.com
+  image: Pragadish.jpg
+  linkedin: https://drive.google.com/open?id=115ymrBplxjG8Dnuq3tGErCCv-UrToBCN
 
-- name: Deputy Coordinator 9
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 10
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 11
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 12
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 13
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 14
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 15
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 16
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 17
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 18
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 19
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 20
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 21
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 22
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
-- name: Deputy Coordinator 23
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
-
+# Placeholder entries for remaining positions (24-45)
 - name: Deputy Coordinator 24
   email: placeholder@smail.iitm.ac.in
   image: placeholder.jpg
@@ -224,4 +248,4 @@
 - name: Deputy Coordinator 45
   email: placeholder@smail.iitm.ac.in
   image: placeholder.jpg
-  linkedin: 
+  linkedin:
