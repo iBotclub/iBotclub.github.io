@@ -233,3 +233,244 @@
 @keyframes spin {
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+/*=========================================
+  Project Team Modal Styles
+=========================================*/
+
+.project-team-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project-team-modal.active {
+  display: flex;
+}
+
+.project-team-modal .modal-content {
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 8, 68, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-team-modal .modal-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.project-team-modal .modal-close:hover {
+  background: var(--primary-red);
+  transform: rotate(90deg);
+}
+
+.project-team-modal h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.team-section {
+  margin-bottom: 3rem;
+}
+
+.team-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 2px solid rgba(255, 8, 68, 0.3);
+  padding-bottom: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.team-card:hover {
+  border-color: var(--primary-red);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 8, 68, 0.2);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(255, 8, 68, 0.3);
+  transition: all var(--transition-base);
+}
+
+.team-card:hover img {
+  border-color: var(--primary-red);
+  transform: scale(1.05);
+}
+
+.team-card h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+.linkedin-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 119, 181, 0.2);
+  border: 1px solid rgba(0, 119, 181, 0.5);
+  color: #00a0d1;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: all var(--transition-base);
+}
+
+.linkedin-link:hover {
+  background: rgba(0, 119, 181, 0.3);
+  border-color: #00a0d1;
+  transform: translateY(-2px);
+}
+
+/* View Team Button in Project Card */
+.view-team-btn {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 8, 68, 0.1);
+  border: 1px solid rgba(255, 8, 68, 0.3);
+  color: var(--primary-red);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-base);
+  width: 100%;
+}
+
+.view-team-btn:hover {
+  background: var(--primary-red);
+  color: white;
+  border-color: var(--primary-red);
+  transform: translateY(-2px);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .project-team-modal .modal-content {
+    padding: 2rem;
+    max-height: 95vh;
+  }
+
+  .project-team-modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h4 {
+    font-size: 1rem;
+  }
+
+  .team-card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-team-modal .modal-content {
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+  }
+
+  .project-team-modal .modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .project-team-modal h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .team-section h3 {
+    font-size: 1.125rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,220 @@
+# Project Members 2025-26
+# Data structure for project leads and members
+
+projects:
+  grasp:
+    name: "GRASP"
+    image: "grasp.jpg"
+    description: "Project GRASP aims to explore and experiment with robotic foundation models for visuomotor policies in general-purpose robotic manipulation."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  pathblazer:
+    name: "PathBlazer"
+    image: "pathblazer.jpg"
+    description: "Project PathBlazer is developing a robust robotic navigation system using reinforcement learning and sensor fusion."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  handy:
+    name: "HANDy"
+    image: "handy.jpg"
+    description: "Project HANDy is developing a precision-controlled robotic arm capable of performing complex tasks."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  morph:
+    name: "MORPH"
+    image: "morph.jpg"
+    description: "Project MORPH is working on a gripper that utilizes both shape and force control for adaptive grasping."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  biogrip:
+    name: "BioGrip"
+    image: "biogrip.jpg"
+    description: "Project BioGrip is designing an EMG/EEG-controlled robotic arm for assistive applications."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  samvid:
+    name: "Samvid"
+    image: "samvid.jpg"
+    description: "Samvid is an autonomous humanoid robot designed for navigation and engagement in dynamic spaces."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+
+  chetak:
+    name: "Chetak"
+    image: "chetak.jpg"
+    description: "Team Chetak is competing in Robocon 2025 with a technically advanced robot design."
+    leads:
+      - name: "Project Lead 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Project Lead 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+    members:
+      - name: "Member 1"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 2"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 3"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
+      - name: "Member 4"
+        email: placeholder@smail.iitm.ac.in
+        image: placeholder.jpg
+        linkedin: 
