@@ -1,394 +1,169 @@
-------
-
-title: Hometitle: reward-rush 2025-26
-
-layout: defaultlayout: default
-
-style: homestyle: reward-rush
-
-permalink: /permalink: /event/reward-rush/
-
-------
-
-<!DOCTYPE html>
-
-<head><html lang="en">
-
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><head>
-
-</head>    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Hero Section -->    <title>REWARD RUSH Leaderboard</title>
-
-<section class="hero-section">    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <!-- Animated Background -->    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <div class="hero-background">    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <div class="hero-grid"></div></head>
-
-    <div class="hero-glow"></div><body>
-
-  </div>    <div class="container reward-rush-page">
-
-        <!-- Header -->
-
-  <div class="container hero-container">        <header class="headerL">
-
-    <div class="hero-content">            <div class="headerL-content">
-
-      <!-- Badge -->                <div class="logo-section">
-
-      <div class="hero-badge">                    <div class="logo-placeholder">
-
-        <span class="badge-icon">🤖</span>                        <img src="IBOT LOGOOO.png" alt="IBOT Logo" class="logo-img">
-
-        <span class="badge-text">Innovating the Future of Robotics</span>                    </div>
-
-      </div>                    <div class="title-sectionL">
-
-                        <h1>REWARD RUSH</h1>
-
-      <!-- Main Title with Explosion Animation -->                        <p class="subtitle">Reinforcement Learning Challenge 2025</p>
-
-      <h1 class="hero-title">                    </div>
-
-        BUILDING THE FUTURE                </div>
-
-        <span class="hero-subtitle">With Cutting-Edge Robotics</span>                <button id="adminBtn" class="admin-btn" style="display: none;">Admin Login</button>
-
-      </h1>            </div>
-
-        </header>
-
-      <!-- Description -->
-
-      <p class="hero-description">        <!-- Leaderboard -->
-
-        The official robotics club of IIT Madras, pioneering innovation in autonomous systems,         <div class="leaderboard-section">
-
-        AI-driven robotics, and advanced automation. Join us in shaping tomorrow's technology.            <div class="leaderboard-header">
-
-      </p>                <h2>Top 10 Teams</h2>
-
-                <div style="display: flex; gap: 0.5rem; align-items: center;">
-
-      <!-- CTA Buttons -->                    <button id="refreshDataBtn" class="view-all-btn" style="background: transparent; border: 2px solid #8b5cf6; color: #8b5cf6;" title="Refresh data from server">
-
-      <div class="hero-cta">                        🔄 Refresh
-
-        <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary btn-large">                    </button>
-
-          <span>Explore Projects</span>                    <button id="viewAllBtn" class="view-all-btn">View Full Leaderboard</button>
-
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">                </div>
-
-            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>            </div>
-
-          </svg>
-
-        </a>            <div id="lastUpdatedSection" class="last-updated-banner" style="display: none;">
-
-        <a href="{{ '/team/' | relative_url }}" class="btn btn-outline btn-large">                <span class="label">Last sync:</span>
-
-          <span>Meet the Team</span>                <span id="lastUpdatedLabel" class="value">--</span>
-
-        </a>            </div>
-
-      </div>            
-
-            <div id="leaderboardContainer" class="leaderboard">
-
-      <!-- Stats -->                <!-- Top 10 will be rendered here -->
-
-      <div class="hero-stats">            </div>
-
-        <div class="stat-item">
-
-          <span class="stat-value">50+</span>            <div id="loadingState" class="loading-state" style="display: none;">
-
-          <span class="stat-label">Members</span>                <div class="spinner"></div>
-
-        </div>                <p>Loading leaderboard...</p>
-
-        <div class="stat-divider"></div>            </div>
-
-        <div class="stat-item">
-
-          <span class="stat-value">15+</span>            <div id="emptyState" class="empty-state" style="display: none;">
-
-          <span class="stat-label">Projects</span>                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-
-        </div>                    <circle cx="40" cy="40" r="38" stroke="#e5e7eb" stroke-width="4"/>
-
-        <div class="stat-divider"></div>                    <path d="M40 28V44M40 52H40.02" stroke="#9ca3af" stroke-width="4" stroke-linecap="round"/>
-
-        <div class="stat-item">                </svg>
-
-          <span class="stat-value">100+</span>                <h3>No participants yet</h3>
-
-          <span class="stat-label">Events</span>                <p>Check back soon for updates!</p>
-
-        </div>            </div>
-
-      </div>        </div>
-
-    </div>    </div>
-
-
-
-    <!-- Floating Robot Illustration -->    <!-- Full Leaderboard Modal -->
-
-    <div class="hero-image">    <div id="fullLeaderboardModal" class="modal">
-
-      <div class="robot-illustration">        <div class="modal-content">
-
-        <div class="robot-glow"></div>            <div class="modal-header">
-
-        <span class="robot-icon">🤖</span>                <h2>Full Leaderboard</h2>
-
-      </div>                <button class="close-btn" id="closeFullLeaderboard">&times;</button>
-
-    </div>            </div>
-
-  </div>            <div class="modal-body">
-
-                <!-- Search Bar -->
-
-  <!-- Scroll Indicator -->                <div class="search-section" style="margin-bottom: 1.5rem;">
-
-  <div class="scroll-indicator">                    <div class="search-container">
-
-    <div class="scroll-dot"></div>                        <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-
-    <span class="scroll-text">Scroll to explore</span>                            <path d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-
-  </div>                        </svg>
-
-</section>                        <input type="text" id="searchInput" placeholder="Search by team name or ID..." class="search-input">
-
-                        <button id="clearSearch" class="clear-btn" style="display: none;">×</button>
-
-<!-- About Section -->                    </div>
-
-<section class="about-section">                    <div id="searchResult" class="search-result" style="display: none;"></div>
-
-  <div class="container">                </div>
-
-    <div class="about-grid">                <div id="fullLeaderboardContainer" class="leaderboard">
-
-      <!-- Left: About Content -->                    <!-- Full leaderboard will be rendered here -->
-
-      <div class="about-content">                </div>
-
-        <div class="section-header">            </div>
-
-          <h2 class="section-title">Who We Are</h2>        </div>
-
-          <div class="section-underline"></div>    </div>
-
-        </div>
-
-        <p class="about-text">    <!-- Admin Login Modal -->
-
-          iBot is the premier robotics club at IIT Madras, bringing together passionate students     <div id="adminModal" class="modal">
-
-          who share a common vision: to push the boundaries of what's possible in robotics and         <div class="modal-content modal-small">
-
-          automation. We combine theoretical knowledge with hands-on experimentation to create             <div class="modal-header">
-
-          innovative solutions.                <h2>Admin Login</h2>
-
-        </p>                <button class="close-btn" id="closeAdminModal">&times;</button>
-
-        <p class="about-text">            </div>
-
-          From autonomous navigation to advanced manipulation, from bio-inspired designs to             <div class="modal-body">
-
-          AI-powered systems, our projects span the entire spectrum of modern robotics. We're                 <form id="adminLoginForm">
-
-          not just building robots; we're building the future.                    <div class="form-group">
-
-        </p>                        <label for="adminPassword">Password</label>
-
-        <a href="{{ '/about/' | relative_url }}" class="btn btn-cyber">Learn More About Us</a>                        <input type="password" id="adminPassword" class="form-input" placeholder="Enter admin password" required>
-
-      </div>                    </div>
-
-                    <button type="submit" class="btn-primary">Login</button>
-
-      <!-- Right: Feature Cards -->                </form>
-
-      <div class="features-grid">            </div>
-
-        <div class="feature-card card-holographic">        </div>
-
-          <div class="feature-icon">🎯</div>    </div>
-
-          <h3 class="feature-title">Our Mission</h3>
-
-          <p class="feature-text">    <!-- Admin Panel Modal -->
-
-            To foster innovation and excellence in robotics through collaborative learning,     <div id="adminPanelModal" class="modal">
-
-            cutting-edge research, and real-world applications.        <div class="modal-content">
-
-          </p>            <div class="modal-header">
-
-        </div>                <h2>Admin Panel</h2>
-
-        <div class="feature-card card-glass">                <button class="close-btn" id="closeAdminPanel">&times;</button>
-
-          <div class="feature-icon">⚡</div>            </div>
-
-          <h3 class="feature-title">Innovation</h3>            <div class="modal-body">
-
-          <p class="feature-text">                <div class="admin-actions">
-
-            Pioneering new technologies and methodologies in autonomous systems, AI integration,                     <button id="addParticipantBtn" class="btn-primary">+ Add Participant</button>
-
-            and advanced control systems.                    <button id="syncGitHubBtn" class="btn-primary" style="background: #8b5cf6;">🔄 Sync to GitHub</button>
-
-          </p>                    <button id="exportDataBtn" class="btn-secondary">Export Data</button>
-
-        </div>                    <button id="importDataBtn" class="btn-secondary">Import Data</button>
-
-        <div class="feature-card card-neon">                    <input type="file" id="importFile" accept=".json" style="display: none;">
-
-          <div class="feature-icon">🤝</div>                </div>
-
-          <h3 class="feature-title">Community</h3>
-
-          <p class="feature-text">                <div id="participantForm" class="participant-form" style="display: none;">
-
-            Building a vibrant community of robotics enthusiasts who collaborate, learn, and                     <h3 id="formTitle">Add New Participant</h3>
-
-            grow together.                    <form id="participantFormElement">
-
-          </p>                        <input type="hidden" id="editIndex" value="">
-
-        </div>                        <div class="form-row">
-
-      </div>                            <div class="form-group">
-
-    </div>                                <label for="teamName">Team Name *</label>
-
-  </div>                                <input type="text" id="teamName" class="form-input" required>
-
-</section>                            </div>
-
-                            <div class="form-group">
-
-<!-- Highlights Section -->                                <label for="teamId">Team ID *</label>
-
-<section class="highlights-section">                                <input type="text" id="teamId" class="form-input" required>
-
-  <div class="container">                            </div>
-
-    <div class="section-header centered">                        </div>
-
-      <h2 class="section-title">Why Choose iBot?</h2>                        <div class="form-row">
-
-      <div class="section-underline centered"></div>                            <div class="form-group">
-
-      <p class="section-subtitle">                                <label for="score">Score *</label>
-
-        Experience the perfect blend of innovation, education, and hands-on robotics                                <input type="number" id="score" class="form-input" step="0.01" required>
-
-      </p>                            </div>
-
-    </div>                            <div class="form-group">
-
-                                <label for="hfRepo">HuggingFace Repo URL</label>
-
-    <div class="highlights-grid">                                <input type="url" id="hfRepo" class="form-input" placeholder="https://huggingface.co/...">
-
-      <div class="highlight-card">                            </div>
-
-        <div class="highlight-icon">                        </div>
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">                        <div class="form-actions">
-
-            <path d="M24 4L28 16L40 20L28 24L24 36L20 24L8 20L20 16L24 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>                            <button type="submit" class="btn-primary">Save Participant</button>
-
-          </svg>                            <button type="button" id="cancelForm" class="btn-secondary">Cancel</button>
-
-        </div>                        </div>
-
-        <h3 class="highlight-title">Cutting-Edge Projects</h3>                    </form>
-
-        <p class="highlight-text">                </div>
-
-          Work on advanced robotics projects involving AI, computer vision, autonomous navigation, 
-
-          and intelligent manipulation systems.                <div class="admin-table-container">
-
-        </p>                    <table class="admin-table">
-
-      </div>                        <thead>
-
-                            <tr>
-
-      <div class="highlight-card">                                <th>Rank</th>
-
-        <div class="highlight-icon">                                <th>Team Name</th>
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">                                <th>Team ID</th>
-
-            <path d="M24 8V24L32 28M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>                                <th>Score</th>
-
-          </svg>                                <th>HF Repo</th>
-
-        </div>                                <th>Actions</th>
-
-        <h3 class="highlight-title">Hands-On Learning</h3>                            </tr>
-
-        <p class="highlight-text">                        </thead>
-
-          Gain practical experience through workshops, competitions, and real-world problem-solving                         <tbody id="adminTableBody">
-
-          in state-of-the-art facilities.                            <!-- Admin table rows will be rendered here -->
-
-        </p>                        </tbody>
-
-      </div>                    </table>
-
-                </div>
-
-      <div class="highlight-card">            </div>
-
-        <div class="highlight-icon">        </div>
-
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">    </div>
-
-            <path d="M16 32L8 24M8 24L16 16M8 24H28M32 16L40 24M40 24L32 32M40 24H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-          </svg>    <script src="script.js?v=3.0"></script>
-
-        </div></body>
-
-        <h3 class="highlight-title">Collaboration</h3></html>
-
-        <p class="highlight-text">
-          Work with talented peers and mentors, participating in national and international 
-          robotics competitions.
+---
+title: Home
+layout: default
+style: home
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-background">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>IIT Madras Robotics Club</span>
+    </div>
+    
+    <h1 class="hero-title">
+      Building the Future with
+      <span class="gradient-text">Robotics</span>
+    </h1>
+    
+    <p class="hero-description">
+      We're a student-powered community of makers, coders, and dreamers pushing the boundaries 
+      of robotics and automation. From AI-driven bots to bio-interfacing arms, we turn wild ideas into reality.
+    </p>
+    
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary">
+        <span>Explore Our Work</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="/projects/" class="btn btn-outline">
+        <span>View Projects</span>
+      </a>
+    </div>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-value">50+</div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Events Hosted</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-image">
+    <div class="robot-illustration">
+      <div class="robot-glow"></div>
+      <span class="robot-icon">🤖</span>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">About <span class="gradient-text">iBot Club</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Innovation • Collaboration • Excellence</p>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="about-lead">
+          <strong>iBot Club</strong> is the official robotics club of <strong>IIT Madras</strong> — 
+          a playground for makers, coders, and dreamers building everything from AI-driven bots to bio-interfacing arms.
+        </p>
+        
+        <p class="about-text">
+          We're a <span class="highlight">student-powered</span> community that believes in hands-on learning, 
+          wild ideas, and the spirit of collaboration. Whether you're hacking your first bot, exploring computer vision, 
+          or leading a team at <span class="highlight">Robocon</span> or <span class="highlight">Inter-IIT Tech Meet</span>, 
+          you'll find your tribe here.
+        </p>
+        
+        <p class="about-text">
+          We host workshops, innovation sprints, and showcase at <span class="highlight">Shaastra</span> and 
+          <span class="highlight">Open House</span>. If you want to build, learn, and push the boundaries of robotics, 
+          <strong>this is your launchpad.</strong>
         </p>
       </div>
-
-      <div class="highlight-card">
-        <div class="highlight-icon">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <path d="M24 32L16 40M24 32L32 40M24 32V8M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>Empower students to explore cutting-edge robotics and create innovative solutions for real-world challenges.</p>
         </div>
-        <h3 class="highlight-title">Career Growth</h3>
-        <p class="highlight-text">
-          Build skills that top tech companies value, with opportunities for research publications 
-          and industry connections.
-        </p>
+        
+        <div class="feature-card">
+          <div class="feature-icon">💡</div>
+          <h3>Innovation First</h3>
+          <p>We foster a culture of experimentation, learning from failures, and celebrating breakthroughs.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Community Driven</h3>
+          <p>Built by students, for students. Everyone contributes, everyone learns, everyone grows together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="highlights-section">
+  <div class="container-wide">
+    <div class="section-header">
+      <h2 class="section-title">What Makes Us <span class="gradient-text">Unique</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon-wrapper">
+          <div class="highlight-icon">🏆</div>
+        </div>
+        <h3>Competition Excellence</h3>
+        <p>Competing and winning at national and international robotics competitions including Robocon, Inter-IIT, and more.</p>
+      </div>
+      
+      <div class="highlight-card">
+        <div class="highlight-icon-wrapper">
+          <div class="highlight-icon">🔬</div>
+        </div>
+        <h3>Research & Development</h3>
+        <p>Working on cutting-edge projects in AI, computer vision, autonomous systems, and advanced manipulation.</p>
+      </div>
+      
+      <div class="highlight-card">
+        <div class="highlight-icon-wrapper">
+          <div class="highlight-icon">🎓</div>
+        </div>
+        <h3>Learning Workshops</h3>
+        <p>Regular workshops, tutorials, and hands-on sessions covering everything from basics to advanced robotics.</p>
+      </div>
+      
+      <div class="highlight-card">
+        <div class="highlight-icon-wrapper">
+          <div class="highlight-icon">🚀</div>
+        </div>
+        <h3>Industry Connect</h3>
+        <p>Collaborations with leading robotics companies and exposure to real-world industry applications.</p>
       </div>
     </div>
   </div>
@@ -396,21 +171,13 @@ permalink: /permalink: /event/reward-rush/
 
 <!-- CTA Section -->
 <section class="cta-section">
-  <div class="cta-background"></div>
   <div class="container">
     <div class="cta-content">
-      <h2 class="cta-title">Ready to Build the Future?</h2>
-      <p class="cta-text">
-        Join iBot and be part of India's most innovative robotics community. Whether you're a 
-        beginner or an experienced enthusiast, there's a place for you here.
-      </p>
+      <h2>Ready to Start Your Robotics Journey?</h2>
+      <p>Join us and be part of something extraordinary. Whether you're a beginner or an expert, there's a place for you.</p>
       <div class="cta-buttons">
-        <a href="{{ '/events/' | relative_url }}" class="btn btn-primary btn-large">
-          View Upcoming Events
-        </a>
-        <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline btn-large">
-          Read Our Blog
-        </a>
+        <a href="/team/" class="btn btn-primary">Meet the Team</a>
+        <a href="/events/" class="btn btn-outline">Upcoming Events</a>
       </div>
     </div>
   </div>
