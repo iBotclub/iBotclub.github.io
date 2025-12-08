@@ -1,0 +1,6 @@
+.bundle/
+.jekyll-cache/
+Gemfile.lock
+docs/
+vendor/
+temp.txt

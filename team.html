@@ -1,0 +1,96 @@
+---
+title: Team
+layout: default
+style: team
+permalink: /team/
+---
+<div class="profile">
+	<h1 class="section-title-01">Core Team</h1>
+	<!-- <h2 class="section-title-02">Heads</h2> -->
+	<div class="card-wrapper">
+		{% for seci in site.data.core_25_26 %}
+		<div class="card">
+		  <div class="card-image">
+			<img src="{{ site.baseurl }}/assets/images/core_25_26/{{ seci.image }}" alt="profile-card">
+			<div class="details">
+			  <h2> {{ seci.name }}</h2>
+			  <div class="job-title">{{ seci.mob }}</div>
+			  <div class="job-contact">{{ seci.email }}</div>
+			  <ul class="social-icons">
+				{% if seci.instagram %}
+				<li><a target="_blank" href="{{ seci.instagram }}"><i class="fab fa-instagram"></i></a></li>
+				{% endif %}
+				{% if seci.linkedin %}
+				<li><a target="_blank" href="{{seci.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
+				{% endif %}
+				{% if seci.github %}
+				<li><a target="_blank" href="{{ seci.github }}"><i class="fab fa-github"></i></a></li>
+				{% endif %}
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<a name="top"></a>
+<div class="profile">
+	<h1 class="section-title-01">Coordinators</h1>
+	<!-- <h2 class="section-title-02">Coordinators</h2> -->
+	<div class="card-wrapper">
+		{% for cordi in site.data.cordis_25_26 %}
+		<div class="card">
+		  <div class="card-image">
+			<img src="{{ site.baseurl }}/assets/images/cordi_25_26/{{ cordi.image }}" alt="profile-card">
+			<div class="details">
+			  <h2>{{ cordi.name }}</h2>
+			  <div class="job-title">{{ cordi.mob }}</div>
+			  <div class="job-contact">{{ cordi.email }}</div>
+			  <ul class="social-icons">
+				{% if cordi.instagram %}
+				<li><a target="_blank" href="{{ cordi.instagram }}"><i class="fab fa-instagram"></i></a></li>
+				{% endif %}
+				{% if cordi.linkedin %}
+				<li><a target="_blank" href="{{cordi.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
+				{% endif %}
+				{% if cordi.github %}
+				<li><a target="_blank" href="{{ cordi.github }}"><i class="fab fa-github"></i></a></li>
+				{% endif %}
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="profile">
+	<h1 class="section-title-01">Previous Heads</h1>
+	<div class="card-wrapper">
+	  {% for prev in site.data.prev_cores %}
+	  <div class="card">
+		<div class="card-image">
+		  <img src="{{ site.baseurl }}/assets/images/prev_cores/{{ prev.image }}" alt="profile-card">
+		  <div class="details">
+			<h2>{{ prev.name }}</h2>
+			<div class="job-title">{{ prev.mob }}</div>
+			<div class="job-contact">{{ prev.email }}</div>
+			<ul class="social-icons">
+			  {% if prev.instagram %}
+			  <li><a target="_blank" href="{{ prev.instagram }}"><i class="fab fa-instagram"></i></a></li>
+			  {% endif %}
+			  {% if prev.linkedin %}
+			  <li><a target="_blank" href="{{ prev.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+			  {% endif %}
+			  {% if prev.github %}
+			  <li><a target="_blank" href="{{ prev.github }}"><i class="fab fa-github"></i></a></li>
+			  {% endif %}
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	  {% endfor %}
+	</div>
+  </div>
+
+

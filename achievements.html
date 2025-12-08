@@ -1,0 +1,60 @@
+---
+title: Achievements
+layout: default
+style: achievements
+permalink: /achievements/
+---
+
+<section class="achievements-hero">
+  <div class="container">
+    <div class="achievements-header">
+      <h1 class="page-title">Our <span class="gradient-text">Achievements</span></h1>
+      <div class="section-divider"></div>
+      <p class="page-subtitle">Celebrating Excellence in Robotics & Innovation</p>
+    </div>
+  </div>
+</section>
+
+<section class="achievements-content">
+  <div class="container">
+    <div class="achievements-grid">
+      {% for achievement in site.data.achievements %}
+      <div class="achievement-card">
+        <div class="achievement-icon">
+          <div class="icon-wrapper">
+            <span class="trophy-icon">🏆</span>
+          </div>
+        </div>
+        
+        <div class="achievement-details">
+          <h3 class="achievement-title">{{ achievement.title }}</h3>
+          
+          {% if achievement.year %}
+          <div class="achievement-meta">
+            <span class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              {{ achievement.year }}
+            </span>
+          </div>
+          {% endif %}
+          
+          <p class="achievement-description">{{ achievement.description }}</p>
+          
+          {% if achievement.link %}
+          <a href="{{ achievement.link }}" target="_blank" rel="noopener noreferrer" class="achievement-link">
+            <span>Learn More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

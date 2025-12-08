@@ -1,0 +1,580 @@
+---
+title: DC Recruitment 2025-26
+layout: default
+style: dc-recruitment
+permalink: /event/dc_recruitment/
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBot Club: Deputy Coordinator Tenure Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .nav-link {
+            transition: color 0.2s, border-bottom-color 0.2s;
+        }
+        .nav-link.active {
+            color: #ef4444;
+            border-bottom-color: #ef4444;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .bar-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+        }
+        .coordinator-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .coord-aryan { background-color: #7c3aed; color: white; }
+        .coord-krishna { background-color: #f59e0b; color: white; }
+        .coord-parthiv { background-color: #10b981; color: white; }
+        .coord-rishik { background-color: #06b6d4; color: white; }
+        .coord-vivek { background-color: #ec4899; color: white; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <header class="bg-gray-900 shadow-xl sticky top-0 z-50 border-b border-red-900">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-white">iBot Club Tenure Plan</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Overview</a>
+                        <a href="#curriculum" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Curriculum</a>
+                        <a href="#schedule" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Schedule</a>
+                        <a href="#timeline" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Timeline</a>
+                        <a href="#evaluation" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 hover:text-red-500 border-b-2 border-transparent">Evaluation</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-base font-semibold text-red-500 tracking-wide uppercase">iBot Club</h2>
+                <p class="mt-2 text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Deputy Coordinator Tenure Plan (2025-26)</p>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-400">
+                    This intensive program is designed to transform 45 selected individuals into versatile technical leaders across Electronics, Software, and Mechanical design. The plan integrates essential programming fundamentals with advanced robotics concepts, culminating in a final project phase.
+                </p>
+                <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">45</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Deputy Coordinators</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">5</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Groups of 9 DCs</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">62</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Training Days</p>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900">
+                        <p class="text-5xl font-extrabold text-red-500">1</p>
+                        <p class="mt-2 text-lg font-medium text-gray-200">Workshop</p>
+                    </div>
+                    <div class="lg:col-span-4 flex flex-col justify-center rounded-xl shadow-2xl p-6 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-br from-gray-800 to-gray-900 h-36">
+                        <p class="text-5xl font-extrabold text-red-500">3</p>
+                        <p class="mt-2 text-xl font-medium text-gray-200">Major Mini-Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculum" class="py-16 sm:py-24 bg-gray-900 border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">The Three Core Verticals of Training</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                        The curriculum is optimized into focused vertical sprints, building foundational skills before advanced applications.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-10 lg:grid-cols-3">
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="electronics-details">
+                        <div class="flex items-center space-x-4">
+                             <div class="text-3xl">⚡️</div>
+                            <h3 class="text-2xl font-bold text-white">Electronics</h3>
+                        </div>
+                        <p class="mt-2"><span class="coordinator-badge coord-krishna">Krishna</span></p>
+                        <p class="mt-4 text-gray-400 flex-grow">Focuses on control systems, hardware interfacing (Arduino/ESP32), and PID logic for precise robot movement.</p>
+                        <ul id="electronics-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Hardware:</strong> Arduino Uno & ESP32 Integration</li>
+                            <li><strong>Control:</strong> PID, Motor Control, Bluetooth Systems</li>
+                            <li><strong>Interfacing:</strong> Sensor Workshops & Communication Protocols</li>
+                            <li><strong>Simulation:</strong> Wokwi & Tinkercad Circuit Prototyping</li>
+                        </ul>
+                        <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+                    
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="software-details">
+                         <div class="flex items-center space-x-4">
+                             <div class="text-3xl">💻</div>
+                            <h3 class="text-2xl font-bold text-white">Software</h3>
+                        </div>
+                        <p class="mt-2"><span class="coordinator-badge coord-aryan">Aryan</span> <span class="coordinator-badge coord-vivek">Vivek</span> <span class="coordinator-badge coord-rishik">Rishik</span></p>
+                        <p class="mt-4 text-gray-400 flex-grow">A deep dive into Python (Pandas/NumPy/OpenCV), C++ algorithms (A*/Dijkstra), Linux systems, and ROS integration.</p>
+                         <ul id="software-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Python Foundation:</strong> Fundamentals, NumPy, Pandas (Aryan)</li>
+                            <li><strong>Computer Vision:</strong> OpenCV, MediaPipe, Tracking Modules (Aryan)</li>
+                            <li><strong>Systems:</strong> Linux Commands & OverTheWire Bandit (Rishik)</li>
+                            <li><strong>Algorithms:</strong> C++ Basics, Graph Theory, Dijkstra's, A* (Vivek)</li>
+                            <li><strong>ROS:</strong> Robot Operating System Fundamentals (Rishik)</li>
+                        </ul>
+                         <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+
+                    <div class="curriculum-card bg-gray-800 rounded-xl shadow-xl p-6 flex flex-col cursor-pointer border border-red-900/50 transition duration-300 hover:shadow-red-500/70 hover:bg-gray-700 bg-gradient-to-br from-gray-800 to-neutral-900" data-target="mechanical-details">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl">⚙️</div>
+                            <h3 class="text-2xl font-bold text-white">Mechanical</h3>
+                        </div>
+                        <p class="mt-2"><span class="coordinator-badge coord-parthiv">Parthiv</span></p>
+                        <p class="mt-4 text-gray-400 flex-grow">Covers 3D design in Fusion 360, system integration using URDF, and model verification via advanced simulation.</p>
+                        <ul id="mechanical-details" class="mt-4 space-y-2 text-gray-300 hidden text-sm">
+                            <li><strong>Fusion 360:</strong> Comprehensive 3D Modeling & Sketching</li>
+                            <li><strong>URDF:</strong> Joint Configuration & URDF File Creation</li>
+                            <li><strong>CoppeliaSim:</strong> Simulation Environment Setup (MiniConda)</li>
+                        </ul>
+                         <div class="mt-4 text-red-500 font-semibold">Show Details &rarr;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="py-16 sm:py-24">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">17-Session Training Schedule (Nov - Jan 2026)</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                       This section details the 17 training sessions (including Phase 0 setup) over the 62-day Training Phase. Sessions occur every 4 days, followed by a mandatory 1-week assignment.
+                    </p>
+                </div>
+
+                <div class="mt-12 max-w-5xl mx-auto">
+                    <div class="mb-8 p-6 bg-gray-800 rounded-xl border border-red-900/50">
+                        <h3 class="text-xl font-bold text-white mb-4">Training Sprint Structure</h3>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <span class="text-2xl">🔧</span>
+                                <div>
+                                    <p class="font-semibold text-red-400">Electronics Sprint (Dec 1-16)</p>
+                                    <p class="text-gray-400">4 sessions by Krishna - Immediate hands-on hardware engagement</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="text-2xl">🐍</span>
+                                <div>
+                                    <p class="font-semibold text-red-400">Software Foundation (Dec 17 - Jan 5)</p>
+                                    <p class="text-gray-400">4 sessions by Aryan — Python Core → NumPy/Pandas → OpenCV → Mini CV Project</p>
+
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="text-2xl">🔩</span>
+                                <div>
+                                    <p class="font-semibold text-red-400">Mechanical Sprint (Jan 6-17)</p>
+                                    <p class="text-gray-400">3 sessions by Parthiv - CAD → URDF → Simulation chain</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <span class="text-2xl">🚀</span>
+                                <div>
+                                    <p class="font-semibold text-red-400">Advanced Software (Jan 18-29)</p>
+                                    <p class="text-gray-400">4 sessions by Rishik & Vivek - Linux → Algorithms → ROS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="schedule-container" class="space-y-4">
+                        <!-- Schedule items populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="timeline" class="py-16 sm:py-24 bg-gray-900 border-y border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Full Program Timeline (Nov 2025 - Mar 2026)</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                       The program is structured into four sequential phases, from mandatory setup to final project execution.
+                    </p>
+                </div>
+                <div class="mt-12 bg-gray-900 p-6 rounded-xl shadow-2xl border border-red-900/50">
+                    <div class="chart-container">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="evaluation" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Evaluation & Accountability</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
+                        Performance is measured across four criteria, culminating in a critical restructuring checkpoint at the end of the Training Phase.
+                    </p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-900 rounded-xl p-6 shadow-2xl border border-red-900/50">
+                        <h3 class="text-2xl font-bold text-white text-center">Leaderboard Weighting</h3>
+                        <p class="text-center mt-2 text-gray-400">The final ranking is determined by a four-part score, emphasizing both commitment and technical proficiency.</p>
+                         <div class="bar-chart-container mt-8">
+                            <canvas id="leaderboardChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Task Completion & Accountability</h4>
+                            <p class="mt-2 text-gray-400">Submission and completion of tasks is <strong class="text-red-500">mandatory</strong>. Missing assignments below a certain threshold will lead to serious consequences, including <strong class="text-red-500">exclusion from the Workshop Phase and Mini-Project assignments</strong>. Consistent participation is essential for progression through the program.</p>
+                        </div>
+                         <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Mini-Project Participation</h4>
+                            <p class="mt-2 text-gray-400">Each DC will be assigned to work on <strong class="text-red-500">one mini-project</strong> during the Mini-Project Phase, where they will receive a <strong class="text-red-500">central kit</strong> to experiment and implement their learnings. For the other two projects, DCs are encouraged to watch and learn from their peers, fostering a collaborative learning environment.</p>
+                        </div>
+                         <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-red-900/50 transition duration-300 hover:shadow-red-500/50 bg-gradient-to-r from-gray-800 to-neutral-900">
+                            <h4 class="text-xl font-semibold text-white">Session Structure</h4>
+                            <p class="mt-2 text-gray-400">Live sessions (for brief theory and doubts) are conducted every 4 days. Each session is immediately followed by a mandatory task and assignment with a strict 1-week deadline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500">&copy; 2025 iBot Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const SCHEDULE_DATA = [
+            {cycle: 0, topic: "Phase 0: VS Code + GitHub Setup & Environment Configuration",vertical: "Initialization", assigned: "Aryan", date: "Nov 26-30", sprint: "Setup"},
+
+            // Electronics Sprint
+            { cycle: 1, topic: "Tinkercad & Arduino Uno Basics", vertical: "Electronics", assigned: "Krishna", date: "Dec 1", sprint: "Electronics" },
+            { cycle: 2, topic: "Wokwi & ESP32 Introduction", vertical: "Electronics", assigned: "Krishna", date: "Dec 5", sprint: "Electronics" },
+            { cycle: 3, topic: "Motor Control & PID Fundamentals", vertical: "Electronics", assigned: "Krishna", date: "Dec 9", sprint: "Electronics" },
+            { cycle: 4, topic: "Sensor Integration & Communication Protocols", vertical: "Electronics", assigned: "Krishna", date: "Dec 13", sprint: "Electronics" },
+            
+            // Software Foundation Sprint
+            { cycle: 5, topic: "Python Fundamentals + Engineering Mindset", vertical: "Software", assigned: "Aryan", date: "Dec 17", sprint: "Software Foundation" },
+            { cycle: 6, topic: "NumPy & Pandas Deep Dive (Data Ops + Vectorization)", vertical: "Software", assigned: "Aryan", date: "Dec 21", sprint: "Software Foundation" },
+            { cycle: 7, topic: "Computer Vision Foundations (OpenCV Core)", vertical: "Software", assigned: "Aryan", date: "Dec 25", sprint: "Software Foundation" },
+            { cycle: 8, topic: "Mini CV Project + Real-time Inference Integration", vertical: "Software", assigned: "Aryan", date: "Dec 29", sprint: "Software Foundation" },
+
+            // Mechanical Sprint
+            { cycle: 9, topic: "Fusion 360 Sketching & 3D Modeling", vertical: "Mechanical", assigned: "Parthiv", date: "Jan 6", sprint: "Mechanical" },
+            { cycle: 10, topic: "URDF Files & Joint Configuration", vertical: "Mechanical", assigned: "Parthiv", date: "Jan 10", sprint: "Mechanical" },
+            { cycle: 11, topic: "CoppeliaSim Setup & Simulation (MiniConda)", vertical: "Mechanical", assigned: "Parthiv", date: "Jan 14", sprint: "Mechanical" },
+            
+            // Advanced Software Sprint (Rishik & Vivek)
+            { cycle: 12, topic: "Linux Commands & OverTheWire Bandit (Lvl 1-10)", vertical: "Software", assigned: "Rishik", date: "Jan 18", sprint: "Advanced Software" },
+            { cycle: 13, topic: "C++ Basics & Graph Theory Fundamentals", vertical: "Software", assigned: "Vivek", date: "Jan 22", sprint: "Advanced Software" },
+            { cycle: 14, topic: "Dijkstra's & A* Pathfinding Algorithms", vertical: "Software", assigned: "Vivek", date: "Jan 26", sprint: "Advanced Software" },
+            { cycle: 15, topic: "ROS Basics & Package Management", vertical: "Software", assigned: "Rishik", date: "Jan 30", sprint: "Advanced Software" },
+        ];
+
+        const coordColors = {
+            'Vivek': 'coord-vivek',
+            'Krishna': 'coord-krishna',
+            'Aryan': 'coord-aryan',
+            'Parthiv': 'coord-parthiv',
+            'Rishik': 'coord-rishik'
+        };
+
+        function populateSchedule() {
+            const container = document.getElementById('schedule-container');
+            let currentSprint = '';
+            
+            SCHEDULE_DATA.forEach((item, index) => {
+                const sessionNumber = index;
+                
+                if (item.sprint !== currentSprint && item.vertical !== 'Initialization') {
+                    currentSprint = item.sprint;
+                    const sprintHeader = document.createElement('div');
+                    sprintHeader.classList.add('mt-8', 'mb-4', 'px-4', 'py-2', 'bg-red-900/30', 'rounded-lg', 'border-l-4', 'border-red-500');
+                    sprintHeader.innerHTML = `<h4 class="text-lg font-bold text-white">${item.sprint} Sprint</h4>`;
+                    container.appendChild(sprintHeader);
+                }
+                
+                const sessionBlock = document.createElement('div');
+                sessionBlock.classList.add('bg-gray-800', 'rounded-xl', 'shadow-xl', 'border', 'border-red-900/50', 'overflow-hidden');
+                
+                const header = document.createElement('div');
+                header.classList.add('flex', 'justify-between', 'items-center', 'p-4', 'cursor-pointer', 'hover:bg-gray-700', 'transition', 'duration-200');
+                header.innerHTML = `
+                    <div class="flex items-center space-x-4 flex-1">
+                        <span class="text-red-500 font-bold text-lg w-10 text-center">S${sessionNumber}</span>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <p class="text-sm text-gray-400 font-medium">${item.date}</p>
+                                <span class="coordinator-badge ${coordColors[item.assigned]}">${item.assigned}</span>
+                            </div>
+                            <h4 class="text-white font-semibold">${item.topic}</h4>
+                        </div>
+                    </div>
+                    <span class="text-red-500 text-lg transform transition duration-300">+</span>
+                `;
+                header.setAttribute('data-target', `details-${sessionNumber}`);
+
+                const details = document.createElement('div');
+                details.id = `details-${sessionNumber}`;
+                details.classList.add('p-4', 'bg-gray-700', 'hidden', 'border-t', 'border-red-900');
+                
+                let sprintContext = '';
+                if (item.sprint === 'Electronics') {
+                    sprintContext = 'Part of the Electronics Sprint focusing on hands-on hardware engagement with Arduino and ESP32 platforms.';
+                } else if (item.sprint === 'Software Foundation') {
+                    sprintContext = 'Part of the Software Foundation Sprint building complete Python → OpenCV → AI vision pipeline.';
+                } else if (item.sprint === 'Mechanical') {
+                    sprintContext = 'Part of the Mechanical Sprint covering CAD → URDF → Simulation workflow.';
+                } else if (item.sprint === 'Advanced Software') {
+                    sprintContext = 'Part of the Advanced Software Sprint preparing for ROS navigation and autonomous systems.';
+                } else if (item.sprint === 'Setup') {
+                    sprintContext = 'Mandatory initialization phase establishing development environments.';
+                }
+                
+                details.innerHTML = `
+                    <p class="text-sm"><strong class="text-red-400">Vertical:</strong> ${item.vertical}</p>
+                    <p class="text-sm"><strong class="text-red-400">Coordinator:</strong> ${item.assigned}</p>
+                    <p class="text-sm mt-2 text-gray-300">${sprintContext}</p>
+                    <p class="text-sm mt-2"><strong class="text-red-400">Assignment:</strong> Mandatory task due 7 days after the session.</p>
+                `;
+
+                sessionBlock.appendChild(header);
+                sessionBlock.appendChild(details);
+                container.appendChild(sessionBlock);
+
+                header.addEventListener('click', () => {
+                    details.classList.toggle('hidden');
+                    const arrow = header.querySelector('span:last-child');
+                    arrow.textContent = details.classList.contains('hidden') ? '+' : '−';
+                });
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            populateSchedule();
+            
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            const curriculumCards = document.querySelectorAll('.curriculum-card');
+            curriculumCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const targetId = card.getAttribute('data-target');
+                    const details = document.getElementById(targetId);
+                    const arrowText = card.querySelector('.font-semibold');
+                    details.classList.toggle('hidden');
+                    if (details.classList.contains('hidden')) {
+                         arrowText.textContent = 'Show Details →';
+                    } else {
+                         arrowText.textContent = 'Hide Details ↑';
+                    }
+                });
+            });
+
+            const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+            new Chart(timelineCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['0. Initialisation', 'I. Training Phase', 'II. Workshop Phase', 'III. Mini-Project Phase'],
+                    datasets: [{
+                        label: 'Tenure Phases',
+                        data: [
+                            {x: ['2025-11-26', '2025-11-30'], y: '0. Initialisation'},
+                            {x: ['2025-12-01', '2026-01-31'], y: 'I. Training Phase'},
+                            {x: ['2026-02-01', '2026-02-28'], y: 'II. Workshop Phase'},
+                            {x: ['2026-03-01', '2026-03-31'], y: 'III. Mini-Project Phase'},
+                        ],
+                        backgroundColor: ['#fecaca', '#dc2626', '#b91c1c', '#7f1d1d'], 
+                        borderColor: ['#f87171', '#ef4444', '#991b1b', '#450a0a'],
+                        borderWidth: 1,
+                        borderSkipped: false,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'month'
+                            },
+                            min: '2025-11-15',
+                            max: '2026-04-15',
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#e5e5e5'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#e5e5e5'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#0a0a0a',
+                            bodyColor: '#0a0a0a',
+                            callbacks: {
+                                title: function(context) {
+                                    const point = context[0].raw.y;
+                                    let objective = '';
+                                    if(point === '0. Initialisation') objective = 'Objective: Essential software installation and account setup. MANDATORY.';
+                                    if(point === 'I. Training Phase') objective = 'Objective: Complete 17 rigorous live sessions in vertical sprints. ENDPOINT for Team Restructuring.';
+                                    if(point === 'II. Workshop Phase') objective = 'Objective: Hands-on implementation of a complete robotic platform. ENDPOINT for Leaderboard Score.';
+                                    if(point === 'III. Mini-Project Phase') objective = 'Objective: Execute 3 Major Mini-Projects with roles determined by Leaderboard ranking.';
+                                    return objective;
+                                },
+                                label: function() {
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const leaderboardCtx = document.getElementById('leaderboardChart').getContext('2d');
+            new Chart(leaderboardCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        ['Live Session', 'Attendance (20%)'],
+                        ['Training Phase', 'Assignments (30%)'],
+                        ['Workshop Phase', 'Participation (30%)'],
+                        ['Workshop Phase', 'Proficiency (20%)']
+                    ],
+                    datasets: [{
+                        label: 'Weightage (%)',
+                        data: [20, 30, 30, 20],
+                        backgroundColor: ['#f87171', '#ef4444', '#dc2626', '#b91c1c'],
+                        borderColor: '#e5e5e5',
+                        borderWidth: 0,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 40,
+                            ticks: {
+                                color: '#e5e5e5',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#e5e5e5'
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#0a0a0a',
+                            bodyColor: '#0a0a0a',
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.raw}% of Final Score`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

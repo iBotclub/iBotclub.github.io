@@ -1,0 +1,313 @@
+/*=========================================
+  Modern Team Page Styles
+=========================================*/
+
+/* Profile Sections */
+.profile {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.profile:first-child {
+  padding-top: 6rem;
+}
+
+/* Section Titles */
+.section-title-01 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title-01::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-primary);
+  margin: 1rem auto 0;
+  border-radius: var(--radius-sm);
+}
+
+/* Card Wrapper */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Team Cards */
+.card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-base);
+  position: relative;
+  height: 100%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: 10;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 23, 23, 0.3);
+  box-shadow: var(--shadow-xl);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Card Image */
+.card-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* Details Overlay */
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 40%);
+  padding: 3rem 1.5rem 1.5rem;
+  transform: translateY(calc(100% - 60px));
+  transition: transform var(--transition-base);
+}
+
+.card:hover .details {
+  transform: translateY(0);
+}
+
+.details h2 {
+  font-size: 1.375rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.job-title {
+  font-size: 0.95rem;
+  color: var(--primary-red);
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+}
+
+.job-contact {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  word-break: break-word;
+}
+
+/* Social Icons */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  font-size: 1.125rem;
+}
+
+.social-icons a:hover {
+  background: var(--primary-red);
+  border-color: var(--primary-red);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 23, 23, 0.4);
+}
+
+/* Specific Social Icon Colors */
+.social-icons a:hover .fa-instagram {
+  color: white;
+}
+
+.social-icons a:hover .fa-linkedin-in {
+  color: white;
+}
+
+.social-icons a:hover .fa-github {
+  color: white;
+}
+
+/* Section Spacing */
+.profile + .profile {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .profile {
+    padding: 3rem 1.5rem;
+  }
+
+  .profile:first-child {
+    padding-top: 5rem;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .section-title-01 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile {
+    padding: 2rem 1rem;
+  }
+
+  .profile:first-child {
+    padding-top: 4rem;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-title-01 {
+    font-size: 2rem;
+  }
+
+  .details {
+    transform: translateY(calc(100% - 50px));
+  }
+
+  .details h2 {
+    font-size: 1.25rem;
+  }
+
+  .job-title {
+    font-size: 0.875rem;
+  }
+
+  .job-contact {
+    font-size: 0.8125rem;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+/* Loading Animation */
+.card.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-red);
+  animation: spin 1s linear infinite;
+  z-index: 100;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Fade-in Animation for Cards */
+.card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .details {
+    transform: translateY(0);
+  }
+}

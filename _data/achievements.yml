@@ -1,0 +1,65 @@
+- title: "SAMVID – Best Hardware Project, CFI Open House"
+  description: "SAMVID is a museum guide robot developed in collaboration with OP Jindal Global University, tailored for their Constitution Museum. The robot intelligently navigates and interacts with visitors to provide curated information. It was awarded the Best Hardware Project at the CFI Open House, reflecting excellence in both design and real-world application."
+  year: 2023
+  image: "samvid.jpg"
+  link: ""
+
+- title: "Team Chetak – AAKRUTI Global (Runner-Up)"
+  description: "Team Chetak secured the 1st Runner-Up position at AAKRUTI Global, a prestigious international design competition organized by Dassault Systèmes (SolidWorks). The team presented an innovative mechanical solution and was awarded a trophy, goodies, and $800 in prize money, competing against teams from around the world."
+  year: 2023
+  image: "aakruti.jpg"
+  link: ""
+
+- title: "Team Chetak – DD Robocon"
+  description: "Team Chetak qualified for India’s nationally acclaimed DD Robocon by clearing the initial evaluation round with an impressive score of 91/100. This robotics event, conducted by Doordarshan, challenges participants to build robots that meet rigorous performance and thematic requirements."
+  year: 2023
+  image: "ddrobocon.jpg"
+  link: ""
+
+- title: "Limca Book Record – 2018"
+  description: "A historic achievement where 45 floor-cleaning robots were built and deployed simultaneously to clean the entire CFI workspace. The feat involved the collaboration of over 400 participants and earned recognition in the Limca Book of Records for its scale, coordination, and impact."
+  year: 2018
+  image: "limca2018.jpg"
+  link: ""
+
+- title: "Project Artemis Patent – 2017"
+  description: "Project Artemis focused on the development of a Rail Road Crack Detection Robot using advanced sensor fusion techniques. It autonomously travels along railway tracks and identifies internal structural cracks, significantly enhancing rail safety. The technology was patented, underlining its innovation and practical significance."
+  year: 2017
+  image: "artemis2017.jpg"
+  link: ""
+
+- title: "Gujarat Robofest"
+  description: "Participated in Gujarat Robofest with a self-balancing, line-following robot capable of handling turns and variable speeds autonomously. The robot progressed to Stage 2 of the competition, demonstrating strong fundamentals in embedded systems and autonomous robotics."
+  year: 2016
+  image: "gujaratrobofest.jpg"
+  link: ""
+
+- title: "Robocon National Champions – 2009"
+  description: "The team emerged as the national champions at DD Robocon 2009, one of India’s most elite inter-collegiate robotics contests. The victory reflected exceptional mechanical engineering, electronics integration, and strategic problem-solving under time pressure."
+  year: 2009
+  image: "robocon2009.jpg"
+  link: ""
+
+- title: "Robocon 'Green Planet' Award"
+  description: "Received special recognition at Robocon for building an environmentally sustainable robotic system. The project incorporated eco-friendly design practices and low-energy components, aligning robotics with green technology goals. The exact year of the award is unspecified."
+  year: 2009
+  image: "greenplanet.jpg"
+  link: ""
+
+- title: "DRDO Student Robot Challenge – 2008 (2nd Place)"
+  description: "Earned 2nd place in the prestigious DRDO Student Robot Challenge, showcasing innovation in tactical robotics. The competition encouraged participants to solve real-world defense problems through autonomous solutions, and the team was commended for their system’s reliability and adaptability."
+  year: 2008
+  image: "drdo2008.jpg"
+  link: ""
+
+- title: "International Aerial Robotics Competition – 2010"
+  description: "Won the international award for best image-processing algorithm at the Aerial Robotics Competition. The algorithm enabled the drone to accurately interpret visual data in real-time, contributing significantly to the field of aerial autonomy and robotic vision."
+  year: 2010
+  image: "aerial2010.jpg"
+  link: ""
+
+- title: "Krishaka Agri Startup – 2022"
+  description: "Krishaka is an agri-tech startup led by the iBot team, focusing on robotics-driven farming automation. The project aims to support Indian agriculture by developing cost-effective, scalable solutions for crop monitoring, planting, and precision irrigation using autonomous systems."
+  year: 2022
+  image: "krishaka2022.jpg"
+  link: ""

@@ -1,0 +1,27 @@
+
+- title: "Techsoc"
+  date: "AUG 10, 2025"
+  description: "Freshi Roadmap – TechSoc introduced beginners to robotics using a 2-DoF arm challenge. Students processed a maze-like setup with OpenCV, planned paths using A*, and executed motion through inverse kinematics. The event offered hands-on learning of core robotics concepts. A fun, practical start for freshers entering the tech scene."
+  show_button: false
+  image: "/assets/images/event/photo.jpg" 
+  
+- title: "Robo Race"
+  date: "SEPT 10, 2025"
+  description: "Robo Race – TechSoc challenged freshers to build their own line-follower robots from scratch. Teams engineered sensors and logic to track and follow the course accurately. The race tested speed, stability, and real-time control. The fastest robot to complete the track took the win. A thrilling competition showcasing creativity and engineering skills."
+  show_button: false
+  image: "/assets/images/event/Robo_race.jpg" # Has image
+
+- title: "DC RECRUITMENT 2025-26"
+  date: "NOV 25, 2025"
+  description: "Deputy Coordinator Selection & Training Tenure Plan."
+  link: "/event/dc_recruitment/"
+  button_text: "View Full Plan"
+  image: null # No image for this one
+
+- title: "Reward Rush: RL Challenge"
+  date: "DEC 01, 2025"
+  description: "Dive into reinforcement learning! Compete to train the best agent. <br> Resources: <a href='/assets/images/event/reward-rush/IntroToRL_Ibot.pdf' target='_blank' rel='noopener'>Notes</a> <a href='/assets/images/event/reward-rush/RL-competition.pdf' target='_blank' rel='noopener'>competition Rules</a>"
+  link: "/event/reward-rush/"
+  button_text: "Go to Challenge"
+  image: null
+  
