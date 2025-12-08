@@ -8,10 +8,10 @@
   linkedin: https://www.linkedin.com/in/mohammad-rafee-238a18383
 
 # Position 2
-- name: Sarveshwar SD
-  email: ee25b119@smail.iitm.ac.in
-  image: Sarveshwar.jpg
-  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
+- name: Roy Saldanha
+  email: am25b130@smail.iitm.ac.in
+  image: Roy.jpg
+  linkedin: https://www.linkedin.com/in/roy-saldanha-198a09352/
 
 # Position 3 - Toshita
 - name: Toshita Vaishnavi Dogra
@@ -20,10 +20,10 @@
   linkedin: https://www.linkedin.com/in/toshita-vaishnavi-dogra-9aa90a348
 
 # Position 4
-- name: Abhirath Narla
-  email: ed25b002@smail.iitm.ac.in
-  image: Abhirath.jpg
-  linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
+- name: Ketan S Hegde
+  email: ee25b066@smail.iitm.ac.in
+  image: Ketan.jpg
+  linkedin: 
 
 # Position 5
 - name: Kshitij Kulkarni
@@ -32,10 +32,10 @@
   linkedin: 
 
 # Position 6
-- name: Roy Saldanha
-  email: am25b130@smail.iitm.ac.in
-  image: Roy.jpg
-  linkedin: https://www.linkedin.com/in/roy-saldanha-198a09352/
+- name: Sarveshwar SD
+  email: ee25b119@smail.iitm.ac.in
+  image: Sarveshwar.jpg
+  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
 
 # Position 7
 - name: Kritisha Babu
@@ -44,16 +44,16 @@
   linkedin: https://www.linkedin.com/in/kritisha-babu-3b035220a
 
 # Position 8
-- name: Nikhil Guha
-  email: ee25b092@smail.iitm.ac.in
-  image: Nikhil.jpg
+- name: P Vydeesh
+  email: me25b144@smail.iitm.ac.in
+  image: Vydeesh.jpg
   linkedin: 
 
 # Position 9
-- name: Ketan S Hegde
-  email: ee25b066@smail.iitm.ac.in
-  image: Ketan.jpg
-  linkedin: 
+- name: Abhirath Narla
+  email: ed25b002@smail.iitm.ac.in
+  image: Abhirath.jpg
+  linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
 
 #Position 10
 - name: Shreyasi
@@ -98,10 +98,10 @@
   linkedin: https://www.linkedin.com/in/bhavishya-jain-46652a369
 
 # Position 17
-- name: P Vydeesh
-  email: me25b144@smail.iitm.ac.in
-  image: Vydeesh.jpg
-  linkedin: 
+- name: Pragadish Arjun V
+  email: pragadisharjun275@gmail.com
+  image: Pragadish.jpg
+  linkedin: https://drive.google.com/open?id=115ymrBplxjG8Dnuq3tGErCCv-UrToBCN
 
 # Position 18
 - name: Vakhin S
@@ -134,10 +134,10 @@
   linkedin: 
 
 # Position 23
-- name: Pragadish Arjun V
-  email: pragadisharjun275@gmail.com
-  image: Pragadish.jpg
-  linkedin: https://drive.google.com/open?id=115ymrBplxjG8Dnuq3tGErCCv-UrToBCN
+  - name: Nikhil Guha
+  email: ee25b092@smail.iitm.ac.in
+  image: Nikhil.jpg
+  linkedin: 
 
 # Placeholder entries for remaining positions (24-45)
 - name: Deputy Coordinator 24
