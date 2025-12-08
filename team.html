@@ -246,7 +246,18 @@ permalink: /team/
   if (totalPagesSpan) totalPagesSpan.textContent = totalPages;
 
   function updateCarousel() {
-    const offset = (currentPage - 1) * itemsPerPage * 280;
+    // Calculate card width + gap dynamically
+    const card = carousel.querySelector('.card');
+    if (!card) return;
+    
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = 32; // 2rem = 32px
+    
+    // Scroll exactly 5 cards worth of distance
+    const scrollDistance = (cardWidth + gap) * itemsPerPage;
+    const offset = (currentPage - 1) * scrollDistance;
+    
     carousel.style.transform = `translateX(${-offset}px)`;
     currentPageSpan.textContent = currentPage;
     
@@ -277,39 +288,57 @@ permalink: /team/
     if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
   });
 
+  // Update carousel on window resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateCarousel();
+    }, 250);
+  });
+
   if (carousel) updateCarousel();
+</script>
 
-  // Project Members Data (from Jekyll data)
-  const projectTeamsData = {
-    {% for project_id in site.data.project_members_flat_25_26 | map: "project_id" | uniq %}
-    "{{ project_id }}": {
-      name: "{{ project_id | capitalize }}",
-      leads: [
-        {% assign leads = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Lead" %}
-        {% for lead in leads %}
-        {
-          name: "{{ lead.name }}",
-          email: "{{ lead.email }}",
-          image: "{{ lead.image }}",
-          linkedin: "{{ lead.linkedin }}"
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ],
-      members: [
-        {% assign members = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Member" %}
-        {% for member in members %}
-        {
-          name: "{{ member.name }}",
-          email: "{{ member.email }}",
-          image: "{{ member.image }}",
-          linkedin: "{{ member.linkedin }}"
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-      ]
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  };
+<script id="projectTeamsData" type="application/json">
+{
+  {% for project_id in site.data.project_members_flat_25_26 | map: "project_id" | uniq %}
+  "{{ project_id }}": {
+    "name": "{{ project_id | capitalize }}",
+    "leads": [
+      {% assign leads = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Lead" %}
+      {% for lead in leads %}
+      {
+        "name": "{{ lead.name }}",
+        "email": "{{ lead.email }}",
+        "image": "{{ lead.image }}",
+        "linkedin": "{{ lead.linkedin }}"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+    "members": [
+      {% assign members = site.data.project_members_flat_25_26 | where: "project_id", project_id | where: "role", "Member" %}
+      {% for member in members %}
+      {
+        "name": "{{ member.name }}",
+        "email": "{{ member.email }}",
+        "image": "{{ member.image }}",
+        "linkedin": "{{ member.linkedin }}"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+}
+</script>
 
+<script>
+  const projectTeamsData = JSON.parse(
+    document.getElementById('projectTeamsData').textContent
+  );
+</script>
+
+<script>
   // Override with proper names
   if (projectTeamsData.grasp) projectTeamsData.grasp.name = "GRASP";
   if (projectTeamsData.pathblazer) projectTeamsData.pathblazer.name = "PathBlazer";

@@ -384,29 +384,59 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .card-carousel {
   display: flex;
   gap: 2rem;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: max-content;
 }
 
 .card-carousel .card {
-  min-width: 280px;
+  width: 240px;
   flex-shrink: 0;
+}
+
+/* Fix image sizing - force square and proper fit */
+.card-carousel .card .card-image {
+  width: 240px;
+  height: 240px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-carousel .card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* Responsive Carousel */
 @media (max-width: 1600px) {
   .card-carousel .card {
-    min-width: 260px;
+    width: 220px;
+  }
+  
+  .card-carousel .card .card-image {
+    width: 220px;
+    height: 220px;
   }
 }
 
 @media (max-width: 1200px) {
   .card-carousel .card {
-    min-width: 240px;
+    width: 200px;
+  }
+  
+  .card-carousel .card .card-image {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -427,7 +457,12 @@
   }
 
   .card-carousel .card {
-    min-width: 220px;
+    width: 180px;
+  }
+  
+  .card-carousel .card .card-image {
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -451,7 +486,12 @@
   }
 
   .card-carousel .card {
-    min-width: 200px;
+    width: 160px;
+  }
+  
+  .card-carousel .card .card-image {
+    width: 160px;
+    height: 160px;
   }
 }
 
