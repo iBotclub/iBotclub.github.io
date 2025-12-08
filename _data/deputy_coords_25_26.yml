@@ -38,28 +38,28 @@
   linkedin: https://drive.google.com/open?id=1nTU3x7x-UcihHQRFBo1r3o168T6UVeFj
 
 # Position 7
-- name: Kritisha Babu
-  email: babu.kriti@gmail.com
-  image: Kritisha.jpg
-  linkedin: https://www.linkedin.com/in/kritisha-babu-3b035220a
+- name: Aadya Kumar
+  email: me25b003@smail.iitm.ac.in
+  image: Aadya.jpg
+  linkedin: 
 
 # Position 8
+- name: Judah Bharathan
+  email: me25b051@smail.iitm.ac.in
+  image: Judah.jpg
+  linkedin: 
+
+# Position 9
 - name: P Vydeesh
   email: me25b144@smail.iitm.ac.in
   image: Vydeesh.jpg
   linkedin: 
 
-# Position 9
-- name: Abhirath Narla
-  email: ed25b002@smail.iitm.ac.in
-  image: Abhirath.jpg
-  linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
-
 #Position 10
-- name: Shreyasi
-  email: shreyasip.123@gmail.com
-  image: Shreyasi.jpg
-  linkedin: 
+- name: Kritisha Babu
+  email: babu.kriti@gmail.com
+  image: Kritisha.jpg
+  linkedin: https://www.linkedin.com/in/kritisha-babu-3b035220a
 
 # Position 11
 - name: Divyanshu
@@ -67,17 +67,18 @@
   image: Divyanshu.jpg
   linkedin: https://www.linkedin.com/in/divyanshu-gedam-143068390
 
-# Inserted: Position 12 (Aadya Kumar)
-- name: Aadya Kumar
-  email: me25b003@smail.iitm.ac.in
-  image: Aadya.jpg
+# Position 12 
+- name: Shreyasi
+  email: shreyasip.123@gmail.com
+  image: Shreyasi.jpg
   linkedin: 
 
-# Inserted: Position 13 (Judah Bharathan)
-- name: Judah Bharathan
-  email: me25b051@smail.iitm.ac.in
-  image: Judah.jpg
-  linkedin: 
+# Position 13 
+- name: Abhirath Narla
+  email: ed25b002@smail.iitm.ac.in
+  image: Abhirath.jpg
+  linkedin: https://in.linkedin.com/in/abhirath-narla-41488823a
+
 
 # Position 12
 - name: Riyansh Trivedi

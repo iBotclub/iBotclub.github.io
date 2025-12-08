@@ -233,133 +233,123 @@ permalink: /team/
 <script>
   // Carousel functionality for deputy coordinators
   const itemsPerPage = 5;
-  const totalItems = document.querySelectorAll('#carouselContainer .card').length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  let currentPage = 1;
-
   const carousel = document.getElementById('carouselContainer');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const currentPageSpan = document.getElementById('currentPage');
   const totalPagesSpan = document.getElementById('totalPages');
-
-  if (totalPagesSpan) totalPagesSpan.textContent = totalPages;
-
-  function updateCarousel() {
-    // Calculate card width + gap dynamically
-    const card = carousel.querySelector('.card');
-    if (!card) return;
-    
-    const cardStyle = window.getComputedStyle(card);
-    const cardWidth = card.offsetWidth;
-    const gap = 32; // 2rem = 32px
-    
-    // Scroll exactly 5 cards worth of distance
-    const scrollDistance = (cardWidth + gap) * itemsPerPage;
-    const offset = (currentPage - 1) * scrollDistance;
-    
-    carousel.style.transform = `translateX(${-offset}px)`;
-    currentPageSpan.textContent = currentPage;
-    
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage === totalPages;
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      if (currentPage > 1) {
-        currentPage--;
-        updateCarousel();
-      }
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (currentPage < totalPages) {
-        currentPage++;
-        updateCarousel();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' && prevBtn) prevBtn.click();
-    if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
-  });
-
-  // Update carousel on window resize
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      updateCarousel();
-    }, 250);
-  });
-
-  // Mobile touch scrolling support
-  const isMobile = window.innerWidth <= 640;
   const carouselWrapper = document.querySelector('.carousel-wrapper');
+  
+  if (!carousel) {
+    console.warn('Carousel container not found');
+  } else {
+    const totalItems = carousel.querySelectorAll('.card').length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    let currentPage = 1;
+    let isAnimating = false;
 
-  if (isMobile && carouselWrapper) {
-    // Enable native scrolling on mobile
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    if (totalPagesSpan) totalPagesSpan.textContent = totalPages;
 
-    carouselWrapper.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX - carouselWrapper.offsetLeft;
-      scrollLeft = carouselWrapper.scrollLeft;
-    });
+    // Check if mobile
+    const isMobile = () => window.innerWidth <= 640;
 
-    carouselWrapper.addEventListener('mouseleave', () => {
-      isDown = false;
-    });
-
-    carouselWrapper.addEventListener('mouseup', () => {
-      isDown = false;
-    });
-
-    carouselWrapper.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - carouselWrapper.offsetLeft;
-      const walk = (x - startX) * 2;
-      carouselWrapper.scrollLeft = scrollLeft - walk;
-    });
-
-    // Touch events for mobile
-    carouselWrapper.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
-      scrollLeft = carouselWrapper.scrollLeft;
-    }, { passive: true });
-
-    carouselWrapper.addEventListener('touchmove', (e) => {
-      const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
-      const walk = (x - startX) * 2;
-      carouselWrapper.scrollLeft = scrollLeft - walk;
-    }, { passive: true });
-
-    // Update page indicator based on scroll position
-    carouselWrapper.addEventListener('scroll', () => {
+    function updateCarousel() {
+      if (isAnimating || isMobile()) return;
+      
+      isAnimating = true;
+      
       const card = carousel.querySelector('.card');
-      if (!card) return;
-      
-      const cardWidth = card.offsetWidth + 16; // card width + gap
-      const scrollPos = carouselWrapper.scrollLeft;
-      const newPage = Math.floor(scrollPos / cardWidth) + 1;
-      
-      if (newPage !== currentPage && newPage >= 1 && newPage <= totalPages) {
-        currentPage = newPage;
-        currentPageSpan.textContent = currentPage;
+      if (!card) {
+        isAnimating = false;
+        return;
       }
+      
+      const cardWidth = card.offsetWidth;
+      const gap = parseInt(getComputedStyle(carousel).gap) || 32;
+      const scrollDistance = (cardWidth + gap) * itemsPerPage;
+      const offset = (currentPage - 1) * scrollDistance;
+      
+      // Use requestAnimationFrame for smooth animation
+      requestAnimationFrame(() => {
+        carousel.style.transform = `translate3d(${-offset}px, 0, 0)`;
+        currentPageSpan.textContent = currentPage;
+        
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+        
+        setTimeout(() => { isAnimating = false; }, 400);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentPage > 1 && !isAnimating) {
+          currentPage--;
+          updateCarousel();
+        }
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        if (currentPage < totalPages && !isAnimating) {
+          currentPage++;
+          updateCarousel();
+        }
+      });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && prevBtn && !isAnimating) prevBtn.click();
+      if (e.key === 'ArrowRight' && nextBtn && !isAnimating) nextBtn.click();
     });
+
+    // Optimized resize handler
+    let resizeTimer;
+    let lastWidth = window.innerWidth;
+    
+    window.addEventListener('resize', () => {
+      const newWidth = window.innerWidth;
+      if (Math.abs(newWidth - lastWidth) < 50) return;
+      
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        lastWidth = newWidth;
+        if (!isMobile()) {
+          updateCarousel();
+        }
+      }, 150);
+    }, { passive: true });
+
+    // Mobile: Simple native scroll with page indicator
+    if (isMobile() && carouselWrapper) {
+      let scrollTimeout;
+      
+      carouselWrapper.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        
+        scrollTimeout = setTimeout(() => {
+          const card = carousel.querySelector('.card');
+          if (!card) return;
+          
+          const cardWidth = card.offsetWidth + 16;
+          const scrollPos = carouselWrapper.scrollLeft;
+          const newPage = Math.round(scrollPos / cardWidth) + 1;
+          
+          if (newPage >= 1 && newPage <= totalPages) {
+            currentPage = newPage;
+            currentPageSpan.textContent = currentPage;
+          }
+        }, 50);
+      }, { passive: true });
+    }
+
+    // Initial setup
+    if (!isMobile()) {
+      updateCarousel();
+    }
   }
-
-  if (carousel) updateCarousel();
-  if (carousel) updateCarousel();
-
 </script>
 
 <script id="projectTeamsData" type="application/json">
@@ -435,8 +425,11 @@ permalink: /team/
     }
     
     document.getElementById('modalTeamContent').innerHTML = content;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    
+    requestAnimationFrame(() => {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
   }
 
   function createMemberCard(member) {
