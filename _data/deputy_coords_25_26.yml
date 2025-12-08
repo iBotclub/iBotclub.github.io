@@ -32,10 +32,10 @@
   linkedin: 
 
 # Position 6
-- name: Sarveshwar SD
-  email: ee25b119@smail.iitm.ac.in
-  image: Sarveshwar.jpg
-  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
+- name: Tejas Arjuna
+  email: ee25b146@smail.iitm.ac.in
+  image: Tejas.jpg
+  linkedin: 
 
 # Position 7
 - name: Kritisha Babu
@@ -128,13 +128,13 @@
   linkedin: https://in.linkedin.com/in/ashwin-k-39826539a
 
 # Position 22
-- name: Tejas Arjuna
-  email: ee25b146@smail.iitm.ac.in
-  image: Tejas.jpg
-  linkedin: 
+- name: Sarveshwar SD
+  email: ee25b119@smail.iitm.ac.in
+  image: Sarveshwar.jpg
+  linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
 
 # Position 23
-  - name: Nikhil Guha
+- name: Nikhil Guha
   email: ee25b092@smail.iitm.ac.in
   image: Nikhil.jpg
   linkedin: 
