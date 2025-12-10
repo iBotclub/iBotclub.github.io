@@ -170,37 +170,43 @@
   image: Sarveshwar.jpg
   linkedin: https://www.linkedin.com/in/sarveshwar-sd-2b6b68368/
 
-# Placeholder entries for remaining positions (30-45)
-
-- name: Deputy Coordinator 30
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 29
+- name: Sanjana Vani V
+  email: ee25b118@smail.iitm.ac.in
+  image: Sanjana.jpg
   linkedin: 
 
-- name: Deputy Coordinator 30
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 30
+- name: Tanay Ashutosh Nasikkar
+  email: ed25b056@smail.iitm.ac.in
+  image: Tanay.jpg
+  linkedin: https://www.linkedin.com/in/tanay-nasikkar-246b17383
+
+# Position 31
+- name: Nikhil Arun
+  email: ee25b091@smail.iitm.ac.in
+  image: NikhilArun.jpg
   linkedin: 
 
-- name: Deputy Coordinator 31
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 32
+- name: M Nharen
+  email: ee25b089@smail.iitm.ac.in
+  image: Nharen.jpg
   linkedin: 
 
-- name: Deputy Coordinator 32
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 33
+- name: Srivatsan S
+  email: ee25b136@smail.iitm.ac.in
+  image: Srivatsan.jpg
   linkedin: 
 
-- name: Deputy Coordinator 33
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
+# Position 34
+- name: Vishnu Joshi
+  email: mm25b052@smail.iitm.ac.in
+  image: Vishnu.jpg
   linkedin: 
 
-- name: Deputy Coordinator 34
-  email: placeholder@smail.iitm.ac.in
-  image: placeholder.jpg
-  linkedin: 
+# Placeholder entries for remaining positions (35-45)
 
 - name: Deputy Coordinator 35
   email: placeholder@smail.iitm.ac.in
